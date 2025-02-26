@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KONECT | Smit Mhatre</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+      * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+      }
+
+      body {
+          background: #0C0404;
+          margin: 0;
+      }
+
+      /* Universal Margin Rules */
+      body > *:not(.navigation):not(.header-container):not(.title) {
+      }
+
+      .konect-analysis {
+          display: flex;
+          flex-direction: column;
+          max-width: 900px;
+          color: #FAF9F6;
+          font-family: 'DM Sans';
+          justify-self: center;
+          width: 100%;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          white-space: normal;
+          padding-left: 15px;
+          padding-right: 15px;
+          box-sizing: border-box;
+      }
+
+
+      .konect-image {
+          width: 100%;
+          max-width: 900px;
+          height: auto;
+          display: block;
+          margin: 80px auto 0;
+          position: relative;
+          padding-top: 20px;
+      }
+
+
+      .konect-analysis h2 {
+          font-size: 30px;
+          font-weight: 375;
+          padding-top: 15px;
+      }
+
+      .konect-analysis h3 {
+          font-size: 20px;
+          font-weight: 185;
+          padding-bottom: 15px;
+      }
+
+      .konect-analysis > div {
+          padding-top: 2px;
+          padding-bottom: 2px;
+      }
+
+      .konect-analysis > div .overview-heading,
+      .konect-analysis > div .did-you-know-heading,
+      .konect-analysis > div .user-categories-heading,
+      .konect-analysis > div .pain-points-heading,
+      .konect-analysis > div .mvp-heading,
+      .konect-analysis > div .sketches-heading,
+      .konect-analysis > div .high-fidelity-prototype-heading,
+      .konect-analysis > div .key-takeaways-heading {
+          margin-bottom: 3px;
+      }
+
+      .konect-analysis > div .overview-content,
+      .konect-analysis > div .did-you-know-content,
+      .konect-analysis > div .user-categories-content,
+      .konect-analysis > div .pain-points-content,
+      .konect-analysis > div .mvp-content,
+      .konect-analysis > div .sketches-content,
+      .konect-analysis > div .high-fidelity-prototype-content,
+      .konect-analysis > div .key-takeaways-content {
+          margin-top: 3px;
+      }
+
+      /* Sketches */
+      .sketches-content {
+          font-style: italic;
+      }
+
+      .header-container {
+          height: 460px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 0 10px;
+          background-image: url("another purp.png");
+
+      }
+
+      .header-container h2 {
+          padding: 0;
+          font-size: clamp(7.5rem, 15vw, 250px);
+          margin: 0;
+          align-self: center;
+          width: 100%;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          white-space: normal;
+          font-family: "DM Sans";
+          align-self: flex-end;
+          color: #FAF9F6;
+      }
+
+      .info {
+          display: flex;
+          flex-direction: row;
+          max-width: 900px;
+          color: #FAF9F6;
+          font-family: 'DM Sans';
+          justify-self: center;
+          justify-content: space-between;
+          width: 100%;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          white-space: normal;
+          padding-left: 15px;
+          padding-right: 15px;
+          box-sizing: border-box;
+      }
+
+      img{
+          max-width: 100%;  /* Ensures the image does not exceed the width of its container */
+          height: auto;
+          object-fit: contain;
+      }
+
+      /* Navigation for larger screens */
+      #nav-menu-normal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(12, 4, 4, 0.6);
+          backdrop-filter: blur(10px);
+          padding: 14px 50px;
+          z-index: 1000;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      /* Brand styling */
+      #nav-menu-normal .brand {
+          font-family: "Instrument Serif";
+          font-size: 25px;
+          font-style: italic;
+          color: lightgrey;
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+
+      #nav-menu-normal .brand:hover {
+          color: #FAF9F6;
+      }
+
+      /* Center links between brand and Est. 2025 */
+      #nav-menu-normal .center-links {
+          display: flex;
+          gap: 65px;
+          margin: 0 auto;
+      }
+
+      #nav-menu-normal .b {
+          text-decoration: none;
+          color: lightgrey;
+          transition: color 0.3s ease;
+          font-size: 20px;
+          font-family: "DM Sans";
+          font-size: 20px;
+      }
+
+      #nav-menu-normal .b:hover {
+          color: #FAF9F6;
+      }
+
+      /* Circa for larger screens */
+      #nav-menu-normal .circa {
+          font-family: Instrument-Serif;
+          font-size: 25px;
+          color: #FAF9F6;
+          font-style: italic;
+          font-weight: 3;
+      }
+
+      /* Hamburger menu for mobile (not visible on large screens) */
+      .menu-toggle {
+          display: none;
+      }
+
+      .ham-circa{
+          display: none;
+          color: #FAF9F6;
+          font-family: Instrument-Serif;
+          font-size: 25px;
+          display: flex;
+          align-items: flex-end;
+          font-style: italic;
+          font-weight: 3;
+          background: transparent;
+      }
+
+      #nav-menu-mobile {
+          display: none; /* Hide by default */
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: rgba(12, 4, 4, 0.95);
+          backdrop-filter: blur(10px);
+          z-index: 3000;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          transition: all 0.4s ease;
+          opacity: 0;
+          visibility: hidden;
+      }
+
+      #nav-menu-mobile.active {
+          display: flex;
+          opacity: 1;
+          visibility: visible;
+      }
+
+      #nav-menu-mobile .b {
+          font-size: 24px;
+          margin: 10px 0;
+          text-align: center;
+          color: #FAF9F6;
+      }
+
+      /* Hamburger menu toggle button */
+      .menu-toggle {
+          display: none;
+          position: fixed;
+          top: 10px;
+          left: 25px;
+          font-size: 30px;
+          color: #FAF9F6;
+          z-index: 3000;
+          cursor: pointer;
+          transition: all 0.3s ease;
+      }
+
+      .menu-toggle.active {
+          transform: rotate(90deg);
+      }
+
+      .top-bar{
+          position: fixed;
+          display: none;
+          top: 0;
+          left:0;
+          background: rgba(12, 4, 4, 0.6);
+          backdrop-filter: blur(10px);
+          width: 100%;
+          height: 60px;
+      }
+
+      #nav-menu-mobile .brand{
+          color: #FAF9F6;
+          text-decoration: none;
+          font-family: Instrument-Serif;
+          font-style: italic;
+          font-size: 25px;
+      }
+
+      #nav-menu-mobile .b{
+          color: #FAF9F6;
+          text-decoration: none;
+          font-family: "DM Sans";
+          font-size: 23px;
+      }
+
+      .konect-photo {
+          width: 100%;
+          max-width: 900px;
+          height: auto;
+          display: block;
+          margin: 80px auto 0;
+          position: relative;
+
+          filter: drop-shadow(20px -50px 60px rgba(181, 132, 243, 0.12)) /* Light purple at top */
+          drop-shadow(-80px 20px 60px rgba(87, 21, 189, 0.12))  /* Darker purple on left */
+          drop-shadow(80px 20px 60px rgba(29, 2, 71, 0.12))   /* Darker purple on right */
+          drop-shadow(100px 20px 60px rgba(181, 132, 243, 0.12));  /* Darkest purple at bottom */
+          margin-top: 100px;
+      }
+
+      .footer{
+          background-color: #0C0404;
+          color: #FAF9F6;
+          position: relative;
+          font-size: 20px;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-family: "DM Sans";
+          padding-right: 20px;
+          padding-left: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-top: 1px solid rgba(211, 211, 211, 0.5);
+      }
+
+      .links {
+          display: flex;
+          justify-content: flex-end;
+          gap: 20px;
+      }
+
+      .links a {
+          color: lightgrey;
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+
+      .links a:hover{
+          color: #FAF9F6;
+      }
+
+      html{
+          scroll-behavior: smooth;
+      }
+
+      .sketches-content{
+          padding-top: 10px;
+      }
+
+      @media (max-width: 900px) {
+          #nav-menu-normal {
+              display: none; /* Hide normal navigation on mobile */
+          }
+
+          .menu-toggle {
+              display: block;
+          }
+
+          .ham-circa {
+              position: fixed;
+              right: 25px;
+              top: 17px;
+          }
+
+          .top-bar{
+              display: block;
+          }
+
+          .konect-analysis{
+              margin-left: 20px;
+              margin-right: 20px;
+          }
+
+          .konect-photo{
+              margin-right: 10px;
+              margin-left: 10px;
+              width: fit-content;
+          }
+
+          .header-container{
+              height: 350px;
+          }
+
+          .footer{
+              display: flex;
+              flex-direction: column;
+
+          }
+
+          .footer p{
+              text-align: center;
+              padding-bottom: 10px;
+          }
+
+          .links{
+              justify-content: center;
+          }
+
+          .konect-image{
+              margin-top: 15px;
+              padding-top: 0;
+          }
+      }
+  </style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+<div class="navigation">
+  <!-- Normal navigation for larger screens -->
+  <nav id="nav-menu-normal" class="nav-normal">
+    <a href="Home%20Page.html" class="brand">Smit Mhatre</a>
+    <div class="center-links">
+      <a href="Home%20Page.html#explore" class="b">Work</a>
+      <a href="About.html" class="b">About Me</a>
+    </div>
+    <a class="circa">Est. 2025</a>
+  </nav>
+
+  <!-- Navigation for smaller screens (below 900px) -->
+  <nav id="nav-menu-mobile" class="nav-mobile">
+    <a href="Home%20Page.html" class="brand">Smit Mhatre</a>
+    <a href="Home%20Page.html#explore" class="b">Work</a>
+    <a href="About.html" class="b">About Me</a>
+  </nav>
+
+  <!-- Hamburger menu for mobile screens -->
+  <div class="menu-toggle">☰</div>
+  <div class="ham-circa">Est. 2025</div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('#nav-menu-mobile');
+
+    menuToggle.addEventListener('click', function() {
+      // Toggle active class on both the menu button and navigation
+      this.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+
+      // Prevent scrolling when menu is open
+      if (mobileNav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close menu when clicking on nav links
+    const navLinks = document.querySelectorAll('#nav-menu-mobile .b');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+    });
+  });
+</script>
+
+<div class="header-container">
+  <h2>KONECT</h2>
+</div>
+
+<div class="konect-photo">
+  <img src="konect%20image.png">
+</div>
+
+<div class="info">
+  <h3 class="role"><a style="font-size:25px; font-weight: 375;">Role</a><br><a style="font-size:20px; font-weight: 185;">Product Ideation</a><br><a style="font-size:20px; font-weight: 185;">UX Researcher</a><br><a style="font-size:20px; font-weight: 185;">Product Designer</a></h3>
+  <h3 class="timeline"><a style="font-size:25px; font-weight: 375;">Timeline</a><br><a style="font-size:20px; font-weight: 185;">September 2024 - December 2024</a></h3>
+  <h3 class="team"><a style="font-size:25px; font-weight: 375;">Team</a><br><a style="font-size:20px; font-weight: 185;">Smit Mhatre</a><br><a style="font-size:20px; font-weight: 185;">Noah Figueiredo</a><br><a style="font-size:20px; font-weight: 185;">Aden Silaphet</a><br><a style="font-size:20px; font-weight: 185;">Emily He</a><br><a style="font-size:20px; font-weight: 185;">Abiha Shah</a></h3>
+</div>
+
+
+<section class="konect-analysis">
+  <div class="overview-section">
+    <h2 class="overview-heading" style="padding-top: 30px;">Overview</h2>
+    <h3 class="overview-content" style="text-align: justify;">Lorem Ipsum</h3>
+    <h3 class="overview-content" style="text-align: justify">Lorem Ipsum</h3>
+  </div>
+
+  <div class="overview-section">
+    <h2 class="overview-heading" style="padding-top: 30px;">User Research</h2>
+    <h3 class="overview-content" style="text-align: justify;">Through our initial research, we found that 75% of high school students felt unprepared for post-secondary education, 53% of university students changed their major twice, 37% were unsure if they were on the right path, and 30% were not following any career path at all, according to YouScience. These statistics made it clear to my team and I that there is a significant gap in support for students navigating their future careers.
+    </h3>
+    <h3 class="overview-content" style="text-align: justify">At the core of the issue, we realized that students simply <span style="font-weight:350;">don’t know what they don’t know</span>. They lack the exposure to various career fields, making it difficult for them to make informed decisions. To address this, we created KONECT – an app designed to help high school students explore diverse career pathways by connecting them to events such as networking opportunities, seminars, and competitions.</h3>
+  </div>
+
+  <div class="user-categories-section">
+    <h2 class="user-categories-heading">User Categories</h2>
+    <h3 class="user-categories-content" style="text-align: justify">Lorem Ipsum
+    </h3>
+  </div>
+
+  <div class="pain-points-section">
+    <h2 class="pain-points-heading">Pain Points</h2>
+    <h3 class="pain-points-content" style="text-align: justify">Our user research revealed several common pain points. One interviewee, who is an upper year university student, shared that despite platforms like LinkedIn, connecting with the right people in her field was difficult. She noted that finding individuals who are both approachable and relatable is challenging, and suggested that better mentoring tools could improve the social experience.
+    </h3>
+    <h3 class="pain-points-content" style="text-align: justify">A first-year University of Waterloo student discussed his struggle to secure an internship for spring 2025, feeling disconnected and intimidated by professionals. He finds platforms like LinkedIn and Waterloo Works inadequate for mentorship and networking, and expressed a desire for a more specialized platform with private messaging. He believes mentors encouraging event attendance could boost his confidence.
+    </h3>
+    <h3 class="pain-points-content" style="text-align: justify">Another interviewee who graduated from university emphasized the importance of networking, particularly in the tech industry, but highlighted how young professionals often struggle with confidence and fear rejection. She advocated for informal events like coffee chats and better access to networking opportunities through educational institutions. She also stressed the need for inclusivity and better mentorship.</h3>
+  </div>
+
+  <div class="mvp-section">
+    <h2 class="mvp-heading">MVP</h2>
+    <h3 class="mvp-content">Talk about the MVP of our app</h3>
+  </div>
+
+  <div class="sketches-section">
+    <h2 class="sketches-heading">Sketches</h2>
+    <img src="KONECT Sketch.jpeg" class='konect-image' style="display: block; margin-left: auto; margin-right: auto;">
+    <h3 class="sketches-content" style="text-align: center">Sketch by Emily He</h3>
+  </div>
+
+  <div class="high-fidelity-prototype-section">
+    <h2 class="high-fidelity-prototype-heading">High Fidelity Prototype</h2>
+    <h3 class="high-fidelity-prototype-content">Pictures of the high fidelity prototype</h3>
+  </div>
+
+  <div class="key-takeaways-section">
+    <h2 class="key-takeaways-heading">Key Takeaways</h2>
+    <h3 class="key-takeaways-content">Write down key takeaways</h3>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Smit Mhatre. All rights reserved.</p>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/smit-mhatre-50b105175/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/SmitMhatre05" target="_blank">GitHub</a>
+    <a href="mailto:smhatre@uwaterloo.ca" target="_blank">Email</a>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

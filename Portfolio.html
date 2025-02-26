@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smit Mhatre</title>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="passion.html">Passion</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+
+  <div class="relative inline-block text-2xl font-mono">
+    <span>Hi, I am a </span>
+    <span id="typewriter-text" class="whitespace-nowrap overflow-hidden border-r-4 border-gray-800"></span>
+  </div>
+
+  <script>
+    const words = ["Developer", "Designer", "Creator", "Learner"];
+    let currentIndex = 0;
+    const typewriterText = document.getElementById('typewriter-text');
+
+    function typeWriter() {
+      typewriterText.textContent = words[currentIndex];
+      typewriterText.style.animation = `typing 3s steps(${words[currentIndex].length}) 1s forwards, erasing 2s steps(${words[currentIndex].length}) 5s forwards`;
+      currentIndex = (currentIndex + 1) % words.length;
+    }
+
+    setInterval(typeWriter, 8000);  // Change word every 8 seconds
+    typeWriter();  // Initial call
+  </script>
+  <style>
+      @keyframes typing {
+          from {
+              width: 0;
+          }
+          to {
+              width: 100%;
+          }
+      }
+
+      @keyframes erasing {
+          from {
+              width: 100%;
+          }
+          to {
+              width: 0;
+          }
+      }
+  </style>
+
+  <style>
+      @keyframes typing {
+          from {
+              width: 0;
+          }
+          to {
+              width: 100%;
+          }
+      }
+
+      @keyframes erasing {
+          from {
+              width: 100%;
+          }
+          to {
+              width: 0;
+          }
+      }
+  </style>
+
+
+
+
+
+</main>
+
+
+
+
+</body>
+</html>

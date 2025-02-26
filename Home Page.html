@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smit Mhatre</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&display=swap');
+
+      /* Global reset for padding */
+      * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
+
+      body {
+          background: #0C0404;
+          margin: 0;
+          padding: 0;
+      }
+
+      /* Flex container for the main content */
+      .container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          height: 100vh;
+          margin-left: 80px;
+          margin-right: 80px;
+      }
+
+      .name {
+          text-align: left;
+          word-wrap: break-word;
+          font-weight: 520;
+          color: #FAF9F6;
+          font-family: "DM Sans";
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 10px;
+      }
+
+      .name span {
+          display: block;
+      }
+
+
+
+      .name .intro {
+          font-size: clamp(25px, 4vw, 200px);
+      }
+
+      .name .job {
+          font-size: clamp(50px, 10vw, 500px);
+      }
+
+      /* Navigation for larger screens */
+      #nav-menu-normal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: rgba(12, 4, 4, 0.6);
+          backdrop-filter: blur(10px);
+          padding: 14px 50px;
+          z-index: 1000;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      /* Brand styling */
+      #nav-menu-normal .brand {
+          font-family: "Instrument Serif";
+          font-size: 25px;
+          font-style: italic;
+          color: lightgrey;
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+
+      #nav-menu-normal .brand:hover {
+          color: #FAF9F6;
+      }
+
+      /* Center links between brand and Est. 2025 */
+      #nav-menu-normal .center-links {
+          display: flex;
+          gap: 65px;
+          margin: 0 auto;
+      }
+
+      #nav-menu-normal .b {
+          text-decoration: none;
+          color: lightgrey;
+          transition: color 0.3s ease;
+          font-size: 20px;
+          font-family: "DM Sans";
+          font-size: 20px;
+      }
+
+      #nav-menu-normal .b:hover {
+          color: #FAF9F6;
+      }
+
+      /* Circa for larger screens */
+      #nav-menu-normal .circa {
+          font-family: Instrument-Serif;
+          font-size: 25px;
+          color: #FAF9F6;
+          font-style: italic;
+          font-weight: 3;
+      }
+
+      /* Hamburger menu for mobile (not visible on large screens) */
+      .menu-toggle {
+          display: none;
+      }
+
+      .ham-circa{
+          display: none;
+          color: #FAF9F6;
+          font-family: Instrument-Serif;
+          font-size: 25px;
+          display: flex;
+          align-items: flex-end;
+          font-style: italic;
+          font-weight: 3;
+          background: transparent;
+      }
+
+      #nav-menu-mobile {
+          display: none; /* Hide by default */
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: rgba(12, 4, 4, 0.95);
+          backdrop-filter: blur(10px);
+          z-index: 3000;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          transition: all 0.4s ease;
+          opacity: 0;
+          visibility: hidden;
+      }
+
+      #nav-menu-mobile.active {
+          display: flex;
+          opacity: 1;
+          visibility: visible;
+      }
+
+      #nav-menu-mobile .b {
+          font-size: 24px;
+          margin: 10px 0;
+          text-align: center;
+          color: #FAF9F6;
+      }
+
+      /* Hamburger menu toggle button */
+      .menu-toggle {
+          display: none;
+          position: fixed;
+          top: 10px;
+          left: 25px;
+          font-size: 30px;
+          color: #FAF9F6;
+          z-index: 3000;
+          cursor: pointer;
+          transition: all 0.3s ease;
+      }
+
+      .menu-toggle.active {
+          transform: rotate(90deg);
+      }
+
+      .top-bar{
+          position: fixed;
+          display: none;
+          top: 0;
+          left:0;
+          background: rgba(12, 4, 4, 0.6);
+          backdrop-filter: blur(10px);
+          width: 100%;
+          height: 60px;
+      }
+
+      #nav-menu-mobile .brand{
+          color: #FAF9F6;
+          text-decoration: none;
+          font-family: Instrument-Serif;
+          font-style: italic;
+          font-size: 25px;
+      }
+
+      #nav-menu-mobile .b{
+          color: #FAF9F6;
+          text-decoration: none;
+          font-family: "DM Sans";
+          font-size: 23px;
+      }
+
+      .work {
+          display: flex;
+          justify-content: center; /* Center the image horizontally */
+          align-items: center; /* Center the image vertically */
+          text-align: center; /* Center any text inside */
+          flex-direction: column;
+          height: auto;
+          margin-top: 50px;
+      }
+
+      .konect {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start; /* Ensures text aligns with the left of the image */
+          width: fit-content; /* Only takes up as much space as needed */
+          margin: 0 auto; /* Centers the entire block */
+
+      }
+
+      .konect img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+          transition: filter 0.1s ease;
+      }
+
+      .konect h1 {
+          color: #FAF9F6;
+          font-family: 'DM Sans';
+          font-size: clamp(40px, 9vw, 60px);
+          font-weight: 550;
+          text-align: left; /* Ensures text stays aligned to image's left */
+          margin-top: 10px;
+      }
+
+      .konect img:hover{
+          filter: drop-shadow(20px -50px 60px rgba(181, 132, 243, 0.12)) /* Light purple at top */
+          drop-shadow(-80px 20px 60px rgba(87, 21, 189, 0.12))  /* Darker purple on left */
+          drop-shadow(80px 20px 60px rgba(29, 2, 71, 0.12))   /* Darker purple on right */
+          drop-shadow(100px 20px 60px rgba(181, 132, 243, 0.12));  /* Darkest purple at bottom */
+      }
+
+      .footer{
+          background-color: #0C0404;
+          color: #FAF9F6;
+          position: relative;
+          font-size: 20px;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-family: "DM Sans";
+          padding-right: 20px;
+          padding-left: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-top: 1px solid rgba(211, 211, 211, 0.5);
+      }
+
+      .links {
+          display: flex;
+          justify-content: flex-end;
+          gap: 20px;
+      }
+
+      .links a {
+          color: lightgrey;
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+
+      .links a:hover{
+          color: #FAF9F6;
+      }
+
+      .Konect-details {
+          display: flex;
+          flex-direction: row;
+          gap: 15px;
+          padding-bottom: 10px;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .figma{
+          color: lightgrey;
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+
+      .figma:hover{
+          color: #FAF9F6;
+      }
+
+      html{
+          scroll-behavior: smooth;
+      }
+
+      .explore-section{
+          margin-right: 100px;
+          margin-left: 100px;
+      }
+
+      #explore{
+          font-size: clamp(70px, 9vw, 110px);
+      }
+
+      .Konect-details h2{
+          font-size: clamp(10px, 2vw, 18px);
+      }
+
+      .Konect-details a{
+          font-size: clamp(10px, 3vw, 23px);
+      }
+
+      @media (max-width: 900px) {
+          .container {
+              display: flex;
+              flex-direction: column;
+              align-items: center; /* Center content horizontally */
+              justify-content: center; /* Center content vertically */
+              margin-right: 10px;
+              margin-left: 20px;
+              height: 100vh; /* Ensure full viewport height */
+          }
+
+          #nav-menu-normal {
+              display: none; /* Hide normal navigation on mobile */
+          }
+
+          .menu-toggle {
+              display: block;
+          }
+
+          .ham-circa {
+              position: fixed;
+              right: 25px;
+              top: 17px;
+          }
+
+          .top-bar{
+              display: block;
+          }
+
+          .explore-section{
+              margin-right: 20px;
+              margin-left: 20px;
+          }
+
+          .Konect-details{
+              padding-top: 0px;
+          }
+
+          .konect img {
+              height: auto; /* Prevent fixed height issues */
+              max-height: 300px; /* Adjust as needed */
+          }
+
+          .footer{
+              display: flex;
+              flex-direction: column;
+          }
+
+          .footer p{
+              text-align: center;
+              padding-bottom: 10px;
+          }
+
+          .links{
+              justify-content: center;
+          }
+
+      }
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+<div class="navigation">
+  <!-- Normal navigation for larger screens -->
+  <nav id="nav-menu-normal" class="nav-normal">
+    <a href="Home%20Page.html" class="brand">Smit Mhatre</a>
+    <div class="center-links">
+      <a href="Home%20Page.html#explore" class="b">Work</a>
+      <a href="About.html" class="b">About Me</a>
+    </div>
+    <a class="circa">Est. 2025</a>
+  </nav>
+
+  <!-- Navigation for smaller screens (below 900px) -->
+  <nav id="nav-menu-mobile" class="nav-mobile">
+    <a href="Home%20Page.html" class="brand">Smit Mhatre</a>
+    <a href="Home%20Page.html#explore" class="b">Work</a>
+    <a href="About.html" class="b">About Me</a>
+  </nav>
+
+  <!-- Hamburger menu for mobile screens -->
+  <div class="menu-toggle">☰</div>
+  <div class="ham-circa">Est. 2025</div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('#nav-menu-mobile');
+
+    menuToggle.addEventListener('click', function() {
+      // Toggle active class on both the menu button and navigation
+      this.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+
+      // Prevent scrolling when menu is open
+      if (mobileNav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Close menu when clicking on nav links
+    const navLinks = document.querySelectorAll('#nav-menu-mobile .b');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+    });
+  });
+</script>
+
+<div class="container">
+  <div class="name">
+    <span class="intro">Hi, my name is</span>
+    <span class="job">SMIT MHATRE</span>
+    <span class="intro">and I'm a</span>
+    <span class="job">DESIGN ENGINEER</span>
+  </div>
+</div>
+
+<section class='explore-section'>
+
+<h1 id="explore" style="font-family: 'DM Sans'; color: #FAF9F6; font-weight: 500; text-align: left;">Explore</h1>
+
+  <div class="work">
+    <div class="konect">
+      <h1 style="color: #FAF9F6; font-family: 'DM Sans', sans-serif; font-weight: 450; margin: 0;">
+        KONECT - 2024
+      </h1>
+      <div class="Konect-details">
+      <h2 style="font-family: 'DM Sans', sans-serif; color: #0C0404; font-weight: 300; background-color: #FAF9F6; padding: 3px; border-radius: 5px;">
+        Networking
+      </h2>
+      <h2 style="font-family: 'DM Sans', sans-serif; color: #0C0404; font-weight: 300; background-color: #FAF9F6; padding: 3px; border-radius: 5px;">
+        Career Development
+      </h2>
+      <h2 style="font-family: 'DM Sans', sans-serif; color: #0C0404; font-weight: 300; background-color: #FAF9F6; padding: 3px; border-radius: 5px;">
+        UX/Product Design
+      </h2>
+
+        <h2 style="font-size: 22px; font-family: 'DM Sans', sans-serif; color: #FAF9F6; font-weight: 300;">| <a class="figma" href="https://www.figma.com/design/ReN1Mv1od7tLpkTBG66lRY/KONECT---2024?node-id=0-1&t=cFsbZVMUZzks6O4k-1" target="_blank">🔗 Figma</a></h2>
+      </div>
+      <a href="Konect-app.html">
+        <img src="konect%20image.png" alt="Konect Image" style="height: 700px; padding-bottom: 50px;">
+      </a>
+    </div>
+  </div>
+
+
+</section>
+
+<footer class="footer">
+  <p>© 2025 Smit Mhatre. All rights reserved.</p>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/smit-mhatre-50b105175/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/SmitMhatre05" target="_blank">GitHub</a>
+    <a href="mailto:smhatre@uwaterloo.ca" target="_blank">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>
