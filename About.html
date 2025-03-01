@@ -28,7 +28,7 @@
       }
       .title h1{
           padding: 0;
-          font-size: clamp(90px, 10vw, 240px);
+          font-size: clamp(80px, 15vw, 250px);
           margin: 0;
           align-self: center;
           width: 100%;
@@ -170,7 +170,7 @@
 
       .container h3{
           color: #FAF9F6;
-          font-size: clamp(50px, 9vw, 120px);
+          font-size: clamp(60px, 9vw, 110px);
           font-weight: 375;
           font-family: "DM Sans";
           padding-bottom: 30px;
@@ -296,7 +296,6 @@
           color: #FAF9F6;
       }
 
-      /* Center links between brand and Est. 2025 */
       #nav-menu-normal .center-links {
           display: flex;
           gap: 65px;
@@ -349,18 +348,6 @@
           color: #FAF9F6;
           background-color: #0C0404;
           border-color: #FAF9F6;
-      }
-
-      .ham-circa{
-          display: none;
-          color: #FAF9F6;
-          font-family: Instrument-Serif;
-          font-size: 25px;
-          display: flex;
-          align-items: flex-end;
-          font-style: italic;
-          font-weight: 3;
-          background: transparent;
       }
 
       #nav-menu-mobile {
@@ -436,6 +423,11 @@
           text-decoration: none;
           font-family: "DM Sans";
           font-size: 23px;
+      }
+
+      .container2{
+          margin-left: 70px;
+          margin-right: 70px;
       }
 
       @media (max-width: 900px) {
@@ -525,9 +517,18 @@
           }
 
           .ham-circa {
+              color: #FAF9F6;
+              font-family: Instrument-Serif;
+              font-size: 25px;
+              display: flex;
+              align-items: flex-end;
+              font-style: italic;
+              font-weight: 3;
+              background: transparent;
               position: fixed;
               right: 25px;
               top: 17px;
+              z-index: 5000;
           }
 
           .top-bar{
@@ -551,6 +552,53 @@
 
           .links{
               justify-content: center;
+          }
+
+          .me{
+              margin: 0;
+              margin-right: 15px;
+              margin-left: 15px;
+              margin-top: 50px;
+          }
+
+          .container, .pillars{
+              margin: 0;
+              margin-right: 15px;
+              margin-left: 15px;
+          }
+
+          .pillar1 h1{
+              font-size: 35px;
+          }
+
+          .pillar1 h2{
+              font-size: 30px;
+          }
+
+          .pillar2 h1{
+              font-size: 35px;
+          }
+
+          .pillar2 h2{
+              font-size: 30px;
+          }
+
+          .pillar3 h1{
+              font-size: 35px;
+          }
+
+          .pillar3 h2{
+              font-size: 30px;
+          }
+
+          .container2{
+              margin: 0;
+              margin-left: 15px;
+              margin-right: 15px;
+          }
+
+          .me-text{
+              font-size: 20px;
           }
 
       }
@@ -581,7 +629,6 @@
 
   <!-- Hamburger menu for mobile screens -->
   <div class="menu-toggle">☰</div>
-  <div class="ham-circa">Est. 2025</div>
 </div>
 
 
@@ -623,7 +670,7 @@
 <div class="me">
   <img src="Smit%20Image.png" class="me-image">
   <h1 class="me-text">
-    I’m a Design Engineer with expertise in both design and software development, dedicated to building user-centric, high-impact digital products. By bridging aesthetics with functionality, I ensure that the solutions I create are not only visually appealing but also intuitive, efficient, and technically robust. This field is compelling to me since it represents the full transformation of an idea into an interactive, functional product.
+    I’m a Design Engineer with expertise in both design and software development, dedicated to building user-centric, high-impact digital products. By bridging aesthetics with functionality, I ensure that the solutions I create are not only visually appealing but also intuitive, efficient, and technically robust. Design Engineering is compelling to me since it represents the full transformation of an idea into an interactive, functional product.
     <br><br>
     Currently studying Global Business and Digital Arts (HCI) with a minor in Computer Science at the University of Waterloo.
   </h1>
@@ -651,27 +698,18 @@
 </div>
 </div>
 
-<div class="container2" style="margin-left: 70px; margin-right: 70px;">
+<div class="container2">
   <img class="boat" src="IMG_2551.jpg">
 
   <div class="words">
     <h1>Playground</h1>
-    <h2>
+    <h2 style="text-align: justify">
       Besides my career goals and ambitions, I enjoy photography, video editing, and graphic design. These are my creative outlets and often inspire my projects and style.
     </h2>
     <a href="https://sites.google.com/view/smitmhatre/home?authuser=0" target='_blank' class="b2">Explore →
     </a>
   </div>
 
-</div>
-
-<div class="talk" style="margin-left: 70px; margin-right: 70px; padding-bottom: 70px;">
-  <h1 style="color: #FAF9F6; font-family: 'DM Sans'; font-size: clamp(50px, 9vw, 120px); font-weight: 375;">Let's Talk</h1>
-  <h2 style="color: #FAF9F6; font-family: 'DM Sans'; font-size: 35px; font-weight: 185;">(Preferably with a cup of coffee ☕)</h2>
-  <div class="links2" style="display: flex; flex-direction: column; padding-top: 25px;">
-  <a href="https://www.linkedin.com/in/smit-mhatre-50b105175/" target="_blank" style="padding-left: 0px; font-family: 'DM Sans'; font-size: 30px;">🔗 LinkedIn</a>
-  <a href="mailto:smhatre@uwaterloo.ca" target="_blank" style="font-family: 'DM Sans'; font-size: 30px;">🔗 Email</a>
-</div>
 </div>
 
 <footer class="footer">
@@ -685,6 +723,3 @@
 
 </body>
 </html>
-
-
-
