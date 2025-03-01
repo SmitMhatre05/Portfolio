@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smit Mhatre</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
-      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&display=swap');
-
-      /* Global reset for padding */
       * {
           box-sizing: border-box;
           margin: 0;
@@ -20,7 +18,6 @@
           padding: 0;
       }
 
-      /* Flex container for the main content */
       .container {
           display: flex;
           flex-direction: column;
@@ -48,17 +45,14 @@
           display: block;
       }
 
-
-
       .name .intro {
-          font-size: clamp(25px, 4vw, 200px);
+          font-size: clamp(28px, 10.5vw, 80px);
       }
 
       .name .job {
-          font-size: clamp(50px, 10vw, 500px);
+          font-size: clamp(28px, 10.5vw, 500px);
       }
 
-      /* Navigation for larger screens */
       #nav-menu-normal {
           position: fixed;
           top: 0;
@@ -73,7 +67,7 @@
           align-items: center;
       }
 
-      /* Brand styling */
+
       #nav-menu-normal .brand {
           font-family: "Instrument Serif";
           font-size: 25px;
@@ -87,7 +81,7 @@
           color: #FAF9F6;
       }
 
-      /* Center links between brand and Est. 2025 */
+
       #nav-menu-normal .center-links {
           display: flex;
           gap: 65px;
@@ -107,7 +101,7 @@
           color: #FAF9F6;
       }
 
-      /* Circa for larger screens */
+
       #nav-menu-normal .circa {
           font-family: Instrument-Serif;
           font-size: 25px;
@@ -116,7 +110,7 @@
           font-weight: 3;
       }
 
-      /* Hamburger menu for mobile (not visible on large screens) */
+
       .menu-toggle {
           display: none;
       }
@@ -134,7 +128,7 @@
       }
 
       #nav-menu-mobile {
-          display: none; /* Hide by default */
+          display: none;
           position: fixed;
           top: 0;
           left: 0;
@@ -165,7 +159,7 @@
           color: #FAF9F6;
       }
 
-      /* Hamburger menu toggle button */
+
       .menu-toggle {
           display: none;
           position: fixed;
@@ -210,9 +204,9 @@
 
       .work {
           display: flex;
-          justify-content: center; /* Center the image horizontally */
-          align-items: center; /* Center the image vertically */
-          text-align: center; /* Center any text inside */
+          justify-content: center;
+          align-items: center;
+          text-align: center;
           flex-direction: column;
           height: auto;
           margin-top: 50px;
@@ -221,9 +215,9 @@
       .konect {
           display: flex;
           flex-direction: column;
-          align-items: flex-start; /* Ensures text aligns with the left of the image */
-          width: fit-content; /* Only takes up as much space as needed */
-          margin: 0 auto; /* Centers the entire block */
+          align-items: flex-start;
+          width: fit-content;
+          margin: 0 auto;
 
       }
 
@@ -239,15 +233,15 @@
           font-family: 'DM Sans';
           font-size: clamp(40px, 9vw, 60px);
           font-weight: 550;
-          text-align: left; /* Ensures text stays aligned to image's left */
+          text-align: left;
           margin-top: 10px;
       }
 
       .konect img:hover{
-          filter: drop-shadow(20px -50px 60px rgba(181, 132, 243, 0.12)) /* Light purple at top */
-          drop-shadow(-80px 20px 60px rgba(87, 21, 189, 0.12))  /* Darker purple on left */
-          drop-shadow(80px 20px 60px rgba(29, 2, 71, 0.12))   /* Darker purple on right */
-          drop-shadow(100px 20px 60px rgba(181, 132, 243, 0.12));  /* Darkest purple at bottom */
+          filter: drop-shadow(20px -50px 60px rgba(181, 132, 243, 0.12))
+          drop-shadow(-80px 20px 60px rgba(87, 21, 189, 0.12))
+          drop-shadow(80px 20px 60px rgba(29, 2, 71, 0.12))
+          drop-shadow(100px 20px 60px rgba(181, 132, 243, 0.12));
       }
 
       .footer{
@@ -327,15 +321,14 @@
           .container {
               display: flex;
               flex-direction: column;
-              align-items: center; /* Center content horizontally */
-              justify-content: center; /* Center content vertically */
-              margin-right: 10px;
+              align-items: flex-start;
               margin-left: 20px;
-              height: 100vh; /* Ensure full viewport height */
+              margin-right: 20px;
+              height: 100vh;
           }
 
           #nav-menu-normal {
-              display: none; /* Hide normal navigation on mobile */
+              display: none;
           }
 
           .menu-toggle {
@@ -346,6 +339,7 @@
               position: fixed;
               right: 25px;
               top: 17px;
+              z-index: 5000;
           }
 
           .top-bar{
@@ -362,8 +356,8 @@
           }
 
           .konect img {
-              height: auto; /* Prevent fixed height issues */
-              max-height: 300px; /* Adjust as needed */
+              height: auto;
+              max-height: 300px;
           }
 
           .footer{
@@ -380,6 +374,14 @@
               justify-content: center;
           }
 
+          .Konect-details{
+              display: none;
+          }
+
+          .name .intro{
+              font-weight: 185;
+          }
+
       }
 
   </style>
@@ -390,9 +392,9 @@
 <div class="navigation">
   <!-- Normal navigation for larger screens -->
   <nav id="nav-menu-normal" class="nav-normal">
-    <a href="Home%20Page.html" class="brand">Smit Mhatre</a>
+    <a href="index.html" class="brand">Smit Mhatre</a>
     <div class="center-links">
-      <a href="Home%20Page.html#explore" class="b">Work</a>
+      <a href="index.html#explore" class="b">Work</a>
       <a href="About.html" class="b">About Me</a>
     </div>
     <a class="circa">Est. 2025</a>
@@ -407,7 +409,6 @@
 
   <!-- Hamburger menu for mobile screens -->
   <div class="menu-toggle">☰</div>
-  <div class="ham-circa">Est. 2025</div>
 </div>
 
 <script>
@@ -416,11 +417,9 @@
     const mobileNav = document.querySelector('#nav-menu-mobile');
 
     menuToggle.addEventListener('click', function() {
-      // Toggle active class on both the menu button and navigation
       this.classList.toggle('active');
       mobileNav.classList.toggle('active');
 
-      // Prevent scrolling when menu is open
       if (mobileNav.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
       } else {
@@ -428,7 +427,6 @@
       }
     });
 
-    // Close menu when clicking on nav links
     const navLinks = document.querySelectorAll('#nav-menu-mobile .b');
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
@@ -440,12 +438,14 @@
   });
 </script>
 
+<section class="mob-mar">
+
 <div class="container">
   <div class="name">
-    <span class="intro">Hi, my name is</span>
-    <span class="job">SMIT MHATRE</span>
+    <span class="intro">Hi, I'm</span>
+    <span class="job">Smit Mhatre</span>
     <span class="intro">and I'm a</span>
-    <span class="job">DESIGN ENGINEER</span>
+    <span class="job">[Design Engineer]</span>
   </div>
 </div>
 
@@ -489,5 +489,8 @@
   </div>
 </footer>
 
+</section>
+
 </body>
 </html>
+
