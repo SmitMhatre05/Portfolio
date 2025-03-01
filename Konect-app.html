@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KONECT | Smit Mhatre</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
-      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
-
       * {
           box-sizing: border-box;
           padding: 0;
@@ -45,7 +43,8 @@
           max-width: 900px;
           height: auto;
           display: block;
-          margin: 80px auto 0;
+          margin: 10px auto 0;
+          margin-top: 0;
           position: relative;
           padding-top: 20px;
       }
@@ -88,6 +87,7 @@
       .konect-analysis > div .high-fidelity-prototype-content,
       .konect-analysis > div .key-takeaways-content {
           margin-top: 3px;
+          text-align: justify;
       }
 
       /* Sketches */
@@ -108,7 +108,7 @@
 
       .header-container h2 {
           padding: 0;
-          font-size: clamp(7.5rem, 15vw, 250px);
+          font-size: clamp(100px, 15vw, 250px);
           margin: 0;
           align-self: center;
           width: 100%;
@@ -135,6 +135,7 @@
           padding-left: 15px;
           padding-right: 15px;
           box-sizing: border-box;
+          padding-top: 10px;
       }
 
       img{
@@ -206,18 +207,6 @@
           display: none;
       }
 
-      .ham-circa{
-          display: none;
-          color: #FAF9F6;
-          font-family: Instrument-Serif;
-          font-size: 25px;
-          display: flex;
-          align-items: flex-end;
-          font-style: italic;
-          font-weight: 3;
-          background: transparent;
-      }
-
       #nav-menu-mobile {
           display: none; /* Hide by default */
           position: fixed;
@@ -227,7 +216,7 @@
           height: 100vh;
           background-color: rgba(12, 4, 4, 0.95);
           backdrop-filter: blur(10px);
-          z-index: 3000;
+          z-index: 4000;
           flex-direction: column;
           justify-content: center;
           align-items: center;
@@ -276,6 +265,7 @@
           backdrop-filter: blur(10px);
           width: 100%;
           height: 60px;
+          z-index: 5000;
       }
 
       #nav-menu-mobile .brand{
@@ -349,19 +339,31 @@
           padding-top: 10px;
       }
 
+      .figma{
+          color: lightgrey;
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+
+      .figma:hover{
+          color: #FAF9F6;
+      }
+
       @media (max-width: 900px) {
           #nav-menu-normal {
-              display: none; /* Hide normal navigation on mobile */
+              display: none;
           }
 
           .menu-toggle {
               display: block;
+              z-index: 5002;
           }
 
           .ham-circa {
               position: fixed;
               right: 25px;
               top: 17px;
+              z-index: 5000;
           }
 
           .top-bar{
@@ -377,6 +379,7 @@
               margin-right: 10px;
               margin-left: 10px;
               width: fit-content;
+              padding-bottom: 10px;
           }
 
           .header-container{
@@ -428,7 +431,6 @@
 
   <!-- Hamburger menu for mobile screens -->
   <div class="menu-toggle">☰</div>
-  <div class="ham-circa">Est. 2025</div>
 </div>
 
 <script>
@@ -470,29 +472,29 @@
 </div>
 
 <div class="info">
-  <h3 class="role"><a style="font-size:25px; font-weight: 375;">Role</a><br><a style="font-size:20px; font-weight: 185;">Product Ideation</a><br><a style="font-size:20px; font-weight: 185;">UX Researcher</a><br><a style="font-size:20px; font-weight: 185;">Product Designer</a></h3>
+  <h3 class="role"><a style="font-size:25px; font-weight: 375;">Role</a><br><a style="font-size:20px; font-weight: 185;">• Product Ideation</a><br><a style="font-size:20px; font-weight: 185;">• UX Researcher</a><br><a style="font-size:20px; font-weight: 185;">• Product Designer</a></h3>
   <h3 class="timeline"><a style="font-size:25px; font-weight: 375;">Timeline</a><br><a style="font-size:20px; font-weight: 185;">September 2024 - December 2024</a></h3>
-  <h3 class="team"><a style="font-size:25px; font-weight: 375;">Team</a><br><a style="font-size:20px; font-weight: 185;">Smit Mhatre</a><br><a style="font-size:20px; font-weight: 185;">Noah Figueiredo</a><br><a style="font-size:20px; font-weight: 185;">Aden Silaphet</a><br><a style="font-size:20px; font-weight: 185;">Emily He</a><br><a style="font-size:20px; font-weight: 185;">Abiha Shah</a></h3>
+  <h3 class="team"><a style="font-size:25px; font-weight: 375;">Team</a><br><a style="font-size:20px; font-weight: 185;">1. Smit Mhatre</a><br><a style="font-size:20px; font-weight: 185;">2. Noah Figueiredo</a><br><a style="font-size:20px; font-weight: 185;">3. Aden Silaphet</a><br><a style="font-size:20px; font-weight: 185;">4. Emily He</a><br><a style="font-size:20px; font-weight: 185;">5. Abiha Shah</a></h3>
 </div>
 
 
 <section class="konect-analysis">
   <div class="overview-section">
     <h2 class="overview-heading" style="padding-top: 30px;">Overview</h2>
-    <h3 class="overview-content" style="text-align: justify;">Lorem Ipsum</h3>
-    <h3 class="overview-content" style="text-align: justify">Lorem Ipsum</h3>
+    <h3 class="overview-content" style="text-align: justify;">KONECT is a platform that helps individuals discover career-related events; such as competitions, seminars, and networking opportunities tailored to their goals and aspirations.
+    </h3>
   </div>
 
   <div class="overview-section">
     <h2 class="overview-heading" style="padding-top: 30px;">User Research</h2>
-    <h3 class="overview-content" style="text-align: justify;">Through our initial research, we found that 75% of high school students felt unprepared for post-secondary education, 53% of university students changed their major twice, 37% were unsure if they were on the right path, and 30% were not following any career path at all, according to YouScience. These statistics made it clear to my team and I that there is a significant gap in support for students navigating their future careers.
+    <h3 class="overview-content" style="text-align: justify;">Through our initial research, we found that: <ul style="padding-left: 50px; padding-top: 10px;"><li>75% of high school students felt unprepared for post-secondary education</li> <li>53% of university students changed their major at least twice</li> <li>37% were unsure if they were on the right career path</li> <li>30% were not following any career path at all</li></ul><br> According to YouScience, these statistics indicated to us that there is a significant gap in support for students navigating their future careers.
     </h3>
-    <h3 class="overview-content" style="text-align: justify">At the core of the issue, we realized that students simply <span style="font-weight:350;">don’t know what they don’t know</span>. They lack the exposure to various career fields, making it difficult for them to make informed decisions. To address this, we created KONECT – an app designed to help high school students explore diverse career pathways by connecting them to events such as networking opportunities, seminars, and competitions.</h3>
+    <h3 class="overview-content" style="text-align: justify;">At the core of the issue, we realized that students simply <span style="font-weight:350; text-align: justify;">don’t know what they don’t know</span>. They lack the exposure to various career fields, making it difficult for them to make informed decisions.</h3>
   </div>
 
   <div class="user-categories-section">
     <h2 class="user-categories-heading">User Categories</h2>
-    <h3 class="user-categories-content" style="text-align: justify">Lorem Ipsum
+    <h3 class="user-categories-content" style="text-align: justify">We identified three key user groups to base our research on: <span style="font-weight: 350;">first year university students, upper-year students, and recent graduates</span>.
     </h3>
   </div>
 
@@ -500,30 +502,33 @@
     <h2 class="pain-points-heading">Pain Points</h2>
     <h3 class="pain-points-content" style="text-align: justify">Our user research revealed several common pain points. One interviewee, who is an upper year university student, shared that despite platforms like LinkedIn, connecting with the right people in her field was difficult. She noted that finding individuals who are both approachable and relatable is challenging, and suggested that better mentoring tools could improve the social experience.
     </h3>
-    <h3 class="pain-points-content" style="text-align: justify">A first-year University of Waterloo student discussed his struggle to secure an internship for spring 2025, feeling disconnected and intimidated by professionals. He finds platforms like LinkedIn and Waterloo Works inadequate for mentorship and networking, and expressed a desire for a more specialized platform with private messaging. He believes mentors encouraging event attendance could boost his confidence.
+    <h3 class="pain-points-content" style="text-align: justify">A first-year University of Waterloo student discussed his struggle to secure an internship for summer 2025, feeling disconnected and intimidated by professionals. He finds platforms like LinkedIn and Waterloo Works inadequate for mentorship and networking, and expressed a desire for a more specialized platform with private messaging. He believes mentors encouraging event attendance could boost his confidence as well.
     </h3>
-    <h3 class="pain-points-content" style="text-align: justify">Another interviewee who graduated from university emphasized the importance of networking, particularly in the tech industry, but highlighted how young professionals often struggle with confidence and fear rejection. She advocated for informal events like coffee chats and better access to networking opportunities through educational institutions. She also stressed the need for inclusivity and better mentorship.</h3>
+    <h3 class="pain-points-content" style="text-align: justify">Another interviewee who graduated from university emphasized the importance of networking, particularly in the tech industry, but highlighted how younger students often struggle with confidence and fear rejection. She advocated for informal events like coffee chats and better access to networking opportunities. She also stressed the need for inclusivity and better mentorship.</h3>
   </div>
 
   <div class="mvp-section">
-    <h2 class="mvp-heading">MVP</h2>
-    <h3 class="mvp-content">Talk about the MVP of our app</h3>
+    <h2 class="mvp-heading">Creation</h2>
+    <h3 class="mvp-content" style="text-align: justify;">Before creating the low-fidelity prototype, we explored multiple ideas and features but prioritized those that would provide the most value to users. After several iterations, we finalized the concept shown below.
+    </h3>
   </div>
 
   <div class="sketches-section">
-    <h2 class="sketches-heading">Sketches</h2>
     <img src="KONECT Sketch.jpeg" class='konect-image' style="display: block; margin-left: auto; margin-right: auto;">
     <h3 class="sketches-content" style="text-align: center">Sketch by Emily He</h3>
   </div>
 
   <div class="high-fidelity-prototype-section">
     <h2 class="high-fidelity-prototype-heading">High Fidelity Prototype</h2>
-    <h3 class="high-fidelity-prototype-content">Pictures of the high fidelity prototype</h3>
+    <h3 class="high-fidelity-prototype-content" style="text-align: justify;">Bringing our concept and sketches to life in Figma was an exciting process. We explored various color schemes and layout ideas, ultimately choosing a design that conveyed information clearly, effectively, and straight to the point .
+    </h3>
+    <h3 class="high-fidelity-prototype-content"><a class="figma" href='https://www.figma.com/design/ReN1Mv1od7tLpkTBG66lRY/KONECT---2024?node-id=0-1&t=cFsbZVMUZzks6O4k-1' target="_blank">🔗 Figma</a></h2></h3>
   </div>
 
   <div class="key-takeaways-section">
     <h2 class="key-takeaways-heading">Key Takeaways</h2>
-    <h3 class="key-takeaways-content">Write down key takeaways</h3>
+    <h3 class="key-takeaways-content" style="text-align: justify; padding-bottom: 45px;">This project was quite a journey - balancing everyone’s ideas, schedules, and workload was a valuable learning experience, especially from a project management point of view. Most importantly, it taught me how to design collaboratively, a skill I’ll carry forward in future design and coding projects!
+    </h3>
   </div>
 </section>
 
@@ -535,8 +540,5 @@
     <a href="mailto:smhatre@uwaterloo.ca" target="_blank">Email</a>
   </div>
 </footer>
-
-
-
 </body>
 </html>
