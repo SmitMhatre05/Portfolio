@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KONECT | Smit Mhatre</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <style>
       * {
           box-sizing: border-box;
@@ -15,10 +17,6 @@
       body {
           background: #0C0404;
           margin: 0;
-      }
-
-      /* Universal Margin Rules */
-      body > *:not(.navigation):not(.header-container):not(.title) {
       }
 
       .konect-analysis {
@@ -49,11 +47,10 @@
           padding-top: 20px;
       }
 
-
       .konect-analysis h2 {
-          font-size: 30px;
+          font-size: 35px;
           font-weight: 375;
-          padding-top: 15px;
+          padding-top: 25px;
       }
 
       .konect-analysis h3 {
@@ -90,33 +87,31 @@
           text-align: justify;
       }
 
-      /* Sketches */
       .sketches-content {
           font-style: italic;
       }
 
       .header-container {
-          height: 460px;
+          height: 550px;
           display: flex;
-          justify-content: space-between;
           align-items: center;
+          align-content: center;
+          justify-content: center;
           flex-wrap: wrap;
-          padding: 0 10px;
-          background-image: url("another purp.png");
-
       }
 
       .header-container h2 {
+          display: flex;
           padding: 0;
-          font-size: clamp(100px, 15vw, 250px);
+          font-size: clamp(65px, 15vw, 210px);
           margin: 0;
           align-self: center;
-          width: 100%;
-          word-wrap: break-word;
-          overflow-wrap: break-word;
+          align-items: center;
+          width: fit-content;
+          text-wrap: balance;
           white-space: normal;
           font-family: "DM Sans";
-          align-self: flex-end;
+          justify-content: center;
           color: #FAF9F6;
       }
 
@@ -139,12 +134,11 @@
       }
 
       img{
-          max-width: 100%;  /* Ensures the image does not exceed the width of its container */
+          max-width: 100%;
           height: auto;
           object-fit: contain;
       }
 
-      /* Navigation for larger screens */
       #nav-menu-normal {
           position: fixed;
           top: 0;
@@ -159,9 +153,8 @@
           align-items: center;
       }
 
-      /* Brand styling */
       #nav-menu-normal .brand {
-          font-family: "Instrument Serif";
+          font-family: "Playfair Display";
           font-size: 25px;
           font-style: italic;
           color: lightgrey;
@@ -173,7 +166,6 @@
           color: #FAF9F6;
       }
 
-      /* Center links between brand and Est. 2025 */
       #nav-menu-normal .center-links {
           display: flex;
           gap: 65px;
@@ -193,22 +185,20 @@
           color: #FAF9F6;
       }
 
-      /* Circa for larger screens */
       #nav-menu-normal .circa {
-          font-family: Instrument-Serif;
+          font-family: 'Instrument Serif';
           font-size: 25px;
           color: #FAF9F6;
           font-style: italic;
           font-weight: 3;
       }
 
-      /* Hamburger menu for mobile (not visible on large screens) */
       .menu-toggle {
           display: none;
       }
 
       #nav-menu-mobile {
-          display: none; /* Hide by default */
+          display: none;
           position: fixed;
           top: 0;
           left: 0;
@@ -239,7 +229,6 @@
           color: #FAF9F6;
       }
 
-      /* Hamburger menu toggle button */
       .menu-toggle {
           display: none;
           position: fixed;
@@ -291,10 +280,10 @@
           margin: 80px auto 0;
           position: relative;
 
-          filter: drop-shadow(20px -50px 60px rgba(181, 132, 243, 0.12)) /* Light purple at top */
-          drop-shadow(-80px 20px 60px rgba(87, 21, 189, 0.12))  /* Darker purple on left */
-          drop-shadow(80px 20px 60px rgba(29, 2, 71, 0.12))   /* Darker purple on right */
-          drop-shadow(100px 20px 60px rgba(181, 132, 243, 0.12));  /* Darkest purple at bottom */
+          filter: drop-shadow(20px -50px 60px rgba(181, 132, 243, 0.12))
+          drop-shadow(-80px 20px 60px rgba(87, 21, 189, 0.12))
+          drop-shadow(80px 20px 60px rgba(29, 2, 71, 0.12))
+          drop-shadow(100px 20px 60px rgba(181, 132, 243, 0.12));
           margin-top: 100px;
       }
 
@@ -359,13 +348,6 @@
               z-index: 5002;
           }
 
-          .ham-circa {
-              position: fixed;
-              right: 25px;
-              top: 17px;
-              z-index: 5000;
-          }
-
           .top-bar{
               display: block;
           }
@@ -383,7 +365,10 @@
           }
 
           .header-container{
-              height: 350px;
+              height: 300px;
+              justify-content: flex-start;
+              display: flex;
+              align-items: flex-start;
           }
 
           .footer{
@@ -477,19 +462,14 @@
   <h3 class="team"><a style="font-size:25px; font-weight: 375;">Team</a><br><a style="font-size:20px; font-weight: 185;">1. Smit Mhatre</a><br><a style="font-size:20px; font-weight: 185;">2. Noah Figueiredo</a><br><a style="font-size:20px; font-weight: 185;">3. Aden Silaphet</a><br><a style="font-size:20px; font-weight: 185;">4. Emily He</a><br><a style="font-size:20px; font-weight: 185;">5. Abiha Shah</a></h3>
 </div>
 
-
 <section class="konect-analysis">
   <div class="overview-section">
     <h2 class="overview-heading" style="padding-top: 30px;">Overview</h2>
-    <h3 class="overview-content" style="text-align: justify;">KONECT is a platform that helps individuals discover career-related events; such as competitions, seminars, and networking opportunities tailored to their goals and aspirations.
-    </h3>
-  </div>
-
-  <div class="overview-section">
-    <h2 class="overview-heading" style="padding-top: 30px;">User Research</h2>
     <h3 class="overview-content" style="text-align: justify;">Through our initial research, we found that: <ul style="padding-left: 50px; padding-top: 10px;"><li>75% of high school students felt unprepared for post-secondary education</li> <li>53% of university students changed their major at least twice</li> <li>37% were unsure if they were on the right career path</li> <li>30% were not following any career path at all</li></ul><br> According to YouScience, these statistics indicated to us that there is a significant gap in support for students navigating their future careers.
     </h3>
     <h3 class="overview-content" style="text-align: justify;">At the core of the issue, we realized that students simply <span style="font-weight:350; text-align: justify;">don’t know what they don’t know</span>. They lack the exposure to various career fields, making it difficult for them to make informed decisions.</h3>
+    <h3 class="overview-content" style="text-align: justify;">To tackle this issue, we created <span style="font-weight: 350;">KONECT</span> - a platform that helps individuals discover career-related events; such as competitions, seminars, and networking opportunities tailored to their goals and aspirations.
+    </h3>
   </div>
 
   <div class="user-categories-section">
