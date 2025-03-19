@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smit Mhatre</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <style>
+
       * {
           box-sizing: border-box;
           margin: 0;
@@ -18,39 +21,23 @@
           padding: 0;
       }
 
-      .container {
+      .name {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
           justify-content: center;
           height: 100vh;
-          margin-left: 80px;
-          margin-right: 80px;
-      }
-
-      .name {
-          text-align: left;
+          text-align: center;
           word-wrap: break-word;
-          font-weight: 520;
+          font-weight: 400;
           color: #FAF9F6;
           font-family: "DM Sans";
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: center;
-          gap: 10px;
       }
 
-      .name span {
-          display: block;
-      }
+
 
       .name .intro {
           font-size: clamp(28px, 10.5vw, 80px);
-      }
-
-      .name .job {
-          font-size: clamp(28px, 10.5vw, 500px);
       }
 
       #nav-menu-normal {
@@ -69,7 +56,7 @@
 
 
       #nav-menu-normal .brand {
-          font-family: "Instrument Serif";
+          font-family: "Playfair Display";
           font-size: 25px;
           font-style: italic;
           color: lightgrey;
@@ -103,7 +90,7 @@
 
 
       #nav-menu-normal .circa {
-          font-family: Instrument-Serif;
+          font-family: "instrument serif";
           font-size: 25px;
           color: #FAF9F6;
           font-style: italic;
@@ -118,7 +105,7 @@
       .ham-circa{
           display: none;
           color: #FAF9F6;
-          font-family: Instrument-Serif;
+          font-family: "Playfair Display";
           font-size: 25px;
           display: flex;
           align-items: flex-end;
@@ -190,7 +177,7 @@
       #nav-menu-mobile .brand{
           color: #FAF9F6;
           text-decoration: none;
-          font-family: Instrument-Serif;
+          font-family: "Playfair Display";
           font-style: italic;
           font-size: 25px;
       }
@@ -440,18 +427,12 @@
 
 <section class="mob-mar">
 
-<div class="container">
   <div class="name">
-    <span class="intro">Hi, I'm</span>
-    <span class="job">Smit Mhatre</span>
-    <span class="intro">and I'm a</span>
-    <span class="job">[Design Engineer]</span>
+    <span class="intro">Hi, my name is Smit Mhatre</span>
+    <span class="intro">I am a<span class="intro" style="font-family: Playfair Display; font-style: italic;">&nbsp;Design Engineer</span></span>
   </div>
-</div>
 
-<section class='explore-section'>
-
-<h1 id="explore" style="font-family: 'DM Sans'; color: #FAF9F6; font-weight: 500; text-align: left;">Explore</h1>
+  <section class='explore-section'>
 
   <div class="work">
     <div class="konect">
@@ -493,4 +474,3 @@
 
 </body>
 </html>
-
