@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiveTrack | Smit Mhatre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+  <style>
+      body{
+          background-color: #121212;
+          padding: 0;
+          margin: 0;
+      }
+
+      nav{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #FAF9F6;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          position: sticky;
+          z-index: 1000;
+          top: 0;
+      }
+
+      #nav-left{
+          font-size: 1.7rem;
+          margin-left: 2rem;
+      }
+
+      #nav-left a{
+          text-decoration: none;
+          color: #121212;
+          font-family: "Instrument Serif";
+          font-style: italic;
+      }
+
+      #nav-right{
+          margin-right: 4.5rem;
+      }
+
+      #nav-right a{
+          margin-left: 5rem;
+          text-decoration: none;
+          font-size: 1.4rem;
+          color: #121212;
+          font-family: "DM Sans";
+      }
+
+      #nav-right a:hover{
+          text-decoration: underline;
+      }
+
+      footer{
+          background-color: #FAF9F6;
+          padding-top: 2rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 8rem;
+      }
+
+      .links a{
+          font-family: "DM Sans";
+          color: #121212;
+          font-size: 1.4rem;
+          text-decoration: none;
+      }
+
+      .links a:hover{
+          text-decoration: underline;
+      }
+
+      .links{
+          display: flex;
+          gap: 20rem;
+      }
+
+      footer p{
+          font-family: "DM Sans";
+          color: #121212;
+          font-size: 1.4rem;
+          text-align: center;
+          margin-top: 1rem;
+          padding: 0;
+      }
+
+      #opening{
+          position: relative;
+          width: 100%;
+          height: 90vh;
+          overflow: hidden;
+      }
+
+      #opening img{
+          object-fit: cover;
+          display: block;
+          width: 100%;
+          height: 100%;
+      }
+
+      .text{
+          z-index: 1;
+          position: absolute;
+          top: 66%;
+          left: 1.5%;
+          gap: 1rem;
+          transform: translateY(-20%);
+      }
+
+      .title{
+          font-family: "instrument serif";
+          font-style: italic;
+          color: #121212;
+          font-weight: 400;
+          font-size: 4rem;
+          margin: 0;
+      }
+
+      .timeline,.role{
+          font-family: "DM Sans";
+          color: #121212;
+          font-weight: 480;
+          font-size: 1.5rem;
+      }
+
+      .timeline{
+          margin: 0;
+          margin-top: 1.3rem;
+      }
+
+      .role{
+          margin: 0;
+          margin-top: 0.8rem;
+      }
+
+      .heading{
+          font-family: "DM Sans";
+          font-weight: 330;
+          font-size: 3.3rem;
+          color: #FAF9F6;
+          margin: 0;
+          margin-top: 7.5rem;
+          margin-bottom: 1.2rem;
+          margin-left: 9.5rem;
+          margin-right: 9.5rem;
+      }
+
+      .paragraph{
+          font-family: "DM Sans";
+          font-weight: 330;
+          font-size: 1.3rem;
+          color: #FAF9F6;
+          text-align: justify;
+          margin: 0;
+          margin-right: 9.5rem;
+          margin-left: 9.5rem;
+      }
+
+      .pain-points{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          grid-template-rows: repeat(2,1fr);
+          gap: 1.2rem;
+          margin-left: 9.5rem;
+          margin-right: 9.5rem;
+          margin-top: 3rem;
+      }
+
+      .point h2{
+          font-family: "DM Sans";
+          color: #FAF9F6;
+          font-size: 2.2rem;
+          font-weight: 330;
+      }
+
+      .point h3{
+          font-family: "DM Sans";
+          color: #FAF9F6;
+          font-size: 1.4rem;
+          font-weight: 310;
+      }
+
+      .LT-mockup{
+          height: 90vh;
+          width: 100vw;
+          object-fit: cover;
+          margin-left: 9.5rem;
+          margin-right: 9.5rem;
+      }
+
+      .image{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      #mobile-warning {
+          display: none;
+          background-color: #121212;
+          color: #FAF9F6;
+          font-family: 'DM Sans', sans-serif;
+          padding: 2rem;
+          text-align: center;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 9999;
+          width: 100%;
+          height: 100vh;
+          box-sizing: border-box;
+      }
+
+      @media only screen and (max-width: 900px) {
+          body > *:not(#mobile-warning) {
+              display: none;
+          }
+
+          #mobile-warning {
+              display: block;
+          }
+      }
+
+
+  </style>
+<body>
+
+<div id="mobile-warning">
+  This website is best viewed on a larger screen. Please visit on a desktop or laptop for the full experience.
+</div>
+
+<nav>
+  <div id = "nav-left">
+    <a>Smit Mhatre</a>
+  </div>
+  <div id = "nav-right">
+    <a href="index.html">Work</a>
+    <a href="About.html">About</a>
+    <a href="Resume.html">Resume</a>
+  </div>
+</nav>
+
+<section id="opening">
+  <img src="LiveTrack%20Mockup.jpeg">
+  <div class="text">
+    <h2 class="title">LiveTrack</h2>
+    <h2 class="timeline">Timeline: March 2025 - April 2025</h2>
+    <h2 class="role">Role: UX & Product Designer</h2>
+  </div>
+</section>
+
+<section id="analysis">
+  <section class="overview">
+    <h2 class="heading">Overview</h2>
+    <h3 class="paragraph">Crowded gyms are a recurring issue we face, and often hear others mention in conversations and on social media. Some gym apps provide the overall occupancy data for the users to view, however, it doesn’t show how people are distributed throughout the gym. This approach leads to unanticipated congestion and a disrupted workout experience.<br><br>The LiveTrack feature addresses this problem by using a real-time heatmap over the gym floor plan to show how busy the gym and each specific section is based on its capacity and occupancy, which can be used to view specific areas to better plan workouts and avoid congestion. In addition, gym managers can also use these insights to identify patterns and make informed decisions to improve the gym experience for everyone.
+    </h3>
+  </section>
+
+  <section class="user-research">
+    <h2 class="heading">User Research</h2>
+    <h3 class="paragraph">Going into user research, my main target group was individuals aged 17-35 years old. This group includes university students, young professionals, and early-career individuals who visit the gym a few times per week. Many lead busy lives and value efficiency, aiming to get the most out of their workouts in limited time.<br><br>To better understand their needs, I designed a user survey featuring a mix of multiple choice and short answer questions. After analyzing the responses, four key pain points clearly emerged.
+    </h3>
+
+    <div class="pain-points">
+      <div class="point">
+        <h2>01</h2>
+        <h2>Waiting for Equipment</h2>
+        <h3>Users feel frustrated when machines, squat racks, or free weights are occupied, leading to wasted time</h3>
+      </div>
+
+      <div class="point">
+        <h2>02</h2>
+        <h2>Unpredictable Crowds</h2>
+        <h3>Users can’t always predict when the gym will be too full, disrupting their routine</h3>
+      </div>
+
+      <div class="point">
+        <h2>03</h2>
+        <h2>Discomfort and Stress</h2>
+        <h3>Some users feel anxious, irritated, or demotivated when the gym is too packed</h3>
+      </div>
+
+      <div class="point">
+        <h2>04</h2>
+        <h2>Lack of Real-Time Updates</h2>
+        <h3>Users don’t have a streamlined way to check how busy the gym is before going</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="competitor-analysis">
+    <h2 class="heading">Competitor Analysis</h2>
+    <h3 class="paragraph">To better understand the existing solutions, I conducted a competitor analysis of gym apps that offer occupancy tracking features. Both Anytime Fitness and PureGym include real-time occupancy meters in their apps. The Anytime Fitness app shows how busy each location is and includes predictive data for different times throughout the week. PureGym offers a similar feature. Google also provides a bar graph of expected crowd levels based on past trends and provides a rough estimate of how many people are currently in the gym. However, a common limitation across all of these solutions is the lack of detailed visibility into specific gym zones.</h3>
+  </section>
+
+  <section class="solution">
+    <h2 class="heading">The Solution</h2>
+  </section>
+
+  <div class="image">
+  <img class="LT-mockup" src="Mockup-LT.png">
+  </div>
+
+  <section class="how-this-works">
+    <h2 class="heading">How This Works</h2>
+    <h3 class="paragraph">Designing the heatmap solution was a fun and creative challenge, but what also interested me was figuring out how to make it actually work in the real world, and that curiosity led me down a deep rabbit hole of research.
+      <br><br>For the live occupancy tracker, the system updates in real time whenever someone signs in with their key fob or their phone. Depending on the gym’s policies, users might also be able to use their phones to check in. The counter adjusts again when they sign out.
+      <br><br>When it came to the real time heat map, I focused on finding a solution that’s affordable, realistic, and respects user privacy. The best option I found was mmWave radar sensors. These use high-frequency radio waves to detect how many people are in a space and where they are, without any cameras. They work by sending out signals and measuring how they bounce back, and are usually mounted on ceilings or high walls to cover large areas. Because they don’t collect images or personal data, they comply with privacy standards and is one of the key reasons I chose this method.
+    </h3>
+  </section>
+
+  <section class="heatmap-logic">
+    <h2 class="heading">The Heatmap Logic</h2>
+    <h3 class="paragraph">Coming up with how the heatmap analyzes the data was a key part of figuring out how to make LiveTrack viable. Although this wasn’t much relevant to the UX process, it was something that interested me and helped me understand the technology much better.
+      <br><br>For the overall gym view, mmWave radar sensors detect how many people are in each section. Each section has a known surface area, and the space needed per person varies depending on the activity, but it is typically between 2.5-4m².<br><br>For example, a 100m² strength training section can hold up to 25 people. Based on how full it is, the heatmap colors the section:
+    </h3>
+    <ul class="paragraph">
+      <li>🟢 Green (low occupancy): 0-7 people</li>
+      <li>🟡 Yellow (moderate occupancy): 8-15 people</li>
+      <li>🔴 Red (high occupancy): 16-25 people</li>
+    </ul>
+
+    <h3 class="paragraph"><br>The subsection analysis adds a more detailed layer by breaking larger areas down further. Taking the same strength training area, it can be split into 10 smaller subsections of 10m² each. These are individually color-coded based on how many people are in each.
+    </h3>
+
+    <ul class="paragraph">
+      <li>🟢 Green: 0-2 people (Around 0-8m² of space required)</li>
+      <li>🟡 Yellow: 3-5 people (Around 12-20m² of space required)</li>
+      <li>🔴 Red: 6+ people (Around 24m²+ of space required)</li>
+    </ul>
+
+    <h3 class="paragraph"><br>This granular view aids the users in spotting congestion within a section, even if the overall area doesn’t look too busy. For instance, the strength training zone might show up as yellow on the overall heatmap, but the strength training heatmap could reveal that areas like the squat rack are actually red, signalling congestion.
+    </h3>
+
+  </section>
+
+ <section class="prototype">
+   <h2 class="heading">Interactive Prototype</h2>
+   <h3 class="paragraph">Coming Soon!</h3>
+ </section>
+
+  <section class="takeaways">
+    <h2 class="heading">Key Takeaways</h2>
+    <h3 class="paragraph">Working on LiveTrack was genuinely an enjoyable experience, especially because it tackled a problem I personally face often.<br><br>One of my biggest takeaways was the importance of user research. Initially, I approached this project based on my own assumptions and pain points. After conducting user surveys and gathering feedback, I uncovered issues that I hadn’t considered, which helped me discover pain points that helped me shape a more thoughtful and inclusive user-centered design.<br><br>I’d love to bring this concept to life through code one day and test it out in a real environment.
+    </h3>
+  </section>
+
+
+
+</section>
+
+<footer>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/smit-mhatre-50b105175/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/SmitMhatre" target="_blank">GitHub</a>
+    <a href="mailto:smhatre@uwaterloo.ca" target="_blank">Email</a>
+  </div>
+  <p>© 2025 Smit Mhatre. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
