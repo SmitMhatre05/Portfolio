@@ -9,468 +9,217 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <style>
 
-      * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-      }
+    body{
+        background-color: #121212;
+        padding: 0;
+        margin: 0;
+    }
 
-      body {
-          background: #0C0404;
-          margin: 0;
-          padding: 0;
-      }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FAF9F6;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        position: sticky;
+        z-index: 1000;
+        top: 0;
+    }
 
-      .name {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          height: 100vh;
-          text-align: center;
-          word-wrap: break-word;
-          font-weight: 400;
-          color: #FAF9F6;
-          font-family: "DM Sans";
-      }
+    #nav-left{
+        font-size: 1.7rem;
+        margin-left: 2rem;
+    }
 
+    #nav-left a{
+        text-decoration: none;
+        color: #121212;
+        font-family: "Instrument Serif";
+        font-style: italic;
+    }
 
+    #nav-right{
+        margin-right: 4.5rem;
+    }
 
-      .name .intro {
-          font-size: clamp(28px, 10.5vw, 80px);
-      }
+    #nav-right a{
+        margin-left: 5rem;
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #121212;
+        font-family: "DM Sans";
+    }
 
-      #nav-menu-normal {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          background: rgba(12, 4, 4, 0.6);
-          backdrop-filter: blur(10px);
-          padding: 14px 50px;
-          z-index: 1000;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-      }
+    #nav-right a:hover{
+        text-decoration: underline;
+    }
 
+    #main-page{
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-      #nav-menu-normal .brand {
-          font-family: "Playfair Display";
-          font-size: 25px;
-          font-style: italic;
-          color: lightgrey;
-          text-decoration: none;
-          transition: color 0.3s ease;
-      }
+    #main-page h1{
+        font-size: 6rem;
+        font-family: "DM Sans";
+        color: #FAF9F6;
+        text-align: center;
+        font-weight: 400;
+    }
 
-      #nav-menu-normal .brand:hover {
-          color: #FAF9F6;
-      }
+    #Work{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
 
+    .project{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
 
-      #nav-menu-normal .center-links {
-          display: flex;
-          gap: 65px;
-          margin: 0 auto;
-      }
+    .project h2{
+        font-family: "DM Sans";
+        text-decoration: none;
+        font-size: 3.2rem;
+        margin-top: 0;
+        color: #FAF9F6;
+        font-weight: 350;
+    }
 
-      #nav-menu-normal .b {
-          text-decoration: none;
-          color: lightgrey;
-          transition: color 0.3s ease;
-          font-size: 20px;
-          font-family: "DM Sans";
-          font-size: 20px;
-      }
+    .project a{
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
 
-      #nav-menu-normal .b:hover {
-          color: #FAF9F6;
-      }
+    .project a:hover{
+        text-decoration: underline;
+        text-decoration-color: #FAF9F6;
+    }
 
+    .project img{
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+    }
 
-      #nav-menu-normal .circa {
-          font-family: "instrument serif";
-          font-size: 25px;
-          color: #FAF9F6;
-          font-style: italic;
-          font-weight: 3;
-      }
+    footer{
+        background-color: #FAF9F6;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 
+    .links a{
+        font-family: "DM Sans";
+        color: #121212;
+        font-size: 1.4rem;
+        text-decoration: none;
+    }
 
-      .menu-toggle {
-          display: none;
-      }
+    .links a:hover{
+        text-decoration: underline;
+    }
 
-      .ham-circa{
-          display: none;
-          color: #FAF9F6;
-          font-family: "Playfair Display";
-          font-size: 25px;
-          display: flex;
-          align-items: flex-end;
-          font-style: italic;
-          font-weight: 3;
-          background: transparent;
-      }
+    .links{
+        display: flex;
+        gap: 20rem;
+    }
 
-      #nav-menu-mobile {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100vh;
-          background-color: rgba(12, 4, 4, 0.95);
-          backdrop-filter: blur(10px);
-          z-index: 3000;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 30px;
-          transition: all 0.4s ease;
-          opacity: 0;
-          visibility: hidden;
-      }
+    footer p{
+        font-family: "DM Sans";
+        color: #121212;
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0;
+    }
 
-      #nav-menu-mobile.active {
-          display: flex;
-          opacity: 1;
-          visibility: visible;
-      }
+    #mobile-warning {
+        display: none;
+        background-color: #121212;
+        color: #FAF9F6;
+        font-family: 'DM Sans', sans-serif;
+        padding: 2rem;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
 
-      #nav-menu-mobile .b {
-          font-size: 24px;
-          margin: 10px 0;
-          text-align: center;
-          color: #FAF9F6;
-      }
+    @media only screen and (max-width: 900px) {
+        body > *:not(#mobile-warning) {
+            display: none;
+        }
 
-
-      .menu-toggle {
-          display: none;
-          position: fixed;
-          top: 10px;
-          left: 25px;
-          font-size: 30px;
-          color: #FAF9F6;
-          z-index: 3000;
-          cursor: pointer;
-          transition: all 0.3s ease;
-      }
-
-      .menu-toggle.active {
-          transform: rotate(90deg);
-      }
-
-      .top-bar{
-          position: fixed;
-          display: none;
-          top: 0;
-          left:0;
-          background: rgba(12, 4, 4, 0.6);
-          backdrop-filter: blur(10px);
-          width: 100%;
-          height: 60px;
-      }
-
-      #nav-menu-mobile .brand{
-          color: #FAF9F6;
-          text-decoration: none;
-          font-family: "Playfair Display";
-          font-style: italic;
-          font-size: 25px;
-      }
-
-      #nav-menu-mobile .b{
-          color: #FAF9F6;
-          text-decoration: none;
-          font-family: "DM Sans";
-          font-size: 23px;
-      }
-
-      .work {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          flex-direction: column;
-          height: auto;
-          margin-top: 50px;
-      }
-
-      .konect {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          width: fit-content;
-          margin: 0 auto;
-
-      }
-
-      .konect img {
-          max-width: 100%;
-          height: auto;
-          object-fit: contain;
-          transition: filter 0.1s ease;
-      }
-
-      .konect h1 {
-          color: #FAF9F6;
-          font-family: 'DM Sans';
-          font-size: clamp(40px, 9vw, 60px);
-          font-weight: 550;
-          text-align: left;
-          margin-top: 10px;
-      }
-
-      .konect img:hover{
-          filter: drop-shadow(20px -50px 60px rgba(181, 132, 243, 0.12))
-          drop-shadow(-80px 20px 60px rgba(87, 21, 189, 0.12))
-          drop-shadow(80px 20px 60px rgba(29, 2, 71, 0.12))
-          drop-shadow(100px 20px 60px rgba(181, 132, 243, 0.12));
-      }
-
-      .footer{
-          background-color: #0C0404;
-          color: #FAF9F6;
-          position: relative;
-          font-size: 20px;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          font-family: "DM Sans";
-          padding-right: 20px;
-          padding-left: 20px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          border-top: 1px solid rgba(211, 211, 211, 0.5);
-      }
-
-      .links {
-          display: flex;
-          justify-content: flex-end;
-          gap: 20px;
-      }
-
-      .links a {
-          color: lightgrey;
-          text-decoration: none;
-          transition: color 0.3s ease;
-      }
-
-      .links a:hover{
-          color: #FAF9F6;
-      }
-
-      .Konect-details {
-          display: flex;
-          flex-direction: row;
-          gap: 15px;
-          padding-bottom: 10px;
-          justify-content: center;
-          align-items: center;
-      }
-
-      .figma{
-          color: lightgrey;
-          text-decoration: none;
-          transition: color 0.3s ease;
-      }
-
-      .figma:hover{
-          color: #FAF9F6;
-      }
-
-      html{
-          scroll-behavior: smooth;
-      }
-
-      .explore-section{
-          margin-right: 100px;
-          margin-left: 100px;
-      }
-
-      #explore{
-          font-size: clamp(70px, 9vw, 110px);
-      }
-
-      .Konect-details h2{
-          font-size: clamp(10px, 2vw, 18px);
-      }
-
-      .Konect-details a{
-          font-size: clamp(10px, 3vw, 23px);
-      }
-
-      @media (max-width: 900px) {
-          .container {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              margin-left: 20px;
-              margin-right: 20px;
-              height: 100vh;
-          }
-
-          #nav-menu-normal {
-              display: none;
-          }
-
-          .menu-toggle {
-              display: block;
-          }
-
-          .ham-circa {
-              position: fixed;
-              right: 25px;
-              top: 17px;
-              z-index: 5000;
-          }
-
-          .top-bar{
-              display: block;
-          }
-
-          .explore-section{
-              margin-right: 20px;
-              margin-left: 20px;
-          }
-
-          .Konect-details{
-              padding-top: 0px;
-          }
-
-          .konect img {
-              height: auto;
-              max-height: 300px;
-          }
-
-          .footer{
-              display: flex;
-              flex-direction: column;
-          }
-
-          .footer p{
-              text-align: center;
-              padding-bottom: 10px;
-          }
-
-          .links{
-              justify-content: center;
-          }
-
-          .Konect-details{
-              display: none;
-          }
-
-          .name .intro{
-              font-weight: 185;
-          }
-
-      }
+        #mobile-warning {
+            display: block;
+        }
+    }
 
   </style>
 </head>
 <body>
 
-<div class="top-bar"></div>
-<div class="navigation">
-  <!-- Normal navigation for larger screens -->
-  <nav id="nav-menu-normal" class="nav-normal">
-    <a href="index.html" class="brand">Smit Mhatre</a>
-    <div class="center-links">
-      <a href="index.html#explore" class="b">Work</a>
-      <a href="About.html" class="b">About Me</a>
-    </div>
-    <a class="circa">Est. 2025</a>
-  </nav>
-
-  <!-- Navigation for smaller screens (below 900px) -->
-  <nav id="nav-menu-mobile" class="nav-mobile">
-    <a href="index.html" class="brand">Smit Mhatre</a>
-    <a href="index.html#explore" class="b">Work</a>
-    <a href="About.html" class="b">About Me</a>
-  </nav>
-
-  <!-- Hamburger menu for mobile screens -->
-  <div class="menu-toggle">☰</div>
+<div id="mobile-warning">
+  This website is best viewed on a larger screen. Please visit on a desktop or laptop for the full experience.
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mobileNav = document.querySelector('#nav-menu-mobile');
 
-    menuToggle.addEventListener('click', function() {
-      this.classList.toggle('active');
-      mobileNav.classList.toggle('active');
-
-      if (mobileNav.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    const navLinks = document.querySelectorAll('#nav-menu-mobile .b');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        menuToggle.classList.remove('active');
-        mobileNav.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      });
-    });
-  });
-</script>
-
-<section class="mob-mar">
-
-  <div class="name">
-    <span class="intro">Hi, my name is Smit Mhatre</span>
-    <span class="intro">I am a<span class="intro" style="font-family: Playfair Display; font-style: italic;">&nbsp;Design Engineer</span></span>
+<nav>
+  <div id = "nav-left">
+    <a>Smit Mhatre</a>
   </div>
-
-  <section class='explore-section'>
-
-  <div class="work">
-    <div class="konect">
-      <h1 style="color: #FAF9F6; font-family: 'DM Sans', sans-serif; font-weight: 450; margin: 0;">
-        KONECT - 2024
-      </h1>
-      <div class="Konect-details">
-      <h2 style="font-family: 'DM Sans', sans-serif; color: #0C0404; font-weight: 300; background-color: #FAF9F6; padding: 3px; border-radius: 5px;">
-        Networking
-      </h2>
-      <h2 style="font-family: 'DM Sans', sans-serif; color: #0C0404; font-weight: 300; background-color: #FAF9F6; padding: 3px; border-radius: 5px;">
-        Career Development
-      </h2>
-      <h2 style="font-family: 'DM Sans', sans-serif; color: #0C0404; font-weight: 300; background-color: #FAF9F6; padding: 3px; border-radius: 5px;">
-        UX/Product Design
-      </h2>
-
-        <h2 style="font-size: 22px; font-family: 'DM Sans', sans-serif; color: #FAF9F6; font-weight: 300;">| <a class="figma" href="https://www.figma.com/design/ReN1Mv1od7tLpkTBG66lRY/KONECT---2024?node-id=0-1&t=cFsbZVMUZzks6O4k-1" target="_blank">🔗 Figma</a></h2>
-      </div>
-      <a href="Konect-app.html">
-        <img src="konect%20image.png" alt="Konect Image" style="height: 700px; padding-bottom: 50px;">
-      </a>
-    </div>
+  <div id = "nav-right">
+    <a href="index.html">Work</a>
+    <a href="About.html">About</a>
+    <a href="Resume.html">Resume</a>
   </div>
+</nav>
 
-
+<section id="main-page">
+  <h1 class="line-1">Hi, my name is Smit Mhatre<br>I am a <span style="font-style: italic; font-family: 'Instrument Serif';">Design Engineer</span></h1>
 </section>
 
-<footer class="footer">
-  <p>© 2025 Smit Mhatre. All rights reserved.</p>
+<section id="Work">
+  <div class="project">
+    <a href="LiveTrack-app.html">
+    <img src="LiveTrack-Image.png">
+    <h2 >LiveTrack - 2025</h2>
+  </a>
+  </div>
+
+  <div class="project">
+    <a href="Konect-app.html">
+      <img src="Konect-Image.png">
+      <h2 >KONECT - 2024</h2>
+    </a>
+  </div>
+</section>
+
+<footer>
   <div class="links">
     <a href="https://www.linkedin.com/in/smit-mhatre-50b105175/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/SmitMhatre05" target="_blank">GitHub</a>
+    <a href="https://github.com/SmitMhatre" target="_blank">GitHub</a>
     <a href="mailto:smhatre@uwaterloo.ca" target="_blank">Email</a>
   </div>
+  <p>© 2025 Smit Mhatre. All rights reserved.</p>
 </footer>
-
-</section>
-
 </body>
 </html>
