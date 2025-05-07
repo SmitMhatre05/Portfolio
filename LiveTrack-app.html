@@ -164,6 +164,18 @@
           margin-left: 9.5rem;
       }
 
+      .comp-head{
+          font-family: "DM Sans";
+          font-weight: 330;
+          font-size: 2.7rem;
+          color: #FAF9F6;
+          margin: 0;
+          margin-top: 3.5rem;
+          margin-bottom: 0.5rem;
+          margin-left: 9.5rem;
+          margin-right: 9.5rem;
+      }
+
       .pain-points{
           display: grid;
           grid-template-columns: repeat(2,1fr);
@@ -179,6 +191,7 @@
           color: #FAF9F6;
           font-size: 2.2rem;
           font-weight: 330;
+          font-style: italic;
       }
 
       .point h3{
@@ -216,6 +229,35 @@
           width: 100%;
           height: 100vh;
           box-sizing: border-box;
+      }
+
+      .heatmaps {
+          display: flex;
+          flex-direction: row;
+          gap: 1.3rem;
+          padding-left: 9.5rem;
+          padding-right: 9.5rem;
+          box-sizing: border-box;
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+
+      .heatmaps img {
+          width: calc(50% - 0.65rem);
+          height: 50vh;
+          object-fit: contain;
+      }
+
+      .competitor-analysis img{
+          height: 50vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: auto;
+          margin-left: 9.5rem;
+          margin-right: 9.5rem;
+
       }
 
       @media only screen and (max-width: 900px) {
@@ -297,7 +339,21 @@
 
   <section class="competitor-analysis">
     <h2 class="heading">Competitor Analysis</h2>
-    <h3 class="paragraph">To better understand the existing solutions, I conducted a competitor analysis of gym apps that offer occupancy tracking features. Both Anytime Fitness and PureGym include real-time occupancy meters in their apps. The Anytime Fitness app shows how busy each location is and includes predictive data for different times throughout the week. PureGym offers a similar feature. Google also provides a bar graph of expected crowd levels based on past trends and provides a rough estimate of how many people are currently in the gym. However, a common limitation across all of these solutions is the lack of detailed visibility into specific gym zones.</h3>
+
+    <h3 class="comp-head">01. Anytime Fitness</h3>
+    <h3 class="paragraph">The Anytime Fitness app shows how busy each location is and includes predictive data for different times throughout the week. Users can also use the app to access the gym.</h3>
+
+    <h3 class="comp-head">02. PureGym</h3>
+    <h3 class="paragraph">The PureGym app offers similar features to the Anytime Fitness app. It has a live occupancy counter and also includes predictive data for different times throughout the day.</h3>
+
+
+    <h3 class="comp-head">03. Google</h3>
+    <h3 class="paragraph">Google provides a bar graph of epected crowd levels based on past trends and a rough estimate of how many people are currently present in the gym.</h3>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 class="paragraph"><span style="font-weight: 550">The Problem</span> -> A common limitation across all of these solutions is the lack of detailed visibilty into specific gym zones, which leads to the pain points uncovered in my user research and impacts the gym experience.</h3>
   </section>
 
   <section class="solution">
@@ -327,7 +383,7 @@
       <li>🔴 Red (high occupancy): 16-25 people</li>
     </ul>
 
-    <h3 class="paragraph"><br>The subsection analysis adds a more detailed layer by breaking larger areas down further. Taking the same strength training area, it can be split into 10 smaller subsections of 10m² each. These are individually color-coded based on how many people are in each.
+    <h3 class="paragraph"><br>The subsection analysis adds a more detailed layer by breaking larger areas down further. Taking the same strength training area, it is split into 10 smaller subsections of 10m² each. These are individually color-coded based on how many people are in each.
     </h3>
 
     <ul class="paragraph">
@@ -336,9 +392,22 @@
       <li>🔴 Red: 6+ people (Around 24m²+ of space required)</li>
     </ul>
 
-    <h3 class="paragraph"><br>This granular view aids the users in spotting congestion within a section, even if the overall area doesn’t look too busy. For instance, the strength training zone might show up as yellow on the overall heatmap, but the strength training heatmap could reveal that areas like the squat rack are actually red, signalling congestion.
+    <h3 class="paragraph"><br>This granular view helps the users to spot congestion within a section, even if the overall area doesn’t look too busy. For example, the strength training zone might show up as yellow on the overall heatmap, but the strength training heatmap could reveal that areas like the squat rack are actually red, indicating that there is congestion.
     </h3>
 
+  </section>
+
+  <section class="inspo">
+    <h2 class="heading">Design Inspiration</h2>
+
+    <div class="heatmaps">
+      <img class="heatmap1" src="heatmap1.jpg">
+      <img class="heatmap2" src="heatmap-2.png">
+    </div>
+
+    <h3 class="paragraph">
+      The idea of adding a heatmap to the gym floor plan came from traffic maps that use color to show how crowded areas are. I wanted to apply that same concept to the gym, but in a way that feels more personal and useful to everyday users. Instead of just being a tool for data analysis, the heatmap gives users a clear, visual way to understand how busy the gym is and decide the best time to go.
+    </h3>
   </section>
 
  <section class="prototype">
