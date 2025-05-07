@@ -176,16 +176,18 @@
       .point h2{
           font-family: "DM Sans";
           color: #FAF9F6;
-          font-size: 2.2rem;
+          font-size: 2.3rem;
           font-weight: 330;
+          font-style: italic;
       }
 
       .point h3{
           font-family: "DM Sans";
           color: #FAF9F6;
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           font-weight: 310;
           text-align: justify;
+          margin-right: 2.5rem;
       }
 
       .LT-mockup{
@@ -228,7 +230,7 @@
       }
 
       .sketch{
-          height: 80vh;
+          height: 100vh;
           width: auto;
           object-fit: cover;
           margin-left: 9.5rem;
@@ -237,6 +239,24 @@
           justify-content: center;
           align-items: center;
       }
+
+      .sketch-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 5rem 0; /* optional spacing */
+          padding-left: 9.5rem;
+          padding-right: 9.5rem;
+          box-sizing: border-box;
+      }
+
+      .sketch {
+          width: 100%;
+          max-width: 800px; /* adjust this as needed */
+          height: auto;
+          object-fit: contain;
+      }
+
 
       .side{
           display: flex;
@@ -363,7 +383,7 @@
 
       <div class="point">
         <h2>04</h2>
-        <h2>Guidance Councellors</h2>
+        <h2>Guidance Counsellors</h2>
         <h3>Guidance counselors are the go-to resource for post-secondary advice in high schools. Talking to a real person can be reassuring and helpful. That said, many of my classmates in high school felt like the advice they received was often just a repeat of what’s already online. Instead of offering new insights, counselors sometimes acted more as reassurance than as a resource for discovering opportunities.
         </h3>
       </div>
@@ -379,11 +399,8 @@
   </div>
 
   <section class="how-this-works">
-    <h2 class="heading">How This Works</h2>
-    <div class="side">
-    <img class='sketch' src="KONECT%20Sketch.jpeg">
-    <h3 class="paragraph-side">When a new user signs up, they first provide their personal details. Next, they’re directed to a “Fields of Interest” page where they select the areas they’d like to receive information about. While these preferences can be changed later, we require users to make initial selections during onboarding to generate tailored event recommendations. Once the setup is complete, users are shown suggested events based on their interests. If a user is interested in an event, they can click on it to view more details. From there, they can choose to register. If the event requires payment, they’ll be taken to a secure payment page. After registering, the user receives a digital ticket with a QR code, which can be scanned upon arrival at the event.
-    </h3>
+    <div class="sketch-wrapper">
+      <img class="sketch" src="KONECT%20Sketch.jpeg">
     </div>
   </section>
 
