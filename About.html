@@ -9,179 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <style>
       body{
-          background-color: #121212;
+          background-color: #1B1B1B;
           padding: 0;
           margin: 0;
-      }
-
-      nav{
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #FAF9F6;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-          position: sticky;
-          z-index: 1000;
-          top: 0;
-      }
-
-      #nav-left{
-          font-size: 1.7rem;
-          margin-left: 2rem;
-      }
-
-      #nav-left a{
-          text-decoration: none;
-          color: #121212;
-          font-family: "Instrument Serif";
-          font-style: italic;
-      }
-
-      #nav-right{
-          margin-right: 4.5rem;
-      }
-
-      #nav-right a{
-          margin-left: 5rem;
-          text-decoration: none;
-          font-size: 1.4rem;
-          color: #121212;
-          font-family: "DM Sans";
-      }
-
-      #nav-right a:hover{
-          text-decoration: underline;
-      }
-
-      footer{
-          background-color: #FAF9F6;
-          padding-top: 2rem;
-          padding-left: 2rem;
-          padding-right: 2rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem;
-      }
-
-      .links a{
-          font-family: "DM Sans";
-          color: #121212;
-          font-size: 1.4rem;
-          text-decoration: none;
-      }
-
-      .links a:hover{
-          text-decoration: underline;
-      }
-
-      .links{
-          display: flex;
-          gap: 20rem;
-      }
-
-      footer p{
-          font-family: "DM Sans";
-          color: #121212;
-          font-size: 1.4rem;
-          text-align: center;
-          margin-top: 1rem;
-          padding: 0;
-      }
-
-      #Smit img{
-          width: auto;
-          height: 70vh;
-          object-fit: scale-down;
-      }
-
-      #Smit{
-          display: flex;
-          flex-direction: row;
-          gap: 2rem;
-          padding-top: 8rem;
-          align-items: center;
-          margin-left: 4.5rem;
-          margin-right: 4.5rem;
-          margin-bottom: 8rem;
-
-      }
-
-      #Smit p{
-          font-family: "DM Sans";
-          color: #FAF9F6;
-          font-size: 1.3rem;
-          font-weight: 300;
-          text-align: justify;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-      }
-
-      #Playground{
-          display: flex;
-          margin-left: 4.5rem;
-          margin-right: 4.5rem;
-          margin-bottom: 8rem;
-          flex-direction: column
-      }
-
-      #Playground h2{
-          font-family: "DM Sans";
-          color: #FAF9F6;
-          font-size: 6rem;
-          font-weight: 350;
-          margin-bottom: 1.2rem;
-      }
-
-      .p-div{
-          display: flex;
-          flex-direction: row;
-          gap: 2rem;
-      }
-
-      .playground-text {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          max-width: 50vw;
-          gap: 1rem;
-      }
-
-      .playground-text p {
-          font-family: "DM Sans";
-          color: #FAF9F6;
-          font-size: 1.3rem;
-          font-weight: 300;
-          text-align: justify;
-          margin: 0;
-      }
-
-
-      .p-div img{
-          width: auto;
-          height: 60vh;
-          object-fit: scale-down;
-      }
-
-      .explore-btn {
-          margin-top: 2rem;
-          padding: 0.7rem 2rem;
-          background-color: #FAF9F6;
-          color: #121212;
-          font-family: "DM Sans";
-          font-size: 1.1rem;
-          text-decoration: none;
-          border: none;
-          width: fit-content;
-          align-self: center;
-
-      }
-
-      .explore-btn:hover {
-          background-color: #e5e5e5;
-          color: #000000;
       }
 
       #mobile-warning {
@@ -198,6 +28,125 @@
           width: 100%;
           height: 100vh;
           box-sizing: border-box;
+      }
+
+      nav{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #1B1B1B;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          position: sticky;
+          z-index: 1000;
+          top: 0;
+          border-bottom: 1px solid #FAF9F6;
+      }
+
+      #nav-left{
+          font-size: 1.6rem;
+          margin-left: 2rem;
+      }
+
+      #nav-left a{
+          text-decoration: none;
+          color: #FAF9F6;
+          font-family: "Instrument Serif";
+          font-style: italic;
+      }
+
+      #nav-right{
+          margin-right: 4.5rem;
+      }
+
+      #nav-right a{
+          margin-left: 5rem;
+          text-decoration: none;
+          font-size: 1.3rem;
+          color: #FAF9F6;
+          font-family: "Manrope";
+      }
+
+      #nav-right a:hover{
+          color: #a7a7a5;
+      }
+
+      #nav-left a:hover{
+          color: #a7a7a5;
+      }
+
+      footer{
+          background-color: #1B1B1B;
+          padding-top: 2rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          border-top: 1px solid #FAF9F6;
+          margin-top: 4rem;
+      }
+
+      .links a{
+          font-family: "Manrope";
+          color: #FAF9F6;
+          font-size: 1.4rem;
+          text-decoration: none;
+      }
+
+      .links a:hover{
+          color: #a7a7a5;
+      }
+
+      .links{
+          display: flex;
+          gap: 20rem;
+      }
+
+      footer p{
+          font-family: "Manrope";
+          color: #FAF9F6;
+          font-size: 1.1rem;
+          text-align: center;
+          margin-top: 1rem;
+          padding: 0;
+      }
+
+      #photo-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: 1rem;
+          padding-left: clamp(4rem, 12vw, 22rem);
+          padding-right: clamp(4rem, 12vw, 22rem);
+      }
+
+      #photo-grid img {
+          width: 100%;
+          aspect-ratio: 1.5 / 1;
+          object-fit: cover;
+      }
+
+      #intro h1{
+          font-family: "Instrument Serif";
+          font-style: italic;
+          font-weight: 350;
+          font-size: 4.5rem;
+          color: #FAF9F6;
+          padding-left: clamp(4rem, 12vw, 22rem);
+          padding-right: clamp(4rem, 12vw, 22rem);
+      }
+
+      .paragraph{
+          font-family: "manrope";
+          color: #FAF9F6;
+          font-size: 1.2rem;
+          font-weight: 350;
+          text-align: justify;
+          margin-top: .5rem;
+          padding-left: clamp(4rem, 12vw, 22rem);
+          padding-right: clamp(4rem, 12vw, 22rem);
       }
 
       @media only screen and (max-width: 900px) {
@@ -221,37 +170,28 @@
 
 <nav>
   <div id = "nav-left">
-    <a>Smit Mhatre</a>
+    <a href="index.html">Smit Mhatre</a>
   </div>
   <div id = "nav-right">
     <a href="index.html">Work</a>
+    <a href="https://sites.google.com/view/smitmhatre/home?authuser=0" target="_blank">Play</a>
     <a href="About.html">About</a>
   </div>
 </nav>
 
-<div class="main-wraper">
-<section id = "Smit" class="page-content">
-  <img src="Smit%20Image.png" class="section-img">
-  <p>I’m a Design Engineer with expertise in both product design and software development, dedicated to building user-centric, high-impact digital products. By approaching software development with a product experience background, I aim to make my software and digital products not only visually appealing but also intuitive, efficient, and technically robust.
-    <br><br>Currently studying Global Business and Digital Arts (HCI) with a minor in Computer Science at the University of Waterloo. Seeking Fall 2025 internships!
-  </p>
+<section id="intro">
+  <h1>Designing, Coding, and <span style="text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 5px;
+">More</span>...</h1>
+  <h2 class="paragraph">Hi, I’m Smit, and I’m a 3rd year student at the University of Waterloo studying Global Business and Digital Arts (HCI) alongside a minor in Computer Science. At Waterloo, I’ve served as an executive in student organizations that explore product design, business consulting, and digital marketing. I’m excited to be starting my very first work term this fall as a UX Design/Technical Analyst Intern at the Ontario Ministry of Transportation. I’m currently seeking Summer 2026 internships and any other interesting opportunities that come my way!<br><br>Outside of school, I’m an avid photographer and occasional video editor, where I create compilations and movie trailers! This portfolio is just a snapshot of my work. If you’d like to chat, connect with me on LinkedIn or follow me on X! <br><br>Here are some of my recent photographs I’ve taken!
+  </h2>
 </section>
 
-  <section id="Playground">
-    <h2>Playground</h2>
-    <div class="p-div">
-      <img src="IMG_2551.jpg">
-      <div class="playground-text">
-        <p>
-          Besides my career goals and ambitions, I enjoy photography, video editing, and graphic design.
-          These are my creative outlets and often inspire my projects and design style.
-        </p>
-        <a href="https://sites.google.com/view/smitmhatre/home?authuser=0" target="_blank" class="explore-btn">Explore</a>
-      </div>
-    </div>
-  </section>
-
-
+<section id="photo-grid">
+  <img src="photo-1.png" alt="Lovely sunset at the beach">
+  <img src="photo-2.png" alt="Lovely afternoon at the beach">
+  <img src="photo-3.png" alt="Gliding at the beach">
+  <img src="photo-4.png" alt="Cruise views">
+</section>
 
 <footer class="footer">
   <div class="links">
