@@ -3,293 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KONECT | Smit Mhatre</title>
+  <title>CENTRAL | Smit Mhatre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <style>
-      body{
-          background-color: #121212;
-          padding: 0;
-          margin: 0;
-      }
+</head>
+<style>
+    body{
+        background-color: #1B1B1B;
+        margin: 0;
+    }
 
-      nav{
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #FAF9F6;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-          position: sticky;
-          z-index: 1000;
-          top: 0;
-      }
+    #container {
+        margin: 0 auto;
+        padding-left: clamp(4rem, 12vw, 22rem);
+        padding-right: clamp(4rem, 12vw, 22rem);
+    }
 
-      #nav-left{
-          font-size: 1.7rem;
-          margin-left: 2rem;
-      }
+    #mobile-warning {
+        display: none;
+        background-color: #121212;
+        color: #FAF9F6;
+        font-family: 'DM Sans', sans-serif;
+        padding: 2rem;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
 
-      #nav-left a{
-          text-decoration: none;
-          color: #121212;
-          font-family: "Instrument Serif";
-          font-style: italic;
-      }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #1B1B1B;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        position: sticky;
+        z-index: 1000;
+        top: 0;
+        border-bottom: 1px solid #FAF9F6;
+    }
 
-      #nav-right{
-          margin-right: 4.5rem;
-      }
+    #nav-left{
+        font-size: 1.6rem;
+        margin-left: 2rem;
+    }
 
-      #nav-right a{
-          margin-left: 5rem;
-          text-decoration: none;
-          font-size: 1.4rem;
-          color: #121212;
-          font-family: "DM Sans";
-      }
+    #nav-left a{
+        text-decoration: none;
+        color: #FAF9F6;
+        font-family: "Instrument Serif";
+        font-style: italic;
+    }
 
-      #nav-right a:hover{
-          text-decoration: underline;
-      }
+    #nav-right{
+        margin-right: 4.5rem;
+    }
 
-      footer{
-          background-color: #FAF9F6;
-          padding-top: 2rem;
-          padding-left: 2rem;
-          padding-right: 2rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 1rem;
-          margin-top: 8rem;
-      }
+    #nav-right a{
+        margin-left: 5rem;
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: #FAF9F6;
+        font-family: "Manrope";
+    }
 
-      .links a{
-          font-family: "DM Sans";
-          color: #121212;
-          font-size: 1.4rem;
-          text-decoration: none;
-      }
+    #nav-right a:hover{
+        color: #a7a7a5;
+    }
 
-      .links a:hover{
-          text-decoration: underline;
-      }
+    #nav-left a:hover{
+        color: #a7a7a5;
+    }
 
-      .links{
-          display: flex;
-          gap: 20rem;
-      }
+    footer{
+        background-color: #1B1B1B;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border-top: 1px solid #FAF9F6;
+        margin-top: 4rem;
+    }
 
-      footer p{
-          font-family: "DM Sans";
-          color: #121212;
-          font-size: 1.4rem;
-          text-align: center;
-          margin-top: 1rem;
-          padding: 0;
-      }
+    .links a{
+        font-family: "Manrope";
+        color: #FAF9F6;
+        font-size: 1.4rem;
+        text-decoration: none;
+    }
 
-      #opening{
-          position: relative;
-          width: 100%;
-          height: 90vh;
-          overflow: hidden;
-      }
+    .links a:hover{
+        color: #a7a7a5;
+    }
 
-      #opening img{
-          object-fit: cover;
-          display: block;
-          width: 100%;
-          height: 100%;
-      }
+    .links{
+        display: flex;
+        gap: 20rem;
+    }
 
-      .text{
-          z-index: 1;
-          position: absolute;
-          top: 77%;
-          left: 1.5%;
-          gap: 1rem;
-          transform: translateY(-20%);
-      }
+    footer p{
+        font-family: "Manrope";
+        color: #FAF9F6;
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0;
+    }
 
-      .title{
-          font-family: "instrument serif";
-          font-style: italic;
-          color: #FAF9F6;
-          font-weight: 400;
-          font-size: 4rem;
-          margin: 0;
-      }
+    #mobile-warning {
+        display: none;
+        background-color: #121212;
+        color: #FAF9F6;
+        font-family: 'Manrope', sans-serif;
+        padding: 2rem;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+    }
 
-      .timeline,.role, .team{
-          font-family: "DM Sans";
-          color: #FAF9F6;
-          font-weight: 480;
-          font-size: 1.5rem;
-      }
+    .title{
+        color: #FAF9F6;
+        font-family: "instrument serif";
+        font-style: italic;
+        font-size: 4rem;
+        text-align: center;
+        font-weight: 350;
+        margin-bottom: 0;
+    }
 
-      .timeline{
-          margin: 0;
-          margin-top: 1.3rem;
-      }
+    .center-container {
+        max-width: 100vw;
+        height: 60vh;
+        overflow: hidden;
+        margin: auto;
+    }
 
-      .role{
-          margin: 0;
-          margin-top: 0.8rem;
-      }
+    .center-container .intro-mockup {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 60%;
+    }
 
-      .heading{
-          font-family: "DM Sans";
-          font-weight: 330;
-          font-size: 3.3rem;
-          color: #FAF9F6;
-          margin: 0;
-          margin-top: 7.5rem;
-          margin-bottom: 1.2rem;
-          margin-left: 9.5rem;
-          margin-right: 9.5rem;
-      }
+    .timeline{
+        color: #FAF9F6;
+        font-family: "Manrope";
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 350;
+        margin-top: .3rem;
+        margin-bottom: 4rem;
+    }
 
-      .paragraph{
-          font-family: "DM Sans";
-          font-weight: 330;
-          font-size: 1.3rem;
-          color: #FAF9F6;
-          text-align: justify;
-          margin: 0;
-          margin-right: 9.5rem;
-          margin-left: 9.5rem;
-      }
+    .role h2{
+        font-family: "manrope";
+        color: #a7a7a5;
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+    }
 
-      .pain-points{
-          display: grid;
-          grid-template-columns: repeat(2,1fr);
-          grid-template-rows: repeat(2,1fr);
-          gap: 1.2rem;
-          margin-left: 9.5rem;
-          margin-right: 9.5rem;
-          margin-top: 3rem;
-      }
+    .role h3{
+        font-family: "manrope";
+        color: #FAF9F6;
+        font-size: 1.1rem;
+        font-weight: 350;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
 
-      .point h2{
-          font-family: "DM Sans";
-          color: #FAF9F6;
-          font-size: 2.3rem;
-          font-weight: 330;
-          font-style: italic;
-      }
+    .skills h2{
+        font-family: "manrope";
+        color: #a7a7a5;
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+    }
 
-      .point h3{
-          font-family: "DM Sans";
-          color: #FAF9F6;
-          font-size: 1.3rem;
-          font-weight: 310;
-          text-align: justify;
-          margin-right: 2.5rem;
-      }
+    .skills h3{
+        font-family: "manrope";
+        color: #FAF9F6;
+        font-size: 1.1rem;
+        font-weight: 350;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
 
-      .LT-mockup{
-          height: 90vh;
-          width: 100vw;
-          object-fit: cover;
-          margin-left: 9.5rem;
-          margin-right: 9.5rem;
-      }
+    .tools h2{
+        font-family: "manrope";
+        color: #a7a7a5;
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+    }
 
-      .image{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+    .tools h3{
+        font-family: "manrope";
+        color: #FAF9F6;
+        font-size: 1.1rem;
+        font-weight: 350;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
 
-      #mobile-warning {
-          display: none;
-          background-color: #121212;
-          color: #FAF9F6;
-          font-family: 'DM Sans', sans-serif;
-          padding: 2rem;
-          text-align: center;
-          position: fixed;
-          top: 0;
-          left: 0;
-          z-index: 9999;
-          width: 100%;
-          height: 100vh;
-          box-sizing: border-box;
-      }
+    .type h2{
+        font-family: "manrope";
+        color: #a7a7a5;
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+    }
 
-      .comp{
-          font-family: "DM Sans";
-          color: #FAF9F6;
-          font-size: 2.4rem;
-          font-weight: 345;
-          margin-left: 9.5rem;
-          margin-right: 9.5rem;
-      }
+    .type h3{
+        font-family: "manrope";
+        color: #FAF9F6;
+        font-size: 1.1rem;
+        font-weight: 350;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
 
-      .sketch{
-          height: 100vh;
-          width: auto;
-          object-fit: cover;
-          margin-left: 9.5rem;
-          margin-right: 9.5rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+    #details{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
 
-      .sketch-wrapper {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 5rem 0; 
-          padding-left: 9.5rem;
-          padding-right: 9.5rem;
-          box-sizing: border-box;
-      }
+    #case-study{
+        margin-top: 8rem;
+    }
 
-      .sketch {
-          width: 100%;
-          max-width: 800px; 
-          height: auto;
-          object-fit: contain;
-      }
+    .heading{
+        font-family: "manrope";
+        color: #a7a7a5;
+        font-size: 1.2rem;
+        margin-bottom: .5rem;
+        margin-top: 6rem;
+    }
 
+    .paragraph{
+        font-family: "manrope";
+        color: #FAF9F6;
+        font-size: 1.2rem;
+        font-weight: 350;
+        text-align: justify;
+        margin-top: .5rem;
+    }
 
-      .side{
-          display: flex;
-          flex-direction: row;
-      }
+    .solution-img, .c-features, .c-blueprint, .c-pre, .c-post, .c-feedback, .c-prototype{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 
-      .paragraph-side{
-          font-family: "DM Sans";
-          font-weight: 330;
-          font-size: 1.3rem;
-          color: #FAF9F6;
-          text-align: justify;
-          margin: 0;
-          margin-right: 9.5rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1rem;
+        padding-left: clamp(4rem, 12vw, 22rem);
+        padding-right: clamp(4rem, 12vw, 22rem);
+    }
 
-
-
-      @media only screen and (max-width: 900px) {
-          body > *:not(#mobile-warning) {
-              display: none;
-          }
-
-          #mobile-warning {
-              display: block;
-          }
-      }
+    .grid img {
+        width: 100%;
+        aspect-ratio: 1 / 1.75;
+        object-fit: cover;
+    }
 
 
-  </style>
+    @media only screen and (max-width: 900px) {
+        body > *:not(#mobile-warning) {
+            display: none;
+        }
+
+        #mobile-warning {
+            display: block;
+        }
+    }
+
+</style>
 <body>
 
 <div id="mobile-warning">
@@ -298,134 +303,116 @@
 
 <nav>
   <div id = "nav-left">
-    <a>Smit Mhatre</a>
+    <a href="index.html">Smit Mhatre</a>
   </div>
   <div id = "nav-right">
     <a href="index.html">Work</a>
+    <a href="https://sites.google.com/view/smitmhatre/home?authuser=0" target="_blank">Play</a>
     <a href="About.html">About</a>
   </div>
 </nav>
 
-<section id="opening">
-  <img src="Mockuuups%20Free%20iPhone%2015%20Pro%20mockup%20with%20credit%20card%20in%20hand.jpeg">
-  <div class="text">
-    <h2 class="title">KONECT</h2>
-    <h2 class="timeline">Timeline: September 2024 - December 2024</h2>
-    <h2 class="role">Role: UX & Product Designer</h2>
-  </div>
-</section>
+<div id="container">
 
-<section id="analysis">
-  <section class="overview">
-    <h2 class="heading">Overview</h2>
-    <h3 class="paragraph">Many high school students feel unprepared when it comes to planning for post-secondary education. Back when I was in high school, several of my friends were unsure about what they actually wanted to pursue. After conducting research, we discovered some alarming statistics: 75% of high schoolers felt unprepared for post-secondary, 53% of university students had changed their major at least twice, 37% were unsure about their career path, and 30% weren’t following any path at all.
-      <br><br>In a team of 5, we created KONECT, which aims to tackle this issue by helping high school students explore career-related opportunities, like competitions, seminars, info sessions, and networking events, that are tailored to their goals. While this information is scattered across the internet, KONECT curates it in one place and personalizes the experience based on each user’s location, interests, and skill level, making it easier and faster to find what’s relevant.
-    </h3>
-  </section>
-
-  <section class="user-research">
-    <h2 class="heading">User Research</h2>
-    <h3 class="paragraph">Initially, our target user group was people who felt lost in their careers with no specific age constraint, which were first year university students, upper-year students, and recent graduates.
-      <br><br>To better understand their needs, we conducted 3 user interviews with a first year university student, an upper-year student, and a recent university graduate, and we discovered these 4 pain points:
-    </h3>
-
-    <div class="pain-points">
-      <div class="point">
-        <h2>01</h2>
-        <h2>Difficulty Connecting</h2>
-        <h3>Existing platforms like LinkedIn feel too formal or impersonal, making it hard for students to find approachable and relatable professionals</h3>
-      </div>
-
-      <div class="point">
-        <h2>02</h2>
-        <h2>Lack of Confidence and Intimidation</h2>
-        <h3>Younger or less experienced students often feel intimidated by professionals and hesitate to reach out, leading to missed networking opportunities</h3>
-      </div>
-
-      <div class="point">
-        <h2>03</h2>
-        <h2>Disconnected Networking Experience</h2>
-        <h3>Students feel a lack of belonging or connection when trying to network, making the experience isolating or overwhelming</h3>
-      </div>
-
-      <div class="point">
-        <h2>04</h2>
-        <h2>Fear of Rejection</h2>
-        <h3>This especially affects students new to the industry, who worry about being dismissed or ignored</h3>
-      </div>
-    </div>
-  </section>
-
-  <section class="competitor-analysis">
-    <h2 class="heading">Competitor Analysis</h2>
-    <div class="pain-points">
-      <div class="point">
-        <h2>01</h2>
-        <h2>MyBlueprint</h2>
-        <h3>MyBlueprint is a platform widely used in Canadian high schools for university and career planning, something our team used as highschool students too. It’s helpful for things like career quizzes, course selection, and exploring post-secondary programs. However, it doesn’t do much to connect students with real-world events or mentors. The interface can also feel a bit outdated, and there’s no built-in event discovery or networking feature.
-        </h3>
-      </div>
-
-      <div class="point">
-        <h2>02</h2>
-        <h2>LinkedIn</h2>
-        <h3>LinkedIn is a platform we all use now in university, and it’s great for connecting with professionals, finding job postings, and staying updated on events. But for high school students, it can feel overwhelming and not very beginner-friendly. It jumps straight into a professional world without offering much guidance for those just starting out in their career exploration.
-        </h3>
-      </div>
-
-      <div class="point">
-        <h2>03</h2>
-        <h2>Eventbrite</h2>
-        <h3>Eventbrite makes it easy to find and attend local events, including ones related to careers. It has a wide variety of options and a simple search experience. However, it’s not built with students in mind; there’s no personalization, no focus on career development, and no guidance based on a student’s goals or interests.
-        </h3>
-      </div>
-
-      <div class="point">
-        <h2>04</h2>
-        <h2>Guidance Counsellors</h2>
-        <h3>Guidance counselors are the go-to resource for post-secondary advice in high schools. Talking to a real person can be reassuring and helpful. That said, many of my classmates in high school felt like the advice they received was often just a repeat of what’s already online. Instead of offering new insights, counselors sometimes acted more as reassurance than as a resource for discovering opportunities.
-        </h3>
-      </div>
-    </div>
-  </section>
-
-  <section class="solution">
-    <h2 class="heading">The Solution</h2>
-  </section>
-
-  <div class="image">
-    <img class="LT-mockup" src="konect-mockup-new.png">
+  <h1 class="title">Central</h1>
+  <h2 class="timeline">June 2025 - August 2025</h2>
+  <div class="center-container">
+    <img class="intro-mockup" src="central-main.png" alt="Central Mockup">
   </div>
 
-  <section class="how-this-works">
-    <div class="sketch-wrapper">
-      <img class="sketch" src="KONECT%20Sketch.jpeg">
+  <section id="details">
+    <div class="role">
+      <h2>ROLE</h2>
+      <h3>Product Designer</h3>
+      <h3>User Researcher</h3>
+    </div>
+
+    <div class="skills">
+      <h2>SKILLS</h2>
+      <h3>Secondary User Research</h3>
+      <h3>User Research Analysis</h3>
+      <h3>High Fidelity Prototyping</h3>
+    </div>
+
+    <div class="tools">
+      <h2>TOOLS</h2>
+      <h3>Figma</h3>
+      <h3>Perplexity</h3>
+      <h3>ChatGPT</h3>
+      <h3>Microsoft Excel</h3>
+    </div>
+
+    <div class="type">
+      <h2>TYPE</h2>
+      <h3>School Group Project</h3>
     </div>
   </section>
 
-  <section class="prototype">
-    <h2 class="heading">Interactive Prototype</h2>
-    <h3 class="paragraph">Coming Soon!</h3>
-  </section>
+  <section id="case-study">
 
-  <section class="takeaways">
-    <h2 class="heading">Key Takeaways</h2>
-    <h3 class="paragraph">This project was quite a journey - balancing everyone’s ideas, schedules, and workload was a valuable learning experience, especially from a project management point of view. Most importantly, it taught me how to design collaboratively, a skill I’ll carry forward in future design and coding projects!
+    <h2 class="heading">OVERVIEW</h2>
+    <h3 class="paragraph">As a part our GBDA301 course, we were tasked with designing a speculative or current technology-based service intervention to address one meaningful inefficiency within the Emergency Room (ER) system.
+    <br><br>In a group of 6, we decided to explore how <span style="font-weight: 700;">ER nurses struggle to monitor patients, manage tasks, and respond to condition changes efficiently during intense ER activity due to fragmented systems, causing delays and increased risk in patient care.</span>
+      <br><br>This led to our research question: <span style="font-weight: 700;">How might we help ER nurses monitor patients, prioritize tasks, and respond to condition changes in real time to reduce delays and risks in care during high-pressure situations in the ER?</span>
+    </h3>
+
+    <h2 class="heading">THE SOLUTION</h2>
+    <img class="solution-img" src="C-screens-new.png" alt="Central Product Screens">
+    <h3 class="paragraph">We designed a wearable wrist device that allows nurses to efficiently manage patients, prioritize tasks, and stay on top of alerts all in one place. The goal was to cut through the chaos during high intensity shifts and optimize the nurse’s workflow and allow them to work in confidence.
+    </h3>
+
+    <h2 class="heading">PRODUCT FEATURES</h2>
+    <img class="c-features" src="C-features.png" alt="Central Product Features">
+
+
+    <h2 class="heading">SECONDARY USER RESEARCH</h2>
+    <h3 class="paragraph">I was responsible for conducting secondary user research to help discover what some of the pain points are when it comes to nurses, which then I presented to my group members to gather their input as well. I gathered 9 research journals & articles that focused on 3 main thing: The communication gap between patients and doctors & patients and nurses, systematic & operational issues in the ER and their impact, and the fragmentation of information throughout the ER.
+    </h3>
+
+    <h2 class="heading">USER RESEARCH ANALYSIS</h2>
+    <h3 class="paragraph">To make sense of my research, I created two user journey maps and a service blueprint. The first journey captures a nurse’s experience before our device; the second shows the after state and where the workflow improves. The service blueprint maps the end-to-end service, following Rachel, an ER nurse, as she moves through routine tasks and responds to a patient (David) emergency.
+    </h3>
+    <img class="c-blueprint" src="C-blueprint.png" alt="Central Product Blueprint">
+    <img class="c-pre" src="C-pre.png" alt="Central Pre User Journey Map">
+    <img class="c-post" src="C-post.png" alt="Central Post User Journey Map">
+
+    <h2 class="heading">LOW FIDELITY PROTOTYPE</h2>
+    <h3 class="paragraph">I was responsible for creating the physical low fidelity prototype of the product, where I collaborated closely with my group member who led the UI of the screens. For the sleeve, I bought a leg warmer from Dollarama. I then slide my phone case into it, which gave it a secure fit. I used a red wrap-around band to represent the haptic feedback and blue electric tape for the Code Blue button. It was scrappy and low-budget, but it got the idea across efficiently, which was our main goal. With more time and budget, I would love to upgrade this prototype using more reliable and durable materials.
+    <br><br>The UI for the low fidelity prototype looks drastically different than our final product since we went through several iterations.</h3>
+    <div class="grid">
+    <img class='c-prototype' src="C-prototype1.png" alt="Central High Fidelity Prototype">
+    <img class='c-prototype' src="C-prototype2.png" alt="Central High Fidelity Prototype">
+    </div>
+
+
+    <h2 class="heading">TESTING</h2>
+    <h3 class="paragraph">To test our product, we conducted a bodystorming session. We simulated an ER waiting area with a check-in desk and two patient rooms. At the front desk, our note-takers captured think-aloud feedback and pros/cons from each session. We also staged a nurse, two patients, and a narrator to guide the scenario. Using the tables and chairs already in the room, we arranged a simple floor plan to match our flow.
+    <br><br>After testing, we had 3 key findings:</h3>
+    <img class="c-feedback" src="C-feedback.png" alt="Central Testing Feedback">
+
+    <h2 class="heading">EXPERT FEEDBACK</h2>
+    <h3 class="paragraph">On presentation day, we had the chance to share our work with healthcare professionals as well as researchers from the University of Waterloo’s Systems Design Engineering faculty.
+      <br><br>They stated that the core problem we were tackling, which is the fragmentation of information, is a big issue in healthcare today. They were fond of our solution, but also raised had their concerns. For example: what if a nurse doesn’t have full mobility in their arms? How would the screens be adapted for nurses with color blindness? They also encouraged us to think about the logistical and financial challenges, since our concept is definitely ambitious and a lot of thought would need to go behind the implementation.
+      <br><br>If we continue developing this project on our own, we’d certainly like to incorporate that feedback and keep collaborating with healthcare experts to make the solution as practical and supportive for nurses as possible.
+    </h3>
+
+    <h2 class="heading">KEY TAKEAWAYS</h2>
+    <h3 class="paragraph">The biggest thing I learned is that refinement matters. We started with a digital hologram watch and narrowed it to a digital arm sleeve that’s simpler and more practical in the ER. Focusing the scope helped us decide what to keep and what to cut from our previous idea, so the solution targets the core problem instead of trying to do everything all at once.
+    <br><br>We want to further refine the prototype and potentially run a hospital simulation with real nurses to see how it affects coordination and efficiency under pressure. With more development, we’ll work through the logistical challenges that are hard to predict in a classroom setting.
     </h3>
   </section>
 
+</div>
 
 
-</section>
-
-
-<footer class="footer">
+<footer>
   <div class="links">
     <a href="https://www.linkedin.com/in/smit-mhatre-50b105175/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/SmitMhatre05" target="_blank">GitHub</a>
+    <a href="https://github.com/SmitMhatre" target="_blank">GitHub</a>
     <a href="mailto:smhatre@uwaterloo.ca" target="_blank">Email</a>
   </div>
   <p>© 2025 Smit Mhatre. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
