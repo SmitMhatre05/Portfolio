@@ -10,7 +10,7 @@
 </head>
 <style>
     body{
-        background-color: #1B1B1B;
+        background-color: #0A0A0A;
         margin: 0;
     }
 
@@ -22,7 +22,7 @@
 
     #mobile-warning {
         display: none;
-        background-color: #121212;
+        background-color: #0A0A0A;
         color: #FAF9F6;
         font-family: 'DM Sans', sans-serif;
         padding: 2rem;
@@ -40,7 +40,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #1B1B1B;
+        background-color: #0A0A0A;
         padding-top: 1rem;
         padding-bottom: 1rem;
         position: sticky;
@@ -82,7 +82,7 @@
     }
 
     footer{
-        background-color: #1B1B1B;
+        background-color: #0A0A0A;
         padding-top: 2rem;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -121,7 +121,7 @@
 
     #mobile-warning {
         display: none;
-        background-color: #121212;
+        background-color: #0A0A0A;
         color: #FAF9F6;
         font-family: 'Manrope', sans-serif;
         padding: 2rem;
@@ -175,6 +175,7 @@
         color: #a7a7a5;
         font-size: 1.2rem;
         margin-bottom: .5rem;
+        font-weight: 390;
     }
 
     .role h3{
@@ -191,6 +192,7 @@
         color: #a7a7a5;
         font-size: 1.2rem;
         margin-bottom: .5rem;
+        font-weight: 390;
     }
 
     .skills h3{
@@ -207,6 +209,7 @@
         color: #a7a7a5;
         font-size: 1.2rem;
         margin-bottom: .5rem;
+        font-weight: 390;
     }
 
     .tools h3{
@@ -223,6 +226,7 @@
         color: #a7a7a5;
         font-size: 1.2rem;
         margin-bottom: .5rem;
+        font-weight: 390;
     }
 
     .type h3{
@@ -248,9 +252,10 @@
     .heading{
         font-family: "manrope";
         color: #a7a7a5;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin-bottom: .5rem;
         margin-top: 6rem;
+        font-weight: 390;
     }
 
     .paragraph{
@@ -262,10 +267,30 @@
         margin-top: .5rem;
     }
 
+    .feature{
+        font-family: "manrope";
+        color: #FAF9F6;
+        font-size: 1.2rem;
+        font-weight: 350;
+        text-align: justify;
+        padding: 0;
+        margin: 0;
+    }
+
+    .feature h4{
+        margin-bottom: 2rem;
+    }
+
     .solution-img, .c-features, .c-blueprint, .c-pre, .c-post, .c-feedback, .c-prototype{
         width: 100%;
         height: auto;
         object-fit: contain;
+    }
+
+    .solution-img{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
     }
 
     .grid {
@@ -357,12 +382,34 @@
     </h3>
 
     <h2 class="heading">THE SOLUTION</h2>
-    <img class="solution-img" src="C-screens-new.png" alt="Central Product Screens">
-    <h3 class="paragraph">We designed a wearable wrist device that allows nurses to efficiently manage patients, prioritize tasks, and stay on top of alerts all in one place. The goal was to cut through the chaos during high intensity shifts and optimize the nurse’s workflow and allow them to work in confidence.
+    <h3 class="paragraph">We designed a wearable wrist device that allows nurses to efficiently manage patients, prioritize tasks, and stay on top of alerts all in one place. The goal was to cut through the chaos during high intensity shifts, caused by the fragmentation of information, and optimize the nurse’s workflow and allow them to work in confidence. The following 6 screens are what the MVP consists of:
     </h3>
+    <div class="solution-img">
+      <h3 class="paragraph">Enter Screen</h3><img src="Enter Screen.png" alt="Login Screen"> <br><br><br>
+      <h3 class="paragraph">Patient Emergency Screen</h3><img src="Patient Urgent Screen.png" alt="Emergency Screen"> <br><br><br>
+      <h3 class="paragraph">Patient Profile Screen</h3><img src="Patient Profile Screen.png" alt="Patient Profile Screen"> <br><br><br>
+      <h3 class="paragraph">Log Your Task Screen</h3><img src="Log Your Task Screen.png" alt="Log Your Task Screen"><br><br><br>
+      <h3 class="paragraph">Standard State Screen</h3><img src="Normal Screen.png" alt="Normal Screen"> <br><br><br>
+      <h3 class="paragraph">Log Out Screen</h3><img src="Log Out Screen.png" alt="Log Out Screen">
+    </div>
 
     <h2 class="heading">PRODUCT FEATURES</h2>
-    <img class="c-features" src="C-features.png" alt="Central Product Features">
+    <h3 class="feature">01</h3>
+    <h3 class="feature" style="text-decoration: underline;">Patient Map</h3>
+    <h4 class="feature">The patient map is located on the left of the screen. It lets nurses see which patients are in which room for quicker navigation. These patient icons are color-coded as well: blue for stable, red for emergencies.
+    </h4><br><br>
+    <h3 class="feature">02</h3>
+    <h3 class="feature" style="text-decoration: underline;">Task List</h3>
+    <h4 class="feature">The task list is located on the right of the screen. it allows the nurses to see a live, priority based list that updates as condition changes, with clear color cues during emergencies.
+    </h4><br><br>
+    <h3 class="feature">03</h3>
+    <h3 class="feature" style="text-decoration: underline;">Patient Information</h3>
+    <h4 class="feature">Upon clicking on the patient icon, the nurse can see a general overview of the patients information and vitals.</h4><br><br>
+    <h3 class="feature">04</h3>
+    <h3 class="feature" style="text-decoration: underline;">Haptic Alerts + Code Blue</h3>
+    <h4 class="feature">Nurses receive haptic feedback for updates, plus a dedicated Code Blue button that alerts nearby nurses as well for additional assistance during emergencies.
+    </h4><br><br>
+        
 
 
     <h2 class="heading">SECONDARY USER RESEARCH</h2>
@@ -373,8 +420,8 @@
     <h3 class="paragraph">To make sense of my research, I created two user journey maps and a service blueprint. The first journey captures a nurse’s experience before our device; the second shows the after state and where the workflow improves. The service blueprint maps the end-to-end service, following Rachel, an ER nurse, as she moves through routine tasks and responds to a patient (David) emergency.
     </h3>
     <img class="c-blueprint" src="C-blueprint.png" alt="Central Product Blueprint">
-    <img class="c-pre" src="C-pre.png" alt="Central Pre User Journey Map">
-    <img class="c-post" src="C-post.png" alt="Central Post User Journey Map">
+    <img class="c-pre" src="central-pre-map.png" alt="Central Pre User Journey Map">
+    <img class="c-post" src="central-post-map.png" alt="Central Post User Journey Map">
 
     <h2 class="heading">LOW FIDELITY PROTOTYPE</h2>
     <h3 class="paragraph">I was responsible for creating the physical low fidelity prototype of the product, where I collaborated closely with my group member who led the UI of the screens. For the sleeve, I bought a leg warmer from Dollarama. I then slide my phone case into it, which gave it a secure fit. I used a red wrap-around band to represent the haptic feedback and blue electric tape for the Code Blue button. It was scrappy and low-budget, but it got the idea across efficiently, which was our main goal. With more time and budget, I would love to upgrade this prototype using more reliable and durable materials.
@@ -388,11 +435,19 @@
     <h2 class="heading">TESTING</h2>
     <h3 class="paragraph">To test our product, we conducted a bodystorming session. We simulated an ER waiting area with a check-in desk and two patient rooms. At the front desk, our note-takers captured think-aloud feedback and pros/cons from each session. We also staged a nurse, two patients, and a narrator to guide the scenario. Using the tables and chairs already in the room, we arranged a simple floor plan to match our flow.
     <br><br>After testing, we had 3 key findings:</h3>
-    <img class="c-feedback" src="C-feedback.png" alt="Central Testing Feedback">
+    <h3 class="feature">01</h3>
+    <h4 class="feature">Users found the patient location feature and task completion feature to be useful. These features helped ER nurses monitor patients and priortize important tasks, allowing them to execute their tasks more efficiently, linking back to our research question.
+    </h4><br><br>
+    <h3 class="feature">02</h3>
+    <h4 class="feature">Users were fond of the real-time updates. Relating it to the research question, we kept focus on condition changes in real time. The feedback we received regarding real-time updates allows us to see the importance of it and how our product incorporates it.
+    </h4><br><br>
+    <h3 class="feature">03</h3>
+    <h4 class="feature">Users found that the overall product was able to reduce delays during high-pressure situations in the ER. The product's core features helped to organize tasks, requirments, and emergencies in a way that supports nurses.
+    </h4><br><br>
 
     <h2 class="heading">EXPERT FEEDBACK</h2>
     <h3 class="paragraph">On presentation day, we had the chance to share our work with healthcare professionals as well as researchers from the University of Waterloo’s Systems Design Engineering faculty.
-      <br><br>They stated that the core problem we were tackling, which is the fragmentation of information, is a big issue in healthcare today. They were fond of our solution, but also raised had their concerns. For example: what if a nurse doesn’t have full mobility in their arms? How would the screens be adapted for nurses with color blindness? They also encouraged us to think about the logistical and financial challenges, since our concept is definitely ambitious and a lot of thought would need to go behind the implementation.
+      <br><br>They stated that the core problem we were tackling, which is the fragmentation of information, is a big issue in healthcare today. They were fond of our solution, but also raised their concerns. For example: what if a nurse doesn’t have full mobility in their arms? How would the screens be adapted for nurses with color blindness? They also encouraged us to think about the logistical and financial challenges, since our concept is definitely ambitious and a lot of thought would need to go behind the implementation.
       <br><br>If we continue developing this project on our own, we’d certainly like to incorporate that feedback and keep collaborating with healthcare experts to make the solution as practical and supportive for nurses as possible.
     </h3>
 
@@ -416,4 +471,5 @@
 
 </body>
 </html>
+
 
