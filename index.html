@@ -131,6 +131,42 @@
         margin-top: 0;
     }
 
+    .project-disabled{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+
+    .project-disabled h2{
+        font-family: "Manrope";
+        text-decoration: none;
+        font-size: clamp(1rem, 4vw, 2.8rem);
+        margin-top: 0;
+        color: #FAF9F6;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .project-disabled a{
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .project-disabled img{
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+    }
+
+    .project-disabled h3{
+        font-family: "Manrope";
+        color: #a7a7a5;
+        font-size: 1.6rem;
+        font-weight: 350;
+        margin-top: 0;
+    }
+
     footer {
     background-color: #0A0A0A;
     border-top: 1px solid #FAF9F6;
@@ -405,15 +441,22 @@
 
 <section id="currently">
   <h2>CURRENTLY</h2>
-  <h3>UX/Technical Analyst @ 
+  <h3>UX Designer @ 
   <a class="link" href="https://www.ontario.ca/page/ministry-transportation" target="_blank" rel="noopener noreferrer">
     The Ontario Ministry of Transportation (Fall '25)
   </a>
 </h3>
-<h3>Incoming @ 
+<h3>Incoming QA Analyst @ 
   <a class="link" href="https://www.cibc.com/en/about-cibc.html" target="_blank" rel="noopener noreferrer">
     CIBC (Winter '26)
   </a>
+</h3>
+<h3>Design Engineer @ 
+  <a class="link" href="https://uwindustry4.tech/" target="_blank" rel="noopener noreferrer">
+    UWaterloo Industry 4.0
+  </a>
+</h3>
+<h3>Director of UXR Education @ UWaterloo UXR Hub
 </h3>
 <h3>
   UX Engineering Lead @ 
@@ -424,7 +467,7 @@
 </section>
 
 <section id="Work">
-  <div class="project">
+  <div class="project-disabled">
     <a>
       <img src="harmoni-coming-soon.png">
       <h2>Harmoni AI - 2025</h2>
