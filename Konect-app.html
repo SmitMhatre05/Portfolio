@@ -450,43 +450,72 @@
     }
 
     nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #0A0A0A;
+        position: sticky; top: 0; z-index: 1000;
+        border-bottom: 1px solid #383838; /* match desktop */
+        padding: 0.75rem clamp(0.75rem, 4vw, 1.25rem);
+        white-space: nowrap;
+        }
+
+    #nav-left{
+        margin: 0;
+        font-size: 1.4rem;
+        }
+
+    #nav-left a{
+        text-decoration: none;
+        color: #a7a7a5; /* use same colour as desktop */
+        font-family: "Instrument Serif", serif;
+        font-style: italic;
+        }
+
+    #nav-right{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: clamp(0.75rem, 3.5vw, 1.25rem); 
+    }
+
+    #nav-right a{
+        margin: 0; 
+        text-decoration: none;
+        color: #a7a7a5; /* use same colour as desktop */
+        font-family: "Manrope", sans-serif;
+        font-size: 1.2rem;
+    }
+
+    footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #0A0A0A;
-    position: sticky; top: 0; z-index: 1000;
-    border-bottom: 1px solid #FAF9F6;
-
-    padding: 0.75rem clamp(0.75rem, 4vw, 1.25rem);
-    white-space: nowrap;
+    border-top: 1px solid #383838; 
+    padding: 0.75rem clamp(0.75rem, 4vw, 1.25rem); 
+    gap: 0;                                        
   }
 
-    #nav-left{
+  .left a {
+    font-size: 1.4rem; 
     margin: 0;
-    font-size: 1.4rem;
-    }
+  }
 
-    #nav-left a{
-    text-decoration: none;
-    color: #FAF9F6;
-    font-family: "Instrument Serif", serif;
-    font-style: italic;
-    }
-
-    #nav-right{
-    margin: 0;
+  .links {
     display: flex;
     align-items: center;
     gap: clamp(0.75rem, 3.5vw, 1.25rem); 
+    margin: 0;                           
   }
 
-    #nav-right a{
-    margin: 0; 
-    text-decoration: none;
-    color: #FAF9F6;
-    font-family: "Manrope", sans-serif;
-    font-size: 1.2rem;
-  }
+  
+  .links a span { display: none; }
+  .links a i {
+    display: none; 
+    font-size: 1.6rem; 
+    line-height: 1;
+  } 
 
   .solution-img{
         display: flex;
@@ -522,36 +551,6 @@
     display: block;
     object-fit: cover;
     }
-
-    footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #0A0A0A;
-    border-top: 1px solid #FAF9F6;
-    padding: 0.75rem clamp(0.75rem, 4vw, 1.25rem); 
-    gap: 0;                                        
-  }
-
-  .left a {
-    font-size: 1.4rem; 
-    margin: 0;
-  }
-
-  .links {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.75rem, 3.5vw, 1.25rem); 
-    margin: 0;                           
-  }
-
-  
-  .links a span { display: none; }
-  .links a i {
-    display: inline-block;
-    font-size: 1.6rem; 
-    line-height: 1;
-  }
 
 
     }
