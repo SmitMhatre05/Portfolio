@@ -9,8 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <style>
+    @font-face {
+    font-family: "Unica-Medium";
+    src: url("./fonts/Unica77LLCyr-Medium.otf") format("opentype");
+    }
+
+    @font-face {
+    font-family: "Unica-Light";
+    src: url("./fonts/Unica77LLCyr-Light.otf") format("opentype");
+    }
+
+    @font-face {
+    font-family: "Unica-Regular";
+    src: url("./fonts/Unica77LLCyr-Regular.otf") format("opentype");
+    }
     * {
     -webkit-tap-highlight-color: transparent;
   }
@@ -22,8 +38,8 @@
 
     #container {
         margin: 0 auto;
-        padding-left: clamp(4rem, 12vw, 22rem);
-        padding-right: clamp(4rem, 12vw, 22rem);
+        padding-left: clamp(8rem, 20vw, 30rem); /* increased padding */
+        padding-right: clamp(8rem, 20vw, 30rem);
     }
 
     nav{
@@ -46,7 +62,7 @@
 
     #nav-left a{
         text-decoration: none;
-        color: #a7a7a5;
+        color: #c5c5c5;
         font-family: "Instrument Serif";
         font-style: italic;
     }
@@ -59,8 +75,8 @@
         margin-left: 3rem;
         text-decoration: none;
         font-size: 1.3rem;
-        color: #a7a7a5;
-        font-family: "Manrope";
+        color: #c5c5c5;
+        font-family: "google sans flex";
     }
 
     #nav-right a:hover{
@@ -84,7 +100,7 @@
 
     .left a {
     text-decoration: none;
-    color: #a7a7a5;
+    color: #c5c5c5;
     font-family: "Instrument Serif", serif;
     font-style: italic;
     font-size: 1.6rem;
@@ -102,8 +118,8 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-family: "Manrope", sans-serif;
-    color: #a7a7a5;
+    font-family: "google sans flex", sans-serif;
+    color: #c5c5c5;
     font-size: 1.3rem;
     text-decoration: none;
     }
@@ -134,83 +150,83 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 50% 60%;
+        object-position: center center;
     }
 
     .timeline{
         color: #FAF9F6;
-        font-family: "Manrope";
-        font-size: 1rem;
+        font-family: "google sans flex";
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
         text-align: center;
-        font-weight: 350;
+        font-weight: 225;
         margin-top: .3rem;
         margin-bottom: 4rem;
     }
 
     .role h2{
-        font-family: "Manrope";
+        font-family: "google sans flex";
         color: #FAF9F6;
-        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-bottom: .5rem;
-        font-weight: 390;
+        font-weight: 300;
     }
 
     .role h3{
-        font-family: "Manrope";
-        color: #a7a7a5;
-        font-size: 1.1rem;
-        font-weight: 350;
+        font-family: "google sans flex";
+        color: #c5c5c5;
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        font-weight: 225;
         margin-top: .5rem;
         margin-bottom: .5rem;
     }
 
     .skills h2{
-        font-family: "Manrope";
+        font-family: "google sans flex";
         color: #FAF9F6;
-        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-bottom: .5rem;
-        font-weight: 390;
+        font-weight: 300;
     }
 
     .skills h3{
-        font-family: "Manrope";
-        color: #a7a7a5;
-        font-size: 1.1rem;
-        font-weight: 350;
+        font-family: "google sans flex";
+        color: #c5c5c5;
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
+        font-weight: 225;
         margin-top: .5rem;
         margin-bottom: .5rem;
     }
 
     .tools h2{
-        font-family: "Manrope";
+        font-family: "google sans flex";
         color: #FAF9F6;
-        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-bottom: .5rem;
-        font-weight: 390;
+        font-weight: 300;
     }
 
     .tools h3{
-        font-family: "Manrope";
-        color: #a7a7a5;
-        font-size: 1.1rem;
-        font-weight: 350;
+        font-family: "google sans flex";
+        color: #c5c5c5;
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        font-weight: 225;
         margin-top: .5rem;
         margin-bottom: .5rem;
     }
 
     .type h2{
-        font-family: "Manrope";
+        font-family: "google sans flex";
         color: #FAF9F6;
-        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-bottom: .5rem;
-        font-weight: 390;
+        font-weight: 300;
     }
 
     .type h3{
-        font-family: "Manrope";
-        color: #a7a7a5;
-        font-size: 1.1rem;
-        font-weight: 350;
+        font-family: "google sans flex";
+        color: #c5c5c5;
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        font-weight: 225;
         margin-top: .5rem;
         margin-bottom: .5rem;
     }
@@ -227,16 +243,24 @@
     }
 
     .heading{
-        font-family: "Manrope";
+        font-family: "google sans flex";
         color: #FAF9F6;
-        font-size: 1.4rem;
-        margin-bottom: .5rem;
-        margin-top: 6rem;
-        font-weight: 390;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
+        margin-top: 10rem;
+        font-weight: 300;
+    }
+
+    .heading-big{
+        font-family: "instrument serif";
+        color: #FAF9F6;
+        font-size: clamp(2.3rem, 4.6vw, 2.5rem);
+        margin-bottom: 1rem;
+        font-weight: 350;
+        margin-top: 0;
     }
 
     .heading-screens{
-        font-family: "Manrope";
+        font-family: "google sans flex";
         color: #FAF9F6;
         font-size: 1.4rem;
         margin-bottom: .5rem;
@@ -245,16 +269,18 @@
     }
 
     .paragraph{
-        font-family: "Manrope";
-        color: #a7a7a5;
-        font-size: 1.2rem;
-        font-weight: 350;
-        text-align: justify;
+        font-family: "google sans flex";
+        color: #c5c5c5;
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        font-weight: 225;
+        text-align: left;
         margin-top: .5rem;
+        margin-bottom: 2rem;
+        line-height: 1.4;
     }
 
     .feature{
-        font-family: "Manrope";
+        font-family: "google sans flex";
         color: #FAF9F6;
         font-size: 1.2rem;
         font-weight: 350;
@@ -265,7 +291,7 @@
     }
 
     .feature-heading{
-        font-family: "Manrope";
+        font-family: "google sans flex";
         color: #FAF9F6;
         font-size: 1.2rem;
         font-weight: 350;
@@ -276,18 +302,13 @@
         margin-bottom: 1rem;
     }
 
-    .solution-img, .c-features, .c-blueprint, .c-pre, .c-post, .c-feedback, .c-prototype{
+    .c-features, .c-blueprint, .c-pre, .c-post, .c-feedback, .c-prototype{
         width: 100%;
         height: auto;
         object-fit: contain;
     }
 
-    .solution-img{
-        display: flex;
-        flex-direction: column;
-        margin-top: 1rem;
-    }
-
+ 
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -302,6 +323,100 @@
         aspect-ratio: 1 / 1.75;
         object-fit: cover;
     }
+
+    .card-rows{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.card-rows img{
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+.cards{
+    padding: 1rem;
+    box-sizing: border-box;
+    flex: 1;                   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cards-header{
+    color: #FAF9F6;
+    font-family: "google sans flex";
+    font-size: clamp(1.2rem, 2vw, 1.3rem);
+    margin: 0;
+    margin-bottom: .5rem;
+    font-weight: 400;
+}
+
+.cards-text{
+    color: #c5c5c5;
+    font-family: "google sans flex";
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    margin: 0;
+    font-weight: 300;
+}
+
+.hmw{
+    font-family: "google sans flex";
+    color: #FAF9F6;
+    font-size: clamp(1.5rem, 2vw, 1.7rem);
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.findings-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature{
+    background-color: #FAF9F6;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.feature h4{
+    color: #0A0A0A;
+    margin: 0 0 1rem 0;
+    text-align: left;
+    font-size: clamp(1.4rem, 2vw, 1.5rem);
+    font-weight: 350;
+    font-style: italic;
+}
+
+.feature p{
+    font-family: "google sans flex";
+    color: #0A0A0A;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 300;
+    text-align: left;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.numbers{
+    font-family: "instrument serif";
+    font-size: clamp(1.5rem, 3vw, 1.7rem);
+    font-weight: 350;
+    margin: 0 0 0.5rem 0;
+    color: #0A0A0A;
+}
 
 
     @media (max-width: 900px) {
@@ -391,7 +506,7 @@
     }
 
     .tools h3{
-       font-family: "Manrope";
+        font-family: "Manrope";
         color: #a7a7a5;
         font-size: 1rem;
         font-weight: 350;
@@ -425,8 +540,6 @@
 
     .heading{
         font-family: "Manrope";
-        color: #FAF9F6;
-        font-size: 1.2rem;
         margin-bottom: .5rem;
         margin-top: 6rem;
         font-weight: 390;
@@ -434,8 +547,6 @@
 
     .paragraph{
         font-family: "Manrope";
-        color: #a7a7a5;
-        font-size: 1rem;
         font-weight: 350;
         text-align: justify;
         margin-top: .5rem;
@@ -509,7 +620,6 @@
     margin: 0;                           
   }
 
-  
   .links a span { display: none; }
   .links a i {
     display: none; 
@@ -552,6 +662,74 @@
     object-fit: cover;
     }
 
+    .card-rows{
+    display: flex;
+    flex-direction: column;     
+    gap: 0.75rem;
+    align-items: stretch;       
+  }
+
+  .card-rows img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .cards{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    color: #c5c5c5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    margin-bottom: 3rem;
+  }
+
+  .findings-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .5rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .feature{
+        background-color: #FAF9F6;
+        padding: 1.25rem;
+        box-sizing: border-box;
+    }
+
+    .feature h4{
+        color: #0A0A0A;
+        margin: 0 0 0.75rem 0;
+        text-align: left;
+        font-family: "Manrope", sans-serif;
+        font-weight: 390;
+        font-style: normal;
+    }
+
+    .feature p{
+        font-family: "Manrope", sans-serif;
+        color: #0A0A0A;
+        font-weight: 350;
+        text-align: left;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .numbers{
+        font-family: "Instrument Serif";
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+        font-weight: 350;
+        margin: 0 0 0.5rem 0;
+        color: #0A0A0A;
+    }
+
+
 
     }
 
@@ -576,25 +754,25 @@
   <h1 class="title">Central</h1>
   <h2 class="timeline">June 2025 - August 2025</h2>
   <div class="center-container">
-    <img class="intro-mockup" src="central-main.png" alt="Central Mockup">
+    <img class="intro-mockup" src="Central-thumbnail.png" alt="Central Mockup">
   </div>
 
   <section id="details">
     <div class="role">
-      <h2>ROLE</h2>
+      <h2>Role</h2>
       <h3>Product Designer</h3>
       <h3>User Researcher</h3>
     </div>
 
     <div class="skills">
-      <h2>SKILLS</h2>
+      <h2>Skills</h2>
       <h3>Secondary User Research</h3>
       <h3>User Research Analysis</h3>
       <h3>High Fidelity Prototyping</h3>
     </div>
 
     <div class="tools">
-      <h2>TOOLS</h2>
+      <h2>Tools</h2>
       <h3>Figma</h3>
       <h3>Perplexity</h3>
       <h3>ChatGPT</h3>
@@ -602,88 +780,163 @@
     </div>
 
     <div class="type">
-      <h2>TYPE</h2>
+      <h2>Type</h2>
       <h3>School Group Project</h3>
     </div>
   </section>
 
   <section id="case-study">
 
-    <h2 class="heading">OVERVIEW</h2>
-    <h3 class="paragraph">As a part our GBDA301 course, we were tasked with designing a speculative or current technology-based service intervention to address one meaningful inefficiency within the Emergency Room (ER) system.
-    <br><br>In a group of 6, we decided to explore how <span style="font-weight: 700;">ER nurses struggle to monitor patients, manage tasks, and respond to condition changes efficiently during intense ER activity due to fragmented systems, causing delays and increased risk in patient care.</span>
-      <br><br>This led to our research question: <span style="font-weight: 700;">How might we help ER nurses monitor patients, prioritize tasks, and respond to condition changes in real time to reduce delays and risks in care during high-pressure situations in the ER?</span>
+    <h2 class="heading">Problem Overview</h2>
+    <h2 class="heading-big">The ER is Inefficient</h2>
+    <h3 class="paragraph">As a part of our GBDA 301 term project, I worked in a team of six to explore challenges faced by ER nurses. In high-pressure environments, nurses must care for patients while dealing with the consequences of fragmented systems; such as scattered information, delayed updates, and added stress. These frequent breakdowns increase the risk of errors and slow down critical care.
     </h3>
 
-    <h2 class="heading">THE SOLUTION</h2>
-    <h3 class="paragraph">We designed a wearable wrist device that allows nurses to efficiently manage patients, prioritize tasks, and stay on top of alerts all in one place. The goal was to cut through the chaos during high intensity shifts, caused by the fragmentation of information, and optimize the nurse’s workflow and allow them to work in confidence. The following 6 screens are what the MVP consists of:
+    <h2 class="heading-big">Patients feel it too...</h2>
+    <h3 class="paragraph">The inefficiencies of fragmented systems affect patients as much as staff. During several hospital visits this year, I experienced ER wait times of nearly three hours, even at a hospital recognized for its hospitality. These challenges are not only limited to well-resourced hospitals. They are often more severe in facilities without advanced management systems or adequate staffing. This prompted us to ask...
+</h3>
+
+    <h2 class="hmw">How might we help ER nurses monitor patients, prioritize tasks, and respond to condition changes in real time to reduce delays and risks in care during high-pressure situations in the ER?
+    </h2>
+
+    <h2 class="heading">The Solution</h2>
+    <h2 class="heading-big">CENTRAL - Centralizing Information for Nurses in the ER</h2>
+    <h3 class="paragraph">Central is a wrist-worn display product that centralizes patient information, tasks, and alerts into one place, allowing nurses to act quickly without being slowed down by fragmented systems and helping them stay focused on patient care instead. 
     </h3>
+    
+
     <div class="solution-img">
-      <h3 class="heading-screens">Enter Screen</h3><img src="Enter Screen.png" alt="Login Screen"> 
-      <h3 class="heading-screens">Patient Emergency Screen</h3><img src="Patient Urgent Screen.png" alt="Emergency Screen"> 
-      <h3 class="heading-screens">Patient Profile Screen</h3><img src="Patient Profile Screen.png" alt="Patient Profile Screen">
-      <h3 class="heading-screens">Log Your Task Screen</h3><img src="Log Your Task Screen.png" alt="Log Your Task Screen">
-      <h3 class="heading-screens">Standard State Screen</h3><img src="Normal Screen.png" alt="Normal Screen"> 
-      <h3 class="heading-screens">Log Out Screen</h3><img src="Log Out Screen.png" alt="Log Out Screen">
+
+    <div class="card-rows">
+        <img src="Enter Screen.png">
+        <div class="cards">
+            <h2 class="cards-header">Logging In</h2>
+            <h3 class="cards-text">Nurses would use their fingerprint to log in securely and quickly.</h3>
+        </div>
     </div>
 
-    <h2 class="heading">PRODUCT FEATURES</h2>
-    <h3 class="feature-heading">01 - Patient Map</h3>
-    <h4 class="paragraph">The patient map is located on the left of the screen. It lets nurses see which patients are in which room for quicker navigation. These patient icons are color-coded as well: blue for stable, red for emergencies.
-    </h4>
-    <h3 class="feature-heading">02 - Task List</h3>
-    <h4 class="paragraph">The task list is located on the right of the screen. it allows the nurses to see a live, priority based list that updates as condition changes, with clear color cues during emergencies.
-    </h4>
-    <h3 class="feature-heading">03 - Patient Information</h3>
-    <h4 class="paragraph">Upon clicking on the patient icon, the nurse can see a general overview of the patients information and vitals.</h4>
-    <h3 class="feature-heading">04 - Haptic Alerts + Code Blue</h3>
-    <h4 class="paragraph">Nurses receive haptic feedback for updates, plus a dedicated Code Blue button that alerts nearby nurses as well for additional assistance during emergencies.
-    </h4>
-        
+    <div class="card-rows">
+        <img src="Patient Urgent Screen.png">
+        <div class="cards">
+            <h2 class="cards-header">Main Dashboard (Emergency State)</h2>
+            <h3 class="cards-text">This screen displays a patient map in the hospital and a task list, with emergencies color coded as red, allowing nurses to prioritize and respond quickly.</h3>
+        </div>
+    </div>
 
+    <div class="card-rows">
+        <img src="Patient Profile Screen.png">
+        <div class="cards">
+            <h2 class="cards-header">Patient Profile Details</h2>
+            <h3 class="cards-text">Upon clicking on a patient from the patient map, the nurse can see a general overview of the patient's information and status.</h3>
+        </div>
+    </div>
 
-    <h2 class="heading">SECONDARY USER RESEARCH</h2>
-    <h3 class="paragraph">I was responsible for conducting secondary user research to help discover what some of the pain points are when it comes to nurses, which then I presented to my group members to gather their input as well. I gathered 9 research journals & articles that focused on 3 main thing: The communication gap between patients and doctors & patients and nurses, systematic & operational issues in the ER and their impact, and the fragmentation of information throughout the ER.
+    <div class="card-rows">
+        <img src="Log Your Task Screen.png">
+        <div class="cards">
+            <h2 class="cards-header">Log Your Task</h2>
+            <h3 class="cards-text">Once the nurse has treated a patient, they can log the completed task for record-keeping and communication with other staff. This is not an official medical record.</h3>
+        </div>
+    </div>
+
+    <div class="card-rows">
+        <img src="Normal Screen.png">
+        <div class="cards">
+            <h2 class="cards-header">Main Dashboard</h2>
+            <h3 class="cards-text">Once the patient emergency has been dealt with, they are brought back to the main dashboard screen, where they can continue to monitor other patients and manage tasks.</h3>
+        </div>
+    </div>
+
+    <div class="card-rows">
+        <img src="Log Out Screen.png">
+        <div class="cards">
+            <h2 class="cards-header">Logging Out</h2>
+            <h3 class="cards-text">Once the nurse is done their shift, they can log out so the next nurse can log in securely.</h3>
+        </div>
+    </div>
+
+</div>
+
+    <h2 class="heading">Discovery Research</h2>
+    <h2 class="heading-big">A Deeper Look at the Current ER Landscape</h2>
+    <h3 class="paragraph">I led the discovery research process, curating nine research papers to find three core issues linked to our problem:
+        <ul>
+          <li>The communication gap between patients and doctors & patients and nurses</li>
+          <li>Systematic & operational issues in the ER and their impact</li>
+          <li>The fragmentation of information throughout the ER</li>
+        </ul>
+
+        <br>To synthesize my research findings, I developed two journey maps and a service blueprint that illustrate the workflows and user experience both before and after our proposed solution.
     </h3>
 
-    <h2 class="heading">USER RESEARCH ANALYSIS</h2>
-    <h3 class="paragraph">To make sense of my research, I created two user journey maps and a service blueprint. The first journey captures a nurse’s experience before our device; the second shows the after state and where the workflow improves. The service blueprint maps the end-to-end service, following Rachel, an ER nurse, as she moves through routine tasks and responds to a patient (David) emergency.
-    </h3>
-    <img class="c-blueprint" src="C-blueprint.png" alt="Central Product Blueprint">
-    <img class="c-pre" src="central-pre-map.png" alt="Central Pre User Journey Map">
-    <img class="c-post" src="central-post-map.png" alt="Central Post User Journey Map">
+        <img class="c-blueprint" src="C-blueprint.png" alt="Central Product Blueprint">
+        <img class="c-pre" src="central-pre-map.png" alt="Central Pre User Journey Map">
+        <img class="c-post" src="central-post-map.png" alt="Central Post User Journey Map">
 
-    <h2 class="heading">LOW FIDELITY PROTOTYPE</h2>
-    <h3 class="paragraph">I was responsible for creating the physical low fidelity prototype of the product, where I collaborated closely with my group member who I worked with for the UI of the screens. For the sleeve, I bought a leg warmer from Dollarama. I then slide my phone case into it, which gave it a secure fit. I used a red wrap-around band to represent the haptic feedback and blue electric tape for the Code Blue button. It was scrappy and low-budget, but it got the idea across efficiently, which was our main goal. With more time and budget, I would love to upgrade this prototype using more reliable and durable materials.
-    <br><br>The UI for the low fidelity prototype looks drastically different than our final product since we went through several iterations.</h3>
+    <h2 class="heading">Prototyping</h2>
+    <h2 class="heading-big">Bringing it to Life</h2>
+    <h3 class="paragraph">Alongside co-designing the user interface, I created a low fidelity prototype of the actual product. Although the prototype was simple and low‑budget, it effectively conveyed our concept, which was our main goal.
+    </h3>
     <div class="grid">
     <img class='c-prototype' src="C-prototype1.png" alt="Central High Fidelity Prototype">
     <img class='c-prototype' src="C-prototype2.png" alt="Central High Fidelity Prototype">
     </div>
 
 
-    <h2 class="heading">TESTING</h2>
-    <h3 class="paragraph">To test our product, we conducted a bodystorming session. We simulated an ER waiting area with a check-in desk and two patient rooms. At the front desk, our note-takers captured think-aloud feedback and pros/cons from each session. We also staged a nurse, two patients, and a narrator to guide the scenario. Using the tables and chairs already in the room, we arranged a simple floor plan to match our flow.
-    <br><br>After testing, we had 3 key findings:</h3><br>
-    <h3 class="feature-heading">01 - Patient Location & Task Completion</h3>
-    <h4 class="paragraph">Users found the patient location feature and task completion feature to be useful. These features helped ER nurses monitor patients and priortize important tasks, allowing them to execute their tasks more efficiently, linking back to our research question.
-    </h4>
-    <h3 class="feature-heading">02 - Real-Time Updates</h3>
-    <h4 class="paragraph">Users were fond of the real-time updates. Relating it to the research question, we kept focus on condition changes in real time. The feedback we received regarding real-time updates allows us to see the importance of it and how our product incorporates it.
-    </h4>
-    <h3 class="feature-heading">03 - Overall Product Impact</h3>
-    <h4 class="paragraph">Users found that the overall product was able to reduce delays during high-pressure situations in the ER. The product's core features helped to organize tasks, requirments, and emergencies in a way that supports nurses.
-    </h4>
-
-    <h2 class="heading">EXPERT FEEDBACK</h2>
-    <h3 class="paragraph">On presentation day, we had the chance to share our work with healthcare professionals as well as researchers from the University of Waterloo’s Systems Design Engineering faculty.
-      <br><br>They stated that the core problem we were tackling, which is the fragmentation of information, is a big issue in healthcare today. They were fond of our solution, but also raised their concerns. For example: what if a nurse doesn’t have full mobility in their arms? How would the screens be adapted for nurses with color blindness? They also encouraged us to think about the logistical and financial challenges, since our concept is definitely ambitious and a lot of thought would need to go behind the implementation.
-      <br><br>If we continue developing this project on our own, we’d certainly like to incorporate that feedback and keep collaborating with healthcare experts to make the solution as practical and supportive for nurses as possible.
+    <h2 class="heading">Testing</h2>
+    <h2 class="heading-big">Validating Our Solution</h2>
+   <h3 class="paragraph">We tested our product through a bodystorming session, simulating an ER waiting area with a check-in desk and two patient rooms. The note-takers at the front desk took note of the think-aloud feedback and pros/cons from each run. The scenario included a nurse, two patients, and a narrator to guide the flow. Using tables and chairs, we set up a simple floor plan to mirror the ER environment. From this testing, we identified three key findings: 
     </h3>
+    <div class="findings-grid">
+        <div class="feature">
+            <h3 class="numbers">01</h3>
+            <h4 class="feature-heading">Centralized Information is Crucial</h4>
+            <p>Users found the patient location and task completion features helpful. These tools made it easier for ER nurses to keep track of patients and focus on the most important tasks, which helped them work more efficiently and tied back to our research question.</p>
+        </div>
+    
+        <div class="feature">
+            <h3 class="numbers">02</h3>
+            <h4 class="feature-heading">Real-Time Alerts Improve Response Times</h4>
+            <p>Participants liked the real-time updates, especially for noticing changes in patient conditions. Their feedback showed how important this feature is and confirmed that our product supports quick, informed decisions.</p>
+        </div>
+    
+        <div class="feature">
+            <h3 class="numbers">03</h3>
+            <h4 class="feature-heading">User Interface Must Be Intuitive</h4>
+            <p>Users felt the UI presented information clearly without becoming overwhelming, which is especially important in an ER setting where the environment can quickly become crowded and overstimulating.</p>
+        </div>
+    </div>
 
-    <h2 class="heading">KEY TAKEAWAYS</h2>
-    <h3 class="paragraph">The biggest thing I learned is that refinement matters. We started with a digital hologram watch and narrowed it to a digital arm sleeve that’s simpler and more practical in the ER. Focusing the scope helped us decide what to keep and what to cut from our previous idea, so the solution targets the core problem instead of trying to do everything all at once.
-    <br><br>We want to further refine the prototype and potentially run a hospital simulation with real nurses to see how it affects coordination and efficiency under pressure. With more development, we’ll work through the logistical challenges that are hard to predict in a classroom setting.
+    <h2 class="heading">Expert Feedback</h2>
+    <h2 class="heading-big">Intuitive and Relevant</h2>
+    <h3 class="paragraph">During our presentation, we shared our work with healthcare professionals and researchers from the University of Waterloo’s Systems Design Engineering faculty. Their feedback highlighted both the strengths of our solution and areas for further consideration. Our final product + pitch received a 94% score.
+    </h3>
+    <div class="findings-grid">
+        <div class="feature">
+            <h3 class="numbers">01</h3>
+            <h4 class="feature-heading">Recognition of the Problem</h4>
+            <p>Experts stated that fragmented information is a major issue in healthcare today. They appreciated that our solution tackled this challenge directly.
+            </p>
+        </div>
+    
+        <div class="feature">
+            <h3 class="numbers">02</h3>
+            <h4 class="feature-heading">Accessibility Concerns</h4>
+            <p>They were curious about how the product would support nurses with limited arm mobility and how the interface could be adjusted to accommodate color blindness.
+            </p>
+        </div>
+    
+        <div class="feature">
+            <h3 class="numbers">03</h3>
+            <h4 class="feature-heading">Implementation Challenges</h4>
+            <p>They raised concerns about logistical and financial barriers and said the ambitious concept would need careful planning before it could be used in practice.    
+            </p>
+        </div>
+    </div>
+
+    <h2 class="heading">Key Takeaways</h2>
+    <h2 class="heading-big">Refinement is Key</h2>
+    <h3 class="paragraph">The biggest lesson I learned is that refinement matters. We began with a digital hologram watch and narrowed it to a simpler, more practical arm sleeve for the ER. Focusing the scope helped us decide what to keep and what to cut, ensuring the solution addressed the core problem instead of trying to do everything at once. With more planning, we plan on tackling the logistical challenges that are difficult to anticipate in a classroom setting.
     </h3>
   </section>
 

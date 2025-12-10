@@ -10,11 +10,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/0f7977fbf9792d6546cdf37146e1a32d?family=Polestar+Unica77+TT+Light" rel="stylesheet"/>
   <style>
 
-  * {
+    @font-face {
+    font-family: "Unica-Medium";
+    src: url("./fonts/Unica77LLCyr-Medium.otf") format("opentype");
+    }
+
+    @font-face {
+    font-family: "Unica-Light";
+    src: url("./fonts/Unica77LLCyr-Light.otf") format("opentype");
+    }
+
+    @font-face {
+    font-family: "Unica-Regular";
+    src: url("./fonts/Unica77LLCyr-Regular.otf") format("opentype");
+    }
+
+    * {
     -webkit-tap-highlight-color: transparent;
-  }
+    }
 
     body{
         background-color: #0A0A0A;
@@ -43,7 +60,7 @@
 
     #nav-left a{
         text-decoration: none;
-        color: #a7a7a5;
+        color: #c5c5c5;
         font-family: "Instrument Serif";
         font-style: italic;
     }
@@ -56,8 +73,8 @@
         margin-left: 3rem;
         text-decoration: none;
         font-size: 1.3rem;
-        color: #a7a7a5;
-        font-family: "Manrope";
+        color: #c5c5c5;
+        font-family: "Google Sans Flex", sans-serif;
     }
 
     #nav-right a:hover{
@@ -105,7 +122,7 @@
         font-size: clamp(1rem, 4vw, 3rem);
         margin-top: 0;
         color: #FAF9F6;
-        font-weight: 400;
+        font-weight: 300;
         margin-bottom: 0;
     }
 
@@ -116,21 +133,22 @@
     }
 
     .project a:hover h2{
-        color: #a7a7a5;
+        color: #c5c5c5;
     }
 
     .project img{
         width: 100%;
+        aspect-ratio: 14 / 8;  
         object-fit: cover;
         height: auto;
     }
 
     .project h3{
-        font-family: "manrope";
-        color: #a7a7a5;
-        font-size: 1.6rem;
-        font-weight: 350;
+        font-family: "Google Sans Flex";
+        color: #c5c5c5;
+        font-size: clamp(1.4rem, 2vw, 1.5rem);
         margin-top: 0;
+        font-weight: 300;
     }
 
     .project-disabled{
@@ -145,7 +163,7 @@
         font-size: clamp(1rem, 4vw, 3rem);
         margin-top: 0;
         color: #FAF9F6;
-        font-weight: 400;
+        font-weight: 300;
         margin-bottom: 0;
     }
 
@@ -157,15 +175,16 @@
 
     .project-disabled img{
         width: 100%;
+        aspect-ratio: 14 / 8;  
         object-fit: cover;
         height: auto;
     }
 
     .project-disabled h3{
-        font-family: "Manrope";
-        color: #a7a7a5;
-        font-size: 1.6rem;
-        font-weight: 350;
+        font-family: "Google Sans Flex";
+        color: #c5c5c5;
+        font-size: clamp(1.4rem, 2vw, 1.5rem);
+        font-weight: 300;
         margin-top: 0;
     }
 
@@ -182,7 +201,7 @@
 
     .left a {
     text-decoration: none;
-    color: #a7a7a5;
+    color: #c5c5c5;
     font-family: "Instrument Serif", serif;
     font-style: italic;
     font-size: 1.6rem;
@@ -200,8 +219,8 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-family: "Manrope", sans-serif;
-    color: #a7a7a5;
+    font-family: "Google Sans Flex", sans-serif;
+    color: #c5c5c5;
     font-size: 1.3rem;
     text-decoration: none;
     }
@@ -210,7 +229,7 @@
     .links a i { display: none; }
 
     #currently{
-        font-family: "manrope";
+        font-family: "Google Sans Flex";
         color: #FAF9F6;
         margin-top: 0;
         margin-bottom: 0;
@@ -220,15 +239,13 @@
     }
 
     #currently h2{
-        font-size: 1.3rem;
-        font-weight: 420;
-        color: #a7a7a5;
-        font-weight: 450;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
+        font-weight: 350;
+        color: #c5c5c5;
     }
 
     #currently h3{
-        font-size: 1.4rem;
-        font-weight: 400;
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
         color: #FAF9F6;
         margin-bottom: 0rem;
         margin-top: .5rem;
@@ -241,7 +258,7 @@
     }
 
     .link:hover {
-        color: #a7a7a5;
+        color: #c5c5c5;
     }
 
     @media only screen and (max-width: 900px) {
@@ -264,7 +281,7 @@
 
     #nav-left a{
         text-decoration: none;
-        color: #a7a7a5; /* use same colour as desktop */
+        color: #c5c5c5; /* use same colour as desktop */
         font-family: "Instrument Serif", serif;
         font-style: italic;
         }
@@ -279,8 +296,7 @@
     #nav-right a{
         margin: 0; 
         text-decoration: none;
-        color: #a7a7a5; /* use same colour as desktop */
-        font-family: "Manrope", sans-serif;
+        color: #c5c5c5; /* use same colour as desktop */
         font-size: 1.2rem;
     }
 
@@ -315,7 +331,6 @@
   } 
 
   #currently{
-        font-family: "Manrope";
         color: #FAF9F6;
         margin-top: 0;
         margin-bottom: 0;
@@ -326,8 +341,7 @@
 
     #currently h2{
         font-size: clamp(1.2rem, 3.8vw, 1.35rem);
-        font-weight: 420;
-        color: #a7a7a5;
+        color: #c5c5c5;
         margin: 0;
         margin-bottom: 0rem;
         margin-top: 2rem;
@@ -335,7 +349,6 @@
 
     #currently h3{
         font-size: clamp(1.2rem, 3.8vw, 1.35rem);
-        font-weight: 400;
         color: #FAF9F6;
         margin: 0;
         margin-top: .75rem;
@@ -389,7 +402,6 @@
     }
 
     .project h3{
-        font-family: "Manrope";
         color: #a7a7a5;
         font-size: clamp(1.2rem, 3.8vw, 1.35rem);
         font-weight: 350;
@@ -419,8 +431,7 @@
     }
 
     .project-disabled h3{
-        font-family: "manrope";
-        color: #a7a7a5;
+        color: #c5c5c5;
         font-size: clamp(1.2rem, 3.8vw, 1.35rem);
         font-weight: 350;
         margin-top: 0;
@@ -477,14 +488,14 @@
 
 <section id="currently">
   <h2>CURRENTLY</h2>
-  <h3>UX Design Intern @
-  <a class="link" href="https://www.ontario.ca/page/ministry-transportation" target="_blank" rel="noopener noreferrer">
-    The Ontario Ministry of Transportation
-  </a>
-</h3>
 <h3>Interaction Design + Computer Science @
   <a class="link" href="https://uwaterloo.ca/" target="_blank" rel="noopener noreferrer">
    University of Waterloo
+  </a>
+</h3>
+<h3>UX Design Intern @
+  <a class="link" href="https://www.ontario.ca/page/ministry-transportation" target="_blank" rel="noopener noreferrer">
+    The Ontario Ministry of Transportation
   </a>
 </h3>
 <h3>Incoming QA/Test Engineering @
@@ -496,17 +507,9 @@
 </section>
 
 <section id="Work">
-  <div class="project-disabled">
-    <a>
-      <img src="OER-Coming-Soon.png">
-      <h2>OER Self-Tracker</h2>
-      <h3>Tracking Occupational Exposures · Coming Soon</h3>
-    </a>
-  </div>
-
   <div class="project">
     <a href="Konect-app.html">
-      <img src="central-main.png">
+      <img src="Central-thumbnail.png">
       <h2>Central - 2025</h2>
       <h3>Optimizing ER Nurse's Workflow</h3>
     </a>
@@ -517,6 +520,14 @@
       <img src="LiveTrack-Image.png">
       <h2>LiveTrack - 2025</h2>
       <h3>Deciding the best time to work out</h3>
+    </a>
+  </div>
+
+  <div class="project-disabled">
+    <a>
+      <img src="OER-Coming-Soon.png">
+      <h2>OER Self-Tracker</h2>
+      <h3>Tracking Occupational Exposures · Coming Soon</h3>
     </a>
   </div>
 

@@ -9,10 +9,17 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
 
     * {
     -webkit-tap-highlight-color: transparent;
+    }
+
+    #container {
+        margin: 0 auto;
+        padding-left: clamp(8rem, 20vw, 30rem); /* increased padding */
+        padding-right: clamp(8rem, 20vw, 30rem);
     }
 
       body{
@@ -42,7 +49,7 @@
 
     #nav-left a{
         text-decoration: none;
-        color: #a7a7a5;
+        color: #c5c5c5;
         font-family: "Instrument Serif";
         font-style: italic;
     }
@@ -55,8 +62,8 @@
         margin-left: 3rem;
         text-decoration: none;
         font-size: 1.3rem;
-        color: #a7a7a5;
-        font-family: "Manrope";
+        color: #c5c5c5;
+        font-family: "google sans flex";
     }
 
     #nav-right a:hover{
@@ -81,7 +88,7 @@
 
     .left a {
     text-decoration: none;
-    color: #a7a7a5;
+    color: #c5c5c5;
     font-family: "Instrument Serif", serif;
     font-style: italic;
     font-size: 1.6rem;
@@ -99,8 +106,8 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-family: "Manrope", sans-serif;
-    color: #a7a7a5;
+    font-family: "google sans flex", sans-serif;
+    color: #c5c5c5;
     font-size: 1.3rem;
     text-decoration: none;
     }
@@ -113,8 +120,6 @@
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(2, 1fr);
           gap: 1rem;
-          padding-left: clamp(4rem, 12vw, 22rem);
-          padding-right: clamp(4rem, 12vw, 22rem);
       }
 
       #photo-grid img {
@@ -125,23 +130,23 @@
 
       #intro h1{
           font-family: "Instrument Serif";
-          
+          margin-bottom: 0;
           font-weight: 350;
           font-size: 4.5rem;
           color: #FAF9F6;
-          padding-left: clamp(4rem, 12vw, 22rem);
-          padding-right: clamp(4rem, 12vw, 22rem);
+          
       }
 
       .paragraph{
-          font-family: "Manrope";
-          color: #a7a7a5;
-          font-size: 1.2rem;
-          font-weight: 350;
+          font-family: "google sans flex";
+          color: #c5c5c5;
+          font-size: clamp(1.1rem, 2vw, 1.2rem);
+          font-weight: 225;
           text-align: justify;
-          margin-top: .5rem;
-          padding-left: clamp(4rem, 12vw, 22rem);
-          padding-right: clamp(4rem, 12vw, 22rem);
+          margin-top: 1rem;
+          line-height: 1.4;
+          margin-bottom: 0;
+         
       }
 
       .styles{
@@ -150,15 +155,13 @@
       }
 
       .styles:hover{
-        color: #a7a7a5;
+        color: #c5c5c5;
       }
 
       #Work{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        padding-left: clamp(4rem, 12vw, 22rem);
-        padding-right: clamp(4rem, 12vw, 22rem);
         padding-top: 4rem;
     }
 
@@ -207,8 +210,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin: 0 auto;
-  padding-left: clamp(4rem, 12vw, 22rem);
-  padding-right: clamp(4rem, 12vw, 22rem);
   padding-top: 4rem;
   padding-bottom: 1.5rem;
 }
@@ -345,6 +346,7 @@
   </div>
 </nav>
 
+<div id="container">
 <section id="intro">
   <h1>Designing, Coding, and <span style="text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 5px;
 ">More</span>...</h1>
@@ -365,6 +367,7 @@
     <img src="pic-3.jpg">
     <img src="pic-4.jpg">
   </section>
+</div>
 
 <footer>
   <div class="left">
