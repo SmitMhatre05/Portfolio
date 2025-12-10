@@ -18,7 +18,7 @@
 
     #container {
         margin: 0 auto;
-        padding-left: clamp(8rem, 20vw, 30rem); /* increased padding */
+        padding-left: clamp(8rem, 20vw, 30rem); 
         padding-right: clamp(8rem, 20vw, 30rem);
     }
 
@@ -223,6 +223,13 @@
 
 
       @media only screen and (max-width: 900px) {
+
+        #container {
+      padding-left: clamp(0.75rem, 4vw, 1.25rem);
+      padding-right: clamp(0.75rem, 4vw, 1.25rem);
+      box-sizing: border-box;
+      margin: 0;
+    }
         nav{
         display: flex;
         align-items: center;
@@ -297,8 +304,7 @@
           font-weight: 350;
           font-size: 3rem;
           color: #FAF9F6;
-          padding-left: clamp(0.75rem, 4vw, 1.25rem);
-          padding-right: clamp(0.75rem, 4vw, 1.25rem);
+          
       }
 
       .paragraph{
@@ -308,24 +314,21 @@
           font-weight: 350;
           text-align: justify;
           margin-top: .5rem;
-          padding-left: clamp(0.75rem, 4vw, 1.25rem);
-          padding-right: clamp(0.75rem, 4vw, 1.25rem);
+          
           text-decoration: none;
       }
 
       #photo-grid {
             grid-template-columns: 1fr; 
             grid-template-rows: auto;   
-            padding-left: clamp(0.75rem, 4vw, 1.25rem); 
-            padding-right: clamp(0.75rem, 4vw, 1.25rem);
+            
 
 
           }
 
       #poster-grid {
         grid-template-columns: repeat(2, 1fr); /* 2×2 grid */
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        
         padding-bottom: 1.5rem;
   }
       }
