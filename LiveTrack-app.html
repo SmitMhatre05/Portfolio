@@ -11,6 +11,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
   <style>
+
+    @font-face {
+    font-family: "Unica-Regular";
+    src: url("./fonts/Unica77LLCyr-Regular.otf") format("opentype");
+    }
+
+    @font-face {
+    font-family: "Unica-Medium";
+    src: url("./fonts/Unica77LLCyr-Medium.otf") format("opentype");
+    }
+
+    @font-face {
+    font-family: "Unica-Thin";
+    src: url("./fonts/Unica77LLCyr-Thin.otf") format("opentype");
+    }
+
     * {
     -webkit-tap-highlight-color: transparent;
   }
@@ -22,8 +38,8 @@
 
       #container {
           margin: 0 auto;
-          padding-left: clamp(4rem, 12vw, 22rem);
-          padding-right: clamp(4rem, 12vw, 22rem);
+          padding-left: clamp(8rem, 20vw, 30rem); 
+          padding-right: clamp(8rem, 20vw, 30rem);
       }
 
       nav{
@@ -36,7 +52,7 @@
         position: sticky;
         z-index: 1000;
         top: 0;
-        border-bottom: 1px solid #FAF9F6;
+        border-bottom: 1px solid #383838;
     }
 
     #nav-left{
@@ -46,7 +62,7 @@
 
     #nav-left a{
         text-decoration: none;
-        color: #FAF9F6;
+        color: #c5c5c5;
         font-family: "Instrument Serif";
         font-style: italic;
     }
@@ -59,21 +75,22 @@
         margin-left: 3rem;
         text-decoration: none;
         font-size: 1.3rem;
-        color: #FAF9F6;
-        font-family: "Manrope";
+        color: #c5c5c5;
+        font-family: "Unica-Regular", sans-serif;
+        font-weight: 225;
     }
 
     #nav-right a:hover{
-        color: #a7a7a5;
+        color: #FAF9F6;
     }
 
     #nav-left a:hover{
-        color: #a7a7a5;
+        color: #FAF9F6;
     }
 
     footer {
     background-color: #0A0A0A;
-    border-top: 1px solid #FAF9F6;
+    border-top: 1px solid #383838;
     margin-top: 4rem;
     display: flex;
     justify-content: space-between;
@@ -84,7 +101,7 @@
 
     .left a {
     text-decoration: none;
-    color: #FAF9F6;
+    color: #c5c5c5;
     font-family: "Instrument Serif", serif;
     font-style: italic;
     font-size: 1.6rem;
@@ -102,132 +119,133 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-family: "Manrope", sans-serif;
-    color: #FAF9F6;
+    font-family: "Unica-Regular", sans-serif;
+    color: #c5c5c5;
     font-size: 1.3rem;
     text-decoration: none;
+    font-weight: 225;
     }
 
-    .links a:hover { color: #a7a7a5; }
+    .links a:hover { color: #FAF9F6; }
     .links a i { display: none; }
 
 
       .title{
-          color: #FAF9F6;
-          font-family: "instrument serif";
-          font-style: italic;
-          font-size: 4rem;
-          text-align: center;
-          font-weight: 350;
-          margin-bottom: 0;
-      }
+        color: #FAF9F6;
+        font-family: "instrument serif";
+        font-style: italic;
+        font-size: 4rem;
+        text-align: center;
+        font-weight: 350;
+        margin-bottom: 0;
+    }
 
-      .center-container {
-          max-width: 100vw;
-          height: 60vh;
-          overflow: hidden;
-          margin: auto;
-      }
+    .center-container {
+        max-width: 100vw;
+        height: 60vh;
+        overflow: hidden;
+        margin: auto;
+    }
 
-      .center-container .intro-mockup {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: 50% 60%;
-      }
+    .center-container .intro-mockup {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
 
-      .timeline{
-          color: #FAF9F6;
-          font-family: "Manrope";
-          font-size: 1rem;
-          text-align: center;
-          font-weight: 350;
-          margin-top: .3rem;
-          margin-bottom: 4rem;
-      }
+    .timeline{
+        color: #FAF9F6;
+        font-family: "Unica-Regular";
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
+        text-align: center;
+        font-weight: 225;
+        margin-top: .3rem;
+        margin-bottom: 4rem;
+    }
 
-      .role h2{
-          font-family: "Manrope";
-          color: #FAF9F6;
-          font-size: 1.2rem;
-          margin-bottom: .5rem;
-          font-weight: 390;
-      }
+    .role h2{
+        font-family: "Unica-Regular";
+        color: #FAF9F6;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
+        margin-bottom: .5rem;
+        font-weight: 300;
+    }
 
-      .role h3{
-          font-family: "Manrope";
-          color: #a7a7a5;
-          font-size: 1.1rem;
-          font-weight: 350;
-          margin-top: .5rem;
-          margin-bottom: .5rem;
-      }
+    .role h3{
+        font-family: "Unica-Regular";
+        color: #c5c5c5;
+        font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+        font-weight: 225;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
 
-      .skills h2{
-          font-family: "Manrope";
-          color: #FAF9F6;
-          font-size: 1.2rem;
-          margin-bottom: .5rem;
-          font-weight: 390;
-      }
+    .skills h2{
+        font-family: "Unica-Regular";
+        color: #FAF9F6;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
+        margin-bottom: .5rem;
+        font-weight: 300;
+    }
 
-      .skills h3{
-          font-family: "Manrope";
-          color: #a7a7a5;
-          font-size: 1.1rem;
-          font-weight: 350;
-          margin-top: .5rem;
-          margin-bottom: .5rem;
-      }
+    .skills h3{
+        font-family: "Unica-Regular";
+        color: #c5c5c5;
+        font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+        font-weight: 225;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
 
-      .tools h2{
-          font-family: "Manrope";
-          color: #FAF9F6;
-          font-size: 1.2rem;
-          margin-bottom: .5rem;
-          font-weight: 390;
-      }
+    .tools h2{
+        font-family: "Unica-Regular";
+        color: #FAF9F6;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
+        margin-bottom: .5rem;
+        font-weight: 300;
+    }
 
-      .tools h3{
-          font-family: "Manrope";
-          color: #a7a7a5;
-          font-size: 1.1rem;
-          font-weight: 350;
-          margin-top: .5rem;
-          margin-bottom: .5rem;
-      }
+    .tools h3{
+        font-family: "Unica-Regular";
+        color: #c5c5c5;
+        font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+        font-weight: 225;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
 
-      .type h2{
-          font-family: "Manrope";
-          color: #FAF9F6;
-          font-size: 1.2rem;
-          margin-bottom: .5rem;
-          font-weight: 390;
-      }
+    .type h2{
+        font-family: "Unica-Regular";
+        color: #FAF9F6;
+        font-size: clamp(1.2rem, 2vw, 1.3rem);
+        margin-bottom: .5rem;
+        font-weight: 300;
+    }
 
-      .type h3{
-          font-family: "Manrope";
-          color: #a7a7a5;
-          font-size: 1.1rem;
-          font-weight: 350;
-          margin-top: .5rem;
-          margin-bottom: .5rem;
-      }
+    .type h3{
+        font-family: "Unica-Regular";
+        color: #c5c5c5;
+        font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+        font-weight: 225;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
 
       #details{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          gap: 2rem;
-      }
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
 
-      #case-study{
-          margin-top: 8rem;
-      }
+    #case-study{
+        margin-top: 8rem;
+    }
 
       .heading{
-          font-family: "Manrope";
+          font-family: "Unica-Regular";
           color: #FAF9F6;
           font-size: 1.4rem;
           margin-bottom: .5rem;
@@ -236,13 +254,15 @@
       }
 
       .paragraph{
-          font-family: "Manrope";
-          color: #a7a7a5;
-          font-size: 1.2rem;
-          font-weight: 350;
-          text-align: justify;
-          margin-top: .5rem;
-      }
+        font-family: "Unica-Regular";
+        color: #c5c5c5;
+        font-size: clamp(1.1rem, 1.5vw, 1.2rem);
+        font-weight: 225;
+        text-align: left;
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
 
       .solution-img, .lt-research1, .lt-research2, .pain-points, .journey-pre, .journey-post, .heatmap, .how-it-works, .heatmap-img {
           width: 100%;
@@ -265,7 +285,7 @@
         }
 
         .feature-heading{
-        font-family: "Manrope";
+        font-family: "Unica-Regular";
         color: #FAF9F6;
         font-size: 1.2rem;
         font-weight: 350;
@@ -274,7 +294,7 @@
     }
 
     .feature-paragraph{
-          font-family: "Manrope";
+          font-family: "Unica-Regular";
           color: #a7a7a5;
           font-size: 1.2rem;
           font-weight: 350;
@@ -320,7 +340,7 @@
 
         .timeline{
                 color: #FAF9F6;
-                font-family: "Manrope";
+                font-family: "Unica-Regular";
                 font-size: 1rem;
                 text-align: center;
                 font-weight: 350;
@@ -329,7 +349,7 @@
             }
 
         .role h2{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #FAF9F6;
             font-size: 1.2rem;
             margin-bottom: .2rem;
@@ -337,7 +357,7 @@
         }
 
         .role h3{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #a7a7a5;
             font-size: 1rem;
             font-weight: 350;
@@ -346,7 +366,7 @@
         }
 
         .skills h2{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #FAF9F6;
             font-size: 1.2rem;
             margin-bottom: .2rem;
@@ -354,7 +374,7 @@
         }
 
         .skills h3{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #a7a7a5;
             font-size: 1rem;
             font-weight: 350;
@@ -363,7 +383,7 @@
         }
 
         .tools h2{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #FAF9F6;
             font-size: 1.2rem;
             margin-bottom: .2rem;
@@ -371,7 +391,7 @@
         }
 
         .tools h3{
-        font-family: "Manrope";
+        font-family: "Unica-Regular";
             color: #a7a7a5;
             font-size: 1rem;
             font-weight: 350;
@@ -380,7 +400,7 @@
         }
 
         .type h2{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #FAF9F6;
             font-size: 1.2rem;
             margin-bottom: .2rem;
@@ -388,7 +408,7 @@
         }
 
         .type h3{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #a7a7a5;
             font-size: 1rem;
             font-weight: 350;
@@ -404,7 +424,7 @@
         }
 
         .heading{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #FAF9F6;
             font-size: 1.2rem;
             margin-bottom: .5rem;
@@ -413,7 +433,7 @@
         }
 
         .paragraph{
-            font-family: "Manrope";
+            font-family: "Unica-Regular";
             color: #a7a7a5;
             font-size: 1rem;
             font-weight: 350;
@@ -422,7 +442,7 @@
         }
 
         .feature-paragraph{
-          font-family: "Manrope";
+          font-family: "Unica-Regular";
           color: #a7a7a5;
           font-size: 1rem;
           font-weight: 350;
@@ -432,7 +452,7 @@
       }
 
       .feature-heading{
-        font-family: "Manrope";
+        font-family: "Unica-Regular";
         color: #FAF9F6;
         font-size: 1.2rem;
         font-weight: 350;
@@ -474,7 +494,7 @@
         margin: 0; 
         text-decoration: none;
         color: #a7a7a5; /* use same colour as desktop */
-        font-family: "Manrope", sans-serif;
+        font-family: "Unica-Regular", sans-serif;
         font-size: 1.2rem;
     }
 
