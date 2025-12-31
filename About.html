@@ -186,6 +186,44 @@
   display: block;
 }
 
+.bottom-fade {
+  position: sticky;
+  bottom: 0;
+  height: 140px;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+  margin:0;
+  padding: 0;
+}
+
+.bottom-fade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  background: transparent;
+
+  mask-image: linear-gradient(
+    to top,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 45%,
+    rgba(0, 0, 0, 0.25) 75%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to top,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 45%,
+    rgba(0, 0, 0, 0.25) 75%,
+    transparent 100%
+  );
+}
+
 
       @media only screen and (max-width: 900px) {
 
@@ -332,6 +370,8 @@
     <img src="pic-4.jpg">
   </section>
 </div>
+
+<div class="bottom-fade"></div> 
 
 <footer>
   <div class="left">
