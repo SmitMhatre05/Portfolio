@@ -12,32 +12,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://db.onlinewebfonts.com/c/0f7977fbf9792d6546cdf37146e1a32d?family=Polestar+Unica77+TT+Light" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <style>
-
-    @font-face {
-    font-family: "Unica-Regular";
-    src: url("./fonts/Unica77LLCyr-Regular.otf") format("opentype");
-    }
-
-    @font-face {
-    font-family: "Unica-Medium";
-    src: url("./fonts/Unica77LLCyr-Medium.otf") format("opentype");
-    }
-
-    @font-face {
-    font-family: "Unica-Thin";
-    src: url("./fonts/Unica77LLCyr-Thin.otf") format("opentype");
-    }
-
-    @font-face {
-    font-family: "Kalice";
-    src: url("./fonts/Kalice.ttf") format("truetype");
-    }
-
-    * {
-    -webkit-tap-highlight-color: transparent;
-    }
-
     body{
         background-color: #0A0A0A;
         padding: 0;
@@ -79,8 +57,8 @@
         text-decoration: none;
         font-size: 1.3rem;
         color: #c5c5c5;
-        font-family: "Unica-Regular", sans-serif;
-        font-weight: 225;
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
     }
 
     #nav-right a:hover{
@@ -107,6 +85,8 @@
         color: #FAF9F6;
         text-align: center;
         font-weight: 335;
+        margin-bottom: 0;
+        padding-bottom: 2rem;
     }
 
     #Work{
@@ -123,12 +103,12 @@
     }
 
     .project h2{
-        font-family: "Unica-Regular";
+        font-family: "Inter";
         text-decoration: none;
         font-size: clamp(2.3rem, 4.6vw, 2.5rem);
         margin-top: 0;
         color: #FAF9F6;
-        font-weight: 325;
+        font-weight: 300;
         margin-bottom: 0;
     }
 
@@ -150,11 +130,11 @@
     }
 
     .project h3{
-        font-family: "Unica-Regular";
+        font-family: "Inter";
         color: #c5c5c5;
         font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-top: 0;
-        font-weight: 500;
+        font-weight: 300;
     }
 
     .project-disabled{
@@ -164,7 +144,7 @@
     }
 
     .project-disabled h2{
-        font-family: "Unica-Regular";
+        font-family: "Inter";
         text-decoration: none;
         font-size: clamp(2.3rem, 4.6vw, 2.5rem);
         margin-top: 0;
@@ -187,7 +167,7 @@
     }
 
     .project-disabled h3{
-        font-family: "Unica-Regular";
+        font-family: "Inter";
         color: #c5c5c5;
         font-size: clamp(1.2rem, 2vw, 1.3rem);
         font-weight: 300;
@@ -225,11 +205,11 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-family: "Unica-Regular", sans-serif;
+    font-family: "Inter", sans-serif;
     color: #c5c5c5;
     font-size: 1.3rem;
     text-decoration: none;
-    font-weight: 225;
+    font-weight: 300;
     }
 
     .links a:hover { color: #FAF9F6; }
@@ -242,23 +222,23 @@
         text-align: center;
         padding: 2rem;
         padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #currently h2{
-        font-size: clamp(1.2rem, 2vw, 1.3rem);
-        font-weight: 350;
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
+        font-weight: 300;
         color: #c5c5c5;
-        font-family: "Unica-Regular"; 
+        font-family: "Inter"; 
+        max-width: 800px;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 0;
     }
 
-    #currently h3{
-        font-size: clamp(1.1rem, 2vw, 1.2rem);
-        color: #FAF9F6;
-        margin-bottom: 0rem;
-        margin-top: .5rem;
-        font-weight: 300;
-        font-family: "Unica-Regular";
-    }
 
     .link {
         color: #FAF9F6;
@@ -489,22 +469,7 @@
 </section>
 
 <section id="currently">
-  <h2>CURRENTLY</h2>
-<h3>Interaction Design + Computer Science @
-  <a class="link" href="https://uwaterloo.ca/" target="_blank" rel="noopener noreferrer">
-   University of Waterloo
-  </a>
-</h3>
-<h3>UX Design Intern @
-  <a class="link" href="https://www.ontario.ca/page/ministry-transportation" target="_blank" rel="noopener noreferrer">
-    The Ontario Ministry of Transportation
-  </a>
-</h3>
-<h3>Incoming QA/Test Engineering Intern @
-  <a class="link" href="https://www.cibc.com/en/about-cibc.html" target="_blank" rel="noopener noreferrer">
-    CIBC
-  </a>
-</h3>
+  <h2>Currently studying Interaction Design & Business + Computer Science at the University of Waterloo. Previous UXD Intern at the Ontario Ministry of Transporation. Currently interning at CIBC as a QA/Test Engineering Intern.</h2>
 
 </section>
 
