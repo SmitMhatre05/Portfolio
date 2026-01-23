@@ -3,18 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smit Mhatre</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://db.onlinewebfonts.com/c/0f7977fbf9792d6546cdf37146e1a32d?family=Polestar+Unica77+TT+Light" rel="stylesheet"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+
   <style>
     body{
         background-color: #0A0A0A;
@@ -25,40 +17,29 @@
 
     nav{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         background-color: #0A0A0A;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
         position: sticky;
         z-index: 1000;
         top: 0;
         border-bottom: 1px solid #383838;
     }
 
-    #nav-left{
-        font-size: 1.6rem;
-        margin-left: 2rem;
-    }
-
-    #nav-left a{
-        text-decoration: none;
-        color: #c5c5c5;
-        font-family: "Instrument Serif";
-        font-style: italic;
-    }
 
     #nav-right{
         margin-right: 4.5rem;
     }
 
     #nav-right a{
-        margin-left: 3rem;
+        margin-left: 5rem;
         text-decoration: none;
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
         color: #c5c5c5;
-        font-family: "Inter", sans-serif;
-        font-weight: 300;
+        font-family: "Stack Sans Notch", sans-serif;
+        font-weight: 200;
     }
 
     #nav-right a:hover{
@@ -72,7 +53,7 @@
     #main-page{
         padding: 0;
         margin: 0;
-        height: 50vh;
+        height: 30vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -103,12 +84,12 @@
     }
 
     .project h2{
-        font-family: "Inter";
+        font-family: "Stack Sans Notch";
         text-decoration: none;
         font-size: clamp(2.3rem, 4.6vw, 2.5rem);
         margin-top: 0;
         color: #FAF9F6;
-        font-weight: 300;
+        font-weight: 200;
         margin-bottom: 0;
     }
 
@@ -144,12 +125,12 @@
     }
 
     .project-disabled h2{
-        font-family: "Inter";
+        font-family: "Stack Sans Notch";
         text-decoration: none;
         font-size: clamp(2.3rem, 4.6vw, 2.5rem);
         margin-top: 0;
         color: #FAF9F6;
-        font-weight: 300;
+        font-weight: 200;
         margin-bottom: 0;
     }
 
@@ -187,10 +168,10 @@
 
     .left a {
     text-decoration: none;
-    color: #c5c5c5;
-    font-family: "Instrument Serif", serif;
-    font-style: italic;
-    font-size: 1.6rem;
+    color: #FAF9F6;
+    font-family: "inter";
+    font-weight: 300;
+    font-size: 1.3rem;
     margin-left: 2rem;
     }
 
@@ -206,7 +187,7 @@
     align-items: center;
     gap: 0.4rem;
     font-family: "Inter", sans-serif;
-    color: #c5c5c5;
+    color: #FAF9F6;
     font-size: 1.3rem;
     text-decoration: none;
     font-weight: 300;
@@ -217,15 +198,14 @@
 
     #currently{
         color: #FAF9F6;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-block: 0;
+        padding: 0 2rem 2rem 2rem;
         text-align: center;
-        padding: 2rem;
-        padding-top: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: clamp(2rem, 5vw, 5rem);
     }
 
     #currently h2{
@@ -233,10 +213,10 @@
         font-weight: 300;
         color: #c5c5c5;
         font-family: "Inter"; 
-        max-width: 800px;
+        max-width: 900px;
         text-align: center;
         margin-top: 0;
-        padding-top: 0;
+        padding-top: clamp(1rem, 3vw, 3rem);
     }
 
 
@@ -249,7 +229,7 @@
         color: #c5c5c5;
     }
 
-    .bottom-fade {
+  .bottom-fade {
   position: sticky;
   bottom: 0;
   height: 140px;
@@ -495,12 +475,10 @@
 <body>
 
 <nav>
-  <div id = "nav-left">
-    <a href="index.html">Smit Mhatre</a>
-  </div>
   <div id = "nav-right">
     <a href="index.html">Work</a>
     <a href="https://sites.google.com/view/smitmhatre/home?authuser=0" target="_blank">Play</a>
+    <a href="https://drive.google.com/file/d/1sf-p6sGG0ZjOMlvFYSpbkUYIbA1DBq7x/view?usp=sharing" target="_blank">Resume</a>
     <a href="About.html">About</a>
   </div>
 </nav>
@@ -510,7 +488,7 @@
 </section>
 
 <section id="currently">
-  <h2>Currently studying Interaction Design & Business + Computer Science at the University of Waterloo. Previous UXD Intern at the Ontario Ministry of Transporation. Currently interning at CIBC as a QA/Test Engineering Intern.</h2>
+  <h2>Studying Interaction Design @ UWaterloo | Currently @ CIBC | Previously @ MTO</h2>
 
 </section>
 
@@ -545,7 +523,7 @@
 
 <footer>
   <div class="left">
-    <a href="index.html">Smit Mhatre</a>
+    <a href="index.html">© Smit Mhatre. 2025</a>
   </div>
 
   <div class="links">

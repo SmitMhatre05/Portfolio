@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Smit Mhatre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+
   <style>
 
     * {
@@ -32,50 +29,34 @@
 
       nav{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         background-color: #0A0A0A;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
         position: sticky;
         z-index: 1000;
         top: 0;
         border-bottom: 1px solid #383838;
     }
 
-    #nav-left{
-        font-size: 1.6rem;
-        margin-left: 2rem;
-    }
-
-    #nav-left a{
-        text-decoration: none;
-        color: #c5c5c5;
-        font-family: "Instrument Serif";
-        font-style: italic;
-    }
 
     #nav-right{
         margin-right: 4.5rem;
     }
 
     #nav-right a{
-        margin-left: 3rem;
+        margin-left: 5rem;
         text-decoration: none;
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
         color: #c5c5c5;
-        font-family: "Inter", sans-serif;
-        font-weight: 300;
+        font-family: "Stack Sans Notch", sans-serif;
+        font-weight: 200;
     }
 
     #nav-right a:hover{
         color: #FAF9F6;
     }
-
-    #nav-left a:hover{
-        color: #FAF9F6;
-    }
-
 
     footer {
     background-color: #0A0A0A;
@@ -138,6 +119,7 @@
           font-weight: 350;
           font-size: 4rem;
           color: #FAF9F6;
+          padding-top: clamp(1rem, 3vw, 2rem);
           
       }
 
@@ -338,12 +320,10 @@
 
 
 <nav>
-  <div id = "nav-left">
-    <a href="index.html">Smit Mhatre</a>
-  </div>
   <div id = "nav-right">
     <a href="index.html">Work</a>
     <a href="https://sites.google.com/view/smitmhatre/home?authuser=0" target="_blank">Play</a>
+    <a href="https://drive.google.com/file/d/1sf-p6sGG0ZjOMlvFYSpbkUYIbA1DBq7x/view?usp=sharing" target="_blank">Resume</a>
     <a href="About.html">About</a>
   </div>
 </nav>

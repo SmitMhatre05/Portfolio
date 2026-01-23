@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LiveTrack | Smit Mhatre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+
 </head>
   <style>
 
@@ -30,49 +28,35 @@
 
       nav{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         background-color: #0A0A0A;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
         position: sticky;
         z-index: 1000;
         top: 0;
         border-bottom: 1px solid #383838;
     }
 
-    #nav-left{
-        font-size: 1.6rem;
-        margin-left: 2rem;
-    }
-
-    #nav-left a{
-        text-decoration: none;
-        color: #c5c5c5;
-        font-family: "Instrument Serif";
-        font-style: italic;
-    }
 
     #nav-right{
         margin-right: 4.5rem;
     }
 
     #nav-right a{
-        margin-left: 3rem;
+        margin-left: 5rem;
         text-decoration: none;
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
         color: #c5c5c5;
-        font-family: "Inter", sans-serif;
-        font-weight: 300;
+        font-family: "Stack Sans Notch", sans-serif;
+        font-weight: 200;
     }
 
     #nav-right a:hover{
         color: #FAF9F6;
     }
 
-    #nav-left a:hover{
-        color: #FAF9F6;
-    }
 
     footer {
     background-color: #0A0A0A;
@@ -152,11 +136,11 @@
     }
 
     .role h2{
-        font-family: "Inter", sans-serif;
+        font-family: "Stack Sans Notch", sans-serif;
         color: #FAF9F6;
         font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-bottom: .5rem;
-        font-weight: 300;
+        font-weight: 200;
     }
 
     .role h3{
@@ -169,11 +153,11 @@
     }
 
     .skills h2{
-        font-family: "Inter", sans-serif;
+        font-family: "Stack Sans Notch", sans-serif;
         color: #FAF9F6;
         font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-bottom: .5rem;
-        font-weight: 300;
+        font-weight: 200;
     }
 
     .skills h3{
@@ -186,11 +170,11 @@
     }
 
     .tools h2{
-        font-family: "Inter", sans-serif;
+        font-family: "Stack Sans Notch", sans-serif;
         color: #FAF9F6;
         font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-bottom: .5rem;
-        font-weight: 300;
+        font-weight: 200;
     }
 
     .tools h3{
@@ -203,11 +187,11 @@
     }
 
     .type h2{
-        font-family: "Inter", sans-serif;
+        font-family: "Stack Sans Notch", sans-serif;
         color: #FAF9F6;
         font-size: clamp(1.2rem, 2vw, 1.3rem);
         margin-bottom: .5rem;
-        font-weight: 300;
+        font-weight: 200;
     }
 
     .type h3{
@@ -231,12 +215,12 @@
     }
 
       .heading{
-          font-family: "Inter", sans-serif;
+          font-family: "Stack Sans Notch", sans-serif;
           color: #FAF9F6;
           font-size: 1.4rem;
           margin-bottom: .5rem;
           margin-top: 6rem;
-          font-weight: 300;
+          font-weight: 200;
       }
 
       .paragraph{
@@ -288,6 +272,46 @@
           margin-top: .2rem;
           margin-bottom: 1rem;
       }
+
+      .feature{
+    
+    box-sizing: border-box;
+}
+
+.feature h4{
+    color: #FAF9F6;
+    margin: 0 0 1rem 0;
+    text-align: left;
+    font-size: clamp(1.2rem, 2vw, 1.3rem);
+    
+}
+
+.feature p{
+    font-family: "Inter", sans-serif;
+    color: #c5c5c5;
+    font-size: clamp(1rem, 1.3vw, 1.1rem);
+    font-weight: 300;
+    text-align: left;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.numbers{
+    font-family: "instrument serif";
+    font-size: clamp(1.5rem, 3vw, 1.7rem);
+    font-weight: 350;
+    margin: 0 0 0.5rem 0;
+    color: #FAF9F6;
+}
+
+.findings-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
 
       .bottom-fade {
   position: sticky;
@@ -565,12 +589,10 @@
 <body>
 
 <nav>
-  <div id = "nav-left">
-    <a href="index.html">Smit Mhatre</a>
-  </div>
   <div id = "nav-right">
     <a href="index.html">Work</a>
     <a href="https://sites.google.com/view/smitmhatre/home?authuser=0" target="_blank">Play</a>
+    <a href="https://drive.google.com/file/d/1sf-p6sGG0ZjOMlvFYSpbkUYIbA1DBq7x/view?usp=sharing" target="_blank">Resume</a>
     <a href="About.html">About</a>
   </div>
 </nav>
@@ -642,18 +664,34 @@
     <h2 class="heading">PAIN POINTS</h2>
     <h3 class="paragraph">After conducting the user research, 4 main pain points emerged, which set the foundation for my solution:
     </h3>
-    <h3 class="feature-heading">01 - Waiting for Equipment</h3>
-    <h4 class="feature-paragraph">Users feel frustrated when machines, squat racks, or free weights are occupied, leading to wasted time.</h4>
-    <h3 class="feature-heading">02 - Unpredictable Crowds</h3>
-    <h4 class="feature-paragraph">Users can't always predict when the gym will be too full, disrupting their routine.</h4>
-    <h3 class="feature-heading">03 - Discomfort & Stress</h3>
-    <h4 class="feature-paragraph">Some users feel anxious, irritated, or demotivated when the gym is too packed</h4>
-    <h3 class="feature-heading">04 - Rushed Workouts</h3>
-    <h4 class="feature-paragraph">There is pressure to finish workouts quickly due to crowds or waiting time, which cuts the workout shorter and reduces its effectiveness.</h4>
+    <div class="findings-grid">
+        <div class="feature">
+            <h3 class="numbers">01</h3>
+            <h4 class="feature-heading">Waiting for Equipment</h4>
+            <p>Users feel frustrated when machines, squat racks, or free weights are occupied, leading to wasted time.
+            </p>
+        </div>
     
-    <h3 class="heading">COMPETETIVE ANALYSIS</h3>
-    <h3 class="paragraph">I also conducted a competitor analysis to understand what current solutions exist to best address this problem, and the top 3 I found were from Anytime Fitness, PureGym, and Google. These solutions operate in the same way, meaning that it only shows the percentage occupancy in the gym, but it doesn’t show the crowd distribution throughout the gym.
-    </h3>
+        <div class="feature">
+            <h3 class="numbers">02</h3>
+            <h4 class="feature-heading">Unpredictable Crowds</h4>
+            <p>Users can't always predict when the gym will be too full, disrupting their routine.
+            </p>
+        </div>
+    
+        <div class="feature">
+            <h3 class="numbers">03</h3>
+            <h4 class="feature-heading">Discomfort and Stress</h4>
+            <p>Some users feel anxious, irritated, or demotivated when the gym is too packed.</p>
+        </div>
+
+        <div class="feature">
+            <h3 class="numbers">04</h3>
+            <h4 class="feature-heading">Rushed Workouts</h4>
+            <p>There is pressure to finish workouts quickly due to crowds or waiting time, which cuts the workout shorter and reduces its effectiveness.</p>
+        </div>
+    </div>
+
 
     <h2 class="heading">PRE-USER JOURNEY MAP</h2>
     <img class="journey-pre" src="LT-Pre.png" alt="LiveTrack Pre-User Journey Map">
